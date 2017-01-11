@@ -4,13 +4,10 @@ Student: Anne Lohmeijer
 Student number: 10447555
 
 # Problem and proposal
-My previous idea with the linked dot connection seemed to complicated and ambitious, as it involved a search engine combined with a visualization instead of solely a visualization. In order to that conclusion I propose a new visualization:
-
-An interactive sunburst visualization which depicts the CO2 emmission per country via multiple levels. The main level of the sunburst is the worldwide CO2 emission, the second level is the CO2 emission per continent, the third the CO2 level per country in that corresponding continent and the last level is how the CO2 emission is divided (Agricultural, vehicles, factories etc.), but I am not sure whether I will be able to found that Data which is what I am doing at the moment (searching). The sunburst visualization should be linked to a time shift such that you can traverse through the last 20 years and therewith get a good impression of the CO2 emission development per continent or country.
+The main target of the visualization is rendering CO2 emission throughout the past 20 years in both a world map and sunburst visualization. In addition the visualization should depict the earth's total ice surface in these years. The user can change the year between 1992 and 2012 such that the three linked visualization simultaneously adjust to the given year. I want to give the user profound insights in the contribution of different industries per country to CO2 emission throughout the years in the interactive sunburst visualization. Finally the user should be able to draw a relation between the increasing CO2 emission and decreasing surface of ice on earth.
 
 # Dataset
-I can obtain the data from the world DataBank, however I did not yet find any data on the subdistribution in between one country.
+I obtained a very complete Dataset which has sufficient subcategories to visualize the sunburst for 20 years (1992-2012).
 
-# Rough first sketch of visualization project:
-![](doc/rough_sketch.jpg)
-
+Sketch of webpage:
+![](doc/CO2_visualization.jpg)
