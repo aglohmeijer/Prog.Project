@@ -10,5 +10,6 @@ Decided that the movie linked dot visualization is too ambitious as it involves 
 - Wrote Design document, sketched webpage look and searched for appropriate data format. I think I first might work out the structure of the linked visualization in order to conclude which data format is the most easy to work with.
 - Rewrote proposal. It is not clear to me what part of the description of my webpage should be written in the README file and what part belongs in the DESIGN document...
 
-
+# day 4
+Wrote main HTML page with World Map in javascript including necessary D3 libraries. TO DO Day 4: think of appropriate JSON format and convert data.
 
