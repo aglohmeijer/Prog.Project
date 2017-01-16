@@ -20,7 +20,7 @@ Started writing of main HTML page with World Map in javascript including necessa
 
 # day 6
 Today I mainly have been working on the correct data format. Raw data was in Excel file, target format is two-keyed JSON (First key: year, second key: continent). I am trying to format the data with a small python script, I think I will get it done today.
-
+- Update day 6, evening: finished data formatting into JSON file. Checked with online JSON validator, data is valid :). 
 
 
 
