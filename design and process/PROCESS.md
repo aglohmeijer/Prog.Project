@@ -11,5 +11,16 @@ Decided that the movie linked dot visualization is too ambitious as it involves 
 - Rewrote proposal. It is not clear to me what part of the description of my webpage should be written in the README file and what part belongs in the DESIGN document...
 
 # day 4
-Wrote main HTML page with World Map in javascript including necessary D3 libraries. TO DO Day 4: think of appropriate JSON format and convert data.
+Started writing of main HTML page with World Map in javascript including necessary D3 libraries. TO DO Day 4: think of appropriate JSON format and convert data.
+
+# day 5
+- Continued with main HTML page, at this moment it gives a clear view of what it is going to look like in the end;
+- Gave some structure to Github repository;
+- Start with data format
+
+# day 6
+Today I mainly have been working on the correct data format. Raw data was in Excel file, target format is two-keyed JSON (First key: year, second key: continent). I am trying to format the data with a small python script, I think I will get it done today.
+
+
+
 
