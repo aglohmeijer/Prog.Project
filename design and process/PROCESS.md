@@ -22,5 +22,9 @@ Started writing of main HTML page with World Map in javascript including necessa
 Today I mainly have been working on the correct data format. Raw data was in Excel file, target format is two-keyed JSON (First key: year, second key: continent). I am trying to format the data with a small python script, I think I will get it done today.
 - Update day 6, evening: finished data formatting into JSON file. Checked with online JSON validator, data is valid :). 
 
+# day 7
+- Created an adjustable timebar in the center of the main HTML page below the world map, such that the user can choose the year between 1992 and 2012.
+- Wrote a function which retrieves all data from the main JSON data file when a year is given as argument, it returns a new JSON data set corresponding to the new year.
+- Main issue of day 7: updating the Chloropleth World map when adjusting the timebar. I am getting stuck on calling different functions from within other functions. I will continue working (and asking for help) on this problem tomorrow morning (day 8).
 
 

@@ -1,24 +1,36 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
 <html>
-   <link rel="stylesheet" href="layout.css"> 
+   <link rel="stylesheet" href="css/layout.css">
     <!Code soure world map: https://github.com/markmarkoh/datamaps/blob/master/README.md#getting-started>
-    <script src="/d3.min.js"></script>
+    <script src="/CO2_emission/javascript/d3.min.js"></script>
     <!script src="d3.v4.min.js"></script>
-    <script src="/topojson.min.js"></script> 
-    <script src="/datamaps.world.min.js"></script>
+    <script src="/CO2_emission/javascript/jquery-3.1.1.js"></script>
+    <script src="/CO2_emission/javascript/topojson.min.js"></script>
+    <script src="/CO2_emission/javascript/datamaps.json.js"></script>
     <head>
       <h1 class="header" style="text/css">CO2 Emission Visualization (1992 - 2012)</h1>
+      <link rel="shortcut icon" href="">
     </head>
     <body>
-    <div id="map" style="height: 700px; width: 1200px"></div>
-    <div id="sunburst" style="height: 800px; width: 800px">SUNBURST</div>
+      <div id="map" style="width: 1200px; height: 700px"></div>
+      
+      <!-- this is a simple HTML slider//-->
+      <input class="center" id="timebar" style="height: 100px; width: 700px" type="range" min="1992" max="2012" value="1992" step="1" onchange="showValue(this.value)" />
+      <span id="range">1992</span>
 
-    <div id="ice" style="height: 800px; width: 380px">EARTH ICE SURFACE</div>
-    <div id="timebar" style="height: 600px; width: 80px">TIMEBAR</div>
+      <div id="sunburst" style="height: 800px; width: 800px">SUNBURST</div>
+      <div id="ice" style="height: 800px; width: 380px">EARTH ICE SURFACE</div>
 
 
-    <script type"text/javascript" src="visualization.js"></script>
-</script>
+      <!-- This slider is more complicate but looks better
+      <p>
+        <label for="amount">Volume:</label>
+        <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
+      </p>
+      <div id="slider-vertical" style="height: 600px; width: 80px">TIMEBAR</div>
+    //-->
+
+      <script src="/CO2_emission/javascript/visualization.js"></script>
   </body>
-</html> 
+</html>
