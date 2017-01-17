@@ -13,6 +13,8 @@ The sunburst is divided in 4 levels. In the centre the total CO2 emisssion of th
 # 4. Soccer field earth ice surface
 Besides the sunburst I want to place a simple visualization which shows the earth's ice surface in number of soccer fields plus what the surface was the year before, this gives the user a decent reference point.
 
+Addition (17/01): in the end of week 1 received the comment that I missed one 'button/interaction'. In order to meet that requirement I have the idea to add one button to the 4th (soccer field ice) visualization, namely the user can choose between the ice surface in terms of soccerfields OR (button) tennisfields or something like that. 
+
 Sketch of webpage:
 ![](doc/CO2_visualization.jpg)
 
