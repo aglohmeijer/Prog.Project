@@ -1,6 +1,16 @@
 h1.header{
 	position: relative;
 	left: 30px;
+	font-family: verdana;
+	font-size: 180%;
+
+}
+
+.hoverinfo{
+	font-family: verdana;
+	font-size: 100%;
+	/*font-weight: normal;*/
+	color: black;
 
 }
 
@@ -9,7 +19,7 @@ h1.header{
 	position: relative;
 	left: 30px;
 	top: 0;
-	border: 3px solid black;
+	/*border: 3px solid black;*/
 }
 
 

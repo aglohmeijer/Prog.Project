@@ -1,43 +1,70 @@
-// fist load external json file
+// fist load external json data and draw first map with default year 1992.
 var data; // a global
 d3.json("/CO2_emission/data/CO2_emission.json", function(error, json) {
 	if (error) return console.warn(error);
 	data = json;
 
-	// create map
-	var chloropleth = new Datamap({
-		element: document.getElementById("map"),
-		projection: 'mercator',
+	// draw Map with default year 1992
+	DrawMap(1992, data);
+});
 
-		// create 5 different colors for different levels:
-		fills:	{
-				level5: "#eff3ff",
-				level4: "#bdd7e7",
-				level3: "#6baed6",
-				level2: "#3182bd",
-				level1: "#08519c",
-				unknown: "white",
-				defaultFill: "#87CEFA",
-		},
 
-		// retrieve correct data from json
-		data: retrieve_data(2010, data)
 
-	});
 
-})
 
+
+// function to draw the actual map
+function DrawMap(year, data){
+
+		// create map
+		map = new Datamap({
+			element: document.getElementById("map"),
+			projection: 'mercator',
+
+			// create 7 different colors for different levels:
+			fills:	{
+					level1:	"#edf8e9",
+					level2:	"#c7e9c0",
+					level3:	"#a1d99b",
+					level4:	"#74c476",
+					level5:	"#41ab5d",
+					level6:	"#238b45",
+					level7:	"#005a32",
+					unknown: "white",
+					defaultFill: "white",
+			},
+
+			// retrieve correct data from json
+			data: retrieve_data(year, data),
+
+			// create pop up template
+			geographyConfig: {
+					popupTemplate: function(geo, data) {
+							return ['<div class="hoverinfo"><strong>' + data.name,
+											'</strong><br/>Total CO2 emission: ' + data.totalCO2 + ' MtCO2',
+											'</div>'].join('');
+					},
+					popupOnHover: true,
+	        highlightOnHover: true,
+	        highlightFillColor: 'darkblue',
+	        highlightBorderColor: 'white',
+	        highlightBorderWidth: 1,
+	        highlightBorderOpacity: 1}
+
+		});
+
+};
 
 
 // this function returns the year chosen by the user on the time bar. Default: 1992.
 function showValue(year){
 	document.getElementById("range").innerHTML = year;
-	/*chloropleth.updateChloropleth({
-		retrieve_data(year, data)
 
-	});*/
+	// update choropleth with new data corresponding to new year when user adjusts timebar
+	map.updateChoropleth(retrieve_data(year, data));
 
 };
+
 
 
 
@@ -57,11 +84,13 @@ function retrieve_data(year, data) {
 		data[year][i][continents[i]].forEach(function(d){
 
 			// determine fillkeys for totalCO2 per country (TO DO: create better color combinations and do better scaling of TOTALCO2)
-			if (d.totalCO2 < 500) {fillkey = "level1";}
-			else if (d.totalCO2 < 1000) {fillkey = "level2";}
-			else if (d.totalCO2 < 2000) {fillkey = "level3";}
-			else if (d.totalCO2 < 3000) {fillkey = "level4";}
-			else {fillkey = "level5";};
+			if (d.totalCO2 < 250) {fillkey = "level1";}
+			else if (d.totalCO2 < 500) {fillkey = "level2";}
+			else if (d.totalCO2 < 1000) {fillkey = "level3";}
+			else if (d.totalCO2 < 2000) {fillkey = "level4";}
+			else if (d.totalCO2 < 3000) {fillkey = "level5";}
+			else if (d.totalCO2 < 4000) {fillkey = "level6";}
+			else {fillkey = "level7";};
 
 			// save data per country in new json format
 			data_per_year[d.ccode] = {
