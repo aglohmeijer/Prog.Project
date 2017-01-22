@@ -14,12 +14,15 @@
     </head>
     <body>
       <div id="map" style="width: 1200px; height: 700px"></div>
-      <!-- simple HTML slider//-->
-      <input class="center" id="timebar" style="height: 100px; width: 700px" type="range" min="1992" max="2012" value="1992" step="1" onchange="showValue(this.value)" />
-      <span id="range">1992</span>
+
+      <script src="/CO2_emission/javascript/visualization.js"></script>
+
+      <label for="year" style="width: 300px">
+      <span id="range"></span></label>
+      <input class="center" id="year" style="height: 100px; width: 700px" type="range" min="1992" max="2012"/>
       <div id="sunburst" style="height: 700px; width: 960px">SUNBURST</div>
       <div id="ice" style="height: 800px; width: 380px">EARTH ICE SURFACE</div>
 
-      <script src="/CO2_emission/javascript/visualization.js"></script>
+
   </body>
 </html>

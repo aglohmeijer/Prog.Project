@@ -1,26 +1,5 @@
-// fist load external json data and draw first map with default year 1992.
-var data; // a global
-d3.json("/CO2_emission/data/CO2_emission.json", function(error, json) {
-	if (error) return console.warn(error);
-	data = json;
-
-	// draw Map with default year 1992
-	Draw_Map(1992, data);
-
-	// Compare sunburst data with own data
-	d3.json("/CO2_emission/data/flare.json", function(error, root) {
-		if (error) return console.warn(error);
-		// DrawSunburst(root);
-		//console.log(root);
-
-	});
-
-	year = 2012;
-
-	Draw_Sunburst(year, data);
-
-
-});
+// a global variable
+var data;
 
 // function to draw the actual map
 function Draw_Map(year, data){
@@ -61,15 +40,6 @@ function Draw_Map(year, data){
 	        highlightBorderOpacity: 1}
 
 		});
-
-}
-
-// this function returns the year chosen by the user on the time bar. Default: 1992.
-function showValue(year){
-	document.getElementById("range").innerHTML = year;
-
-	// update choropleth with new data corresponding to new year when user adjusts timebar
-	map.updateChoropleth(Worldmap_Data(year, data));
 
 }
 
@@ -127,7 +97,7 @@ function Sunburst_Data(year, data){
 	var continents_total = [];
 
 	// loop through all continents per the given year and put format in appropriate object for sunburst
-	for (i = 0; i < continents.length; i++) {
+	for (i = 0; i < continents.length ; i++) {
 
 		// every time create new continent object else it overwrites
 		var continent_parent = new Object;
@@ -139,37 +109,37 @@ function Sunburst_Data(year, data){
 		var numb_countries = data[year][i][continents[i]].length;
 
 		// loop through every country per continent
-		for (x = 0; x < numb_countries; x++){
+		for (a = 0; a < numb_countries; a++){
 
 			// for some reason you have to create a new object every time
 			var country_parent = new Object;
 
 			// define country object
-			var country_object = data[year][i][continents[i]][x];
+			var country_object = data[year][i][continents[i]][a];
 
 			// put every single emission from a country in a different object and place that object in an array
 			var country_emission = [];
 
 			// loop through the numbers per country
-			for (y = 0; y < 6; y ++){
+			for (z = 0; z < 6; z ++){
 
 				// create new object every time, else it replaces
 				var emission_per_industry = new Object;
 
 				// put emission type and emission number in object
-				emission_per_industry.name = industries[y];
-				emission_per_industry.size = Number(country_object[industries[y]]);
+				emission_per_industry.name = industries[z];
+				emission_per_industry.size = Number(country_object[industries[z]]);
 
 				// put the object in the array from the corresponding country
-				country_emission[y] = emission_per_industry;
+				country_emission[z] = emission_per_industry;
 			}
 
 			// one country is a children from the continent
 			country_parent["children"] = country_emission;
-			country_parent.name = data[year][i][continents[i]][x].name;
+			country_parent.name = data[year][i][continents[i]][a].name;
 
 			// put all countries in the continents array
-			country_per_continent[x] = country_parent;
+			country_per_continent[a] = country_parent;
 
 		}
 
@@ -190,18 +160,22 @@ function Sunburst_Data(year, data){
 
 }
 
-// function to draw sunburst
-function Draw_Sunburst(year, data){
+// load data
+d3.json("/CO2_emission/data/CO2_emission.json", function(error, json) {
+	if (error) return console.warn(error);
+	data = json;
 
-// retrieve correct data via external function
-root = Sunburst_Data(year, data);
+	// draw Map with default year 1992
+	Draw_Map(1992, data);
+
+ 	year = 2012;
 
 // script which creates sunburst
 var width = 960,
 		height = 700,
-		radius = Math.min(width, height) / 2 - 10;
+		radius = Math.min(width, height) / 2 - 20;
 
-var formatNumber = d3.format(",d");
+// var formatNumber = d3.format(",d");
 
 var x = d3.scale.linear()
 	.range([0, 2 * Math.PI]);
@@ -209,7 +183,13 @@ var x = d3.scale.linear()
 var y = d3.scale.sqrt()
 	.range([0, radius]);
 
-var color = d3.scale.category20c();
+var color = d3.scale.category20b();
+
+var svg = d3.select("#sunburst").append("svg")
+    .attr("width", width)
+    .attr("height", height)
+    .append("g")
+    .attr("transform", "translate(" + width / 2 + "," + (height / 2 + 10) + ") rotate(-90 0 0)");
 
 var partition = d3.layout.partition()
 		.value(function(d) {return d.size; });
@@ -220,34 +200,146 @@ var arc = d3.svg.arc()
 		.innerRadius(function(d) { return Math.max(0, y(d.y)); })
 		.outerRadius(function(d) { return Math.max(0, y(d.y + d.dy)); });
 
-var svg = d3.select("#sunburst").append("svg")
-		.attr("width", width)
-		.attr("height", height)
-	.append("g")
-		.attr("transform", "translate(" + width / 2 + "," + (height / 2) + " )");
-
-svg.selectAll("path")
-			.data(partition.nodes(root))
-		.enter().append("path")
-			.attr("d", arc)
-			.style("fill", function(d) {return color((d.children ? d : d.parent).name); })
-			.on("click", click)
-		//.append("title")
-			//.text(function(d) {return d.name + "\n" + formatNumber(d.value); });
-
-function click(d){
-	svg.transition()
-		.duration(750)
-		.tween("scale", function() {
-			var xd = d3.interpolate(x.domain(), [d.x, d.x + d.dx]),
-					yd = d3.interpolate(y.domain(), [d.y, 1]),
-					yr = d3.interpolate(y.range(), [d.y ? 20 : 0, radius]);
-				return function(t) {x.domain(xd(t)); y.domain(yd(t)).range(yr(t)); };
-			})
-		.selectAll("path")
-			.attrTween("d", function(d) {return function() {return arc(d); }; });
+function computeTextRotation(d) {
+    var angle = x(d.x + d.dx / 2) - Math.PI / 2;
+    return angle / Math.PI * 180;
 }
 
-d3.select(self.frameElement).style("height", height + "px");
+		// interpolate the scales
+		function arcTween(d) {
+		    var xd = d3.interpolate(x.domain(), [d.x, d.x + d.dx]),
+		        yd = d3.interpolate(y.domain(), [d.y, 1]),
+		        yr = d3.interpolate(y.range(), [d.y ? 20 : 0, radius]);
+		    return function(d, i) {
+		        return i ? function(t) {
+		            return arc(d);
+		        } : function(t) {
+		            x.domain(xd(t));
+		            y.domain(yd(t)).range(yr(t));
+		            return arc(d);
+		        };
+		    };
+		}
+
+		function arcTweenUpdate(a) {
+		    console.log(path);
+		    var _self = this;
+		    var i = d3.interpolate({ x: this.x0, dx: this.dx0 }, a);
+		    return function(t) {
+		        var b = i(t);
+		        console.log(window);
+		        _self.x0 = b.x;
+		        _self.dx0 = b.dx;
+		        return arc(b);
+		    };
+		}
+
+
+// function to update the sunburst
+var updateChart = function (items) {
+    var root = items;
+    // DATA JOIN - Join new data with old elements, if any.
+    var gs = svg.selectAll("g").data(partition.nodes(root));
+
+    // ENTER
+    var g = gs.enter().append("g").on("click", click);
+
+    // UPDATE
+   var path = g.append("path");
+
+ gs.select('path')
+  .style("fill", function(d) {
+      return color((d.children ? d : d.parent).name);
+  })
+  //.on("click", click)
+  .each(function(d) {
+      this.x0 = d.x;
+      this.dx0 = d.dx;
+  })
+  .transition().duration(500)
+  .attr("d", arc);
+
+
+  var text = g.append("text");
+
+  /*gs.select('text')
+  .attr("x", function(d) {
+      return y(d.y);
+  })
+  .attr("dx", "6") // margin
+  .attr("dy", ".35em") // vertical-align
+  .attr("transform", function(d) {
+      return "rotate(" + computeTextRotation(d) + ")";
+  })
+  .text(function(d) {
+      return d.name;
+  })
+  .style("fill", "white");*/
+
+
+  function click(d) {
+      console.log(d)
+      // fade out all text elements
+      if (d.size !== undefined) {
+          d.size += 100;
+      };
+      text.transition().attr("opacity", 0);
+
+      path.transition()
+          .duration(750)
+          .attrTween("d", arcTween(d))
+          /*.each("end", function(e, i) {
+              // check if the animated element's data e lies within the visible angle span given in d
+              if (e.x >= d.x && e.x < (d.x + d.dx)) {
+                  // get a selection of the associated text element
+                  var arcText = d3.select(this.parentNode).select("text");
+                  // fade in the text element and recalculate positions
+                  arcText.transition().duration(750)
+                      .attr("opacity", 1)
+                      .attr("transform", function() {
+                          return "rotate(" + computeTextRotation(e) + ")"
+                      })
+                      .attr("x", function(d) {
+                          return y(d.y);
+                      });
+              }
+          })*/;
+  } //});
+
+
+  // EXIT - Remove old elements as needed.
+  gs.exit().transition().duration(500).style("fill-opacity", 1e-6).remove();
+
 
 }
+
+
+updateChart(Sunburst_Data(year,data));
+// END UPDATE FUNCTION
+
+
+});
+
+
+
+// TODO: implement slider in HTML and retrieve value with D3!
+
+// this function returns the year chosen by the user on the time bar. Default: 1992.
+	d3.select("#year").on("input", function() {
+		// Save new value and show on screen
+		year = this.value;
+		d3.select("#range").text(year);
+		d3.select("#year").property("value", year);
+
+		// update choropleth with new data corresponding to new year when user adjusts timebar
+		map.updateChoropleth(Worldmap_Data(year, data));
+
+		updateChart(Sunburst_Data(year, data));
+		//console.log(year);
+		//console.log(typeof sunburst);
+		// updateChart(Sunburst_Data(year,data));
+		//return year;
+
+	});
+
+	//document.getElementById("range").innerHTML = year;
