@@ -31,3 +31,6 @@ Today I mainly have been working on the correct data format. Raw data was in Exc
 - The Choropleth data map now updates automatically when the user adjusts the timebar. Spend roughly 5 hours to find out why it didn't work, turned out to be a misspell (it's choropleth, not chLoropleth);
 - Added Pop Up on Hover with TOTAL CO2 in MtCO2. I don't think I will add the other 4/5 data fields to the Pop Up since the popup will then contain to much information.
 - TODO day 9/10: Sunburst.
+
+# day 10
+- Started with sunburst. I'm struggling with appropriate data formatting to Sunburst Data structure. 
