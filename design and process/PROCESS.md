@@ -33,4 +33,9 @@ Today I mainly have been working on the correct data format. Raw data was in Exc
 - TODO day 9/10: Sunburst.
 
 # day 10
-- Implemented Sunburst below WorldMap, however not yet with my own data. I'm struggling with data formatting as the Sunburst contains a quite vertical Object/Array structure;
+## day 10 - morning
+- Implemented Sunburst below the WorldMap, however not yet with my own data. I'm struggling with data formatting as the Sunburst contains a quite vertical Object/Array structure;
+
+## day 10 - afternoon
+- Implemented Sunburst with own data, not yet with correct coloring and titles.
+- TODO: think of a way to render sunburst better, at this moment there are too many objects.

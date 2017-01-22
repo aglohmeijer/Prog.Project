@@ -5,24 +5,25 @@ d3.json("/CO2_emission/data/CO2_emission.json", function(error, json) {
 	data = json;
 
 	// draw Map with default year 1992
-	DrawMap(1992, data);
+	Draw_Map(1992, data);
 
 	// Compare sunburst data with own data
 	d3.json("/CO2_emission/data/flare.json", function(error, root) {
 		if (error) return console.warn(error);
-		DrawSunburst(root);
+		// DrawSunburst(root);
+		//console.log(root);
 
 	});
 
-	// Sunburst_Data(1992, data);
+	year = 2012;
 
-
+	Draw_Sunburst(year, data);
 
 
 });
 
 // function to draw the actual map
-function DrawMap(year, data){
+function Draw_Map(year, data){
 
 		// create map
 		map = new Datamap({
@@ -43,7 +44,7 @@ function DrawMap(year, data){
 			},
 
 			// retrieve correct data from json
-			data: retrieve_data(year, data),
+			data: Worldmap_Data(year, data),
 
 			// create pop up template
 			geographyConfig: {
@@ -61,19 +62,19 @@ function DrawMap(year, data){
 
 		});
 
-};
+}
 
 // this function returns the year chosen by the user on the time bar. Default: 1992.
 function showValue(year){
 	document.getElementById("range").innerHTML = year;
 
 	// update choropleth with new data corresponding to new year when user adjusts timebar
-	map.updateChoropleth(retrieve_data(year, data));
+	map.updateChoropleth(Worldmap_Data(year, data));
 
-};
+}
 
 // separate function to load the correct data from the json if user has given a year
-function retrieve_data(year, data) {
+function Worldmap_Data(year, data) {
 
 	// because the JSON has two keys you have to retrieve the data via year (1st key) and then via continent (2nd key)
 	var continents = ["Africa", "Asia", "Europe", "North America", "Oceania", "South America"];
@@ -110,52 +111,90 @@ function retrieve_data(year, data) {
 
 	// return data per year to function which draws the map
 	return data_per_year;
+}
 
-};
-
-
+// function to retrieve data in appropriate parent-> children format for sunburst
 function Sunburst_Data(year, data){
 
-	// because the JSON has two keys you have to retrieve the data via year (1st key) and then via continent (2nd key)
-	var continents = ["Africa", "Asia", "Europe", "North America", "Oceania", "South America"];
-
-	//store new data in object which is appropriate for sunburst
+	// create object in which I place formatted data
 	var sunburst_data = new Object;
-	var continent_parent = new Object;
-	var country_parent = new Object;
 
-	// loop through all the six continents which are in one year of data
-	for (i = 0; i < 6; i++){
+	// create two arrays which makes accessing JSON data easier
+	var continents = ["Africa", "Asia", "Europe", "North America", "Oceania", "South America"];
+	var industries = ["totalCO2", "electricandheat", "manufacturing", "transportation", "fuelcombustion", "fugitive"];
 
-		var continent = data[year][i][continents[i]];
+	// create array in which we can store the continent objects
+	var continents_total = [];
 
-		for (x = 0; x < continent.length; x++){
+	// loop through all continents per the given year and put format in appropriate object for sunburst
+	for (i = 0; i < continents.length; i++) {
 
-			var country_parent = continent[x];
-			//continent_parent(country_parent);
+		// every time create new continent object else it overwrites
+		var continent_parent = new Object;
 
+		// create array in which we can store the country objects
+		var country_per_continent = [];
 
-			/*country.forEach(function(d) {
-				country_parent["children"] = {
-					name: "TOTALCO2",
-					size: d.totalCO2}
-			});*/
+		// define number of countries per continent
+		var numb_countries = data[year][i][continents[i]].length;
 
-		};
-		//console.log(children);
+		// loop through every country per continent
+		for (x = 0; x < numb_countries; x++){
 
+			// for some reason you have to create a new object every time
+			var country_parent = new Object;
 
-	};
+			// define country object
+			var country_object = data[year][i][continents[i]][x];
 
+			// put every single emission from a country in a different object and place that object in an array
+			var country_emission = [];
 
+			// loop through the numbers per country
+			for (y = 0; y < 6; y ++){
 
+				// create new object every time, else it replaces
+				var emission_per_industry = new Object;
 
+				// put emission type and emission number in object
+				emission_per_industry.name = industries[y];
+				emission_per_industry.size = Number(country_object[industries[y]]);
 
-};
+				// put the object in the array from the corresponding country
+				country_emission[y] = emission_per_industry;
+			}
 
+			// one country is a children from the continent
+			country_parent["children"] = country_emission;
+			country_parent.name = data[year][i][continents[i]][x].name;
+
+			// put all countries in the continents array
+			country_per_continent[x] = country_parent;
+
+		}
+
+		// place the array of countries as children under the corresponding continent
+		continent_parent["children"] = country_per_continent;
+		continent_parent.name = continents[i];
+
+		// place all continent objects in an array
+		continents_total[i] = continent_parent;
+
+	}
+
+	// place the array of continents as children in the world data
+	sunburst_data["children"] = continents_total;
+	sunburst_data.name = "World";
+
+	return sunburst_data;
+
+}
 
 // function to draw sunburst
-function DrawSunburst(root){
+function Draw_Sunburst(year, data){
+
+// retrieve correct data via external function
+root = Sunburst_Data(year, data);
 
 // script which creates sunburst
 var width = 960,
