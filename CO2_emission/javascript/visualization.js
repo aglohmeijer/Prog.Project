@@ -7,15 +7,14 @@ d3.json("/CO2_emission/data/CO2_emission.json", function(error, json) {
 	// draw Map with default year 1992
 	DrawMap(1992, data);
 
-	DrawSunburst(2012, data);
-
-
 	// Compare sunburst data with own data
-	d3.json("CO2_emission/data/CO2_emission.json", function(error, root) {
+	d3.json("/CO2_emission/data/flare.json", function(error, root) {
 		if (error) return console.warn(error);
-		console.log(root);
+		DrawSunburst(root);
 
 	});
+
+	// Sunburst_Data(1992, data);
 
 
 
@@ -115,7 +114,6 @@ function retrieve_data(year, data) {
 };
 
 
-
 function Sunburst_Data(year, data){
 
 	// because the JSON has two keys you have to retrieve the data via year (1st key) and then via continent (2nd key)
@@ -123,54 +121,46 @@ function Sunburst_Data(year, data){
 
 	//store new data in object which is appropriate for sunburst
 	var sunburst_data = new Object;
+	var continent_parent = new Object;
+	var country_parent = new Object;
 
 	// loop through all the six continents which are in one year of data
 	for (i = 0; i < 6; i++){
 
-		// store data from one year per country in new object
-		data[year][i][continents[i]].forEach(function(d){
-			sunburst_data[d.name] = {
-				"name": "Total CO2",
-				"size": d.totalCO2};
-			})
+		var continent = data[year][i][continents[i]];
+
+		for (x = 0; x < continent.length; x++){
+
+			var country_parent = continent[x];
+			//continent_parent(country_parent);
 
 
+			/*country.forEach(function(d) {
+				country_parent["children"] = {
+					name: "TOTALCO2",
+					size: d.totalCO2}
+			});*/
 
 		};
+		//console.log(children);
 
 
-
-	//sunburst_data = data[year]["2"].Europe;
-
-
-
-
-// console.log(sunburst_data);
-return sunburst_data;
-
-}
+	};
 
 
 
 
+
+};
 
 
 // function to draw sunburst
-function DrawSunburst(year, data){
-
-// check (works)
-// console.log(data[1992]["0"].Africa[6].totalCO2);
-
-// console.log(retrieve_data(2002, data));
-
-Sunburst_Data(year, data);
-
-/*
+function DrawSunburst(root){
 
 // script which creates sunburst
 var width = 960,
 		height = 700,
-		radius = Math.min(width, height) / 2;
+		radius = Math.min(width, height) / 2 - 10;
 
 var formatNumber = d3.format(",d");
 
@@ -183,12 +173,12 @@ var y = d3.scale.sqrt()
 var color = d3.scale.category20c();
 
 var partition = d3.layout.partition()
-		.value(function(d) {return d.totalCO2;});
+		.value(function(d) {return d.size; });
 
 var arc = d3.svg.arc()
 		.startAngle(function(d) { return Math.max(0, Math.min(2 * Math.PI, x(d.x))); })
 		.endAngle(function(d) { return Math.max(0, Math.min(2 * Math.PI, x(d.x + d.dx))); })
-		.innerRadius(function(d) { return Math.max(0, y(d.x)); })
+		.innerRadius(function(d) { return Math.max(0, y(d.y)); })
 		.outerRadius(function(d) { return Math.max(0, y(d.y + d.dy)); });
 
 var svg = d3.select("#sunburst").append("svg")
@@ -198,16 +188,27 @@ var svg = d3.select("#sunburst").append("svg")
 		.attr("transform", "translate(" + width / 2 + "," + (height / 2) + " )");
 
 svg.selectAll("path")
-		.data(partition.nodes(Sunburst_Data(year, data)));
+			.data(partition.nodes(root))
+		.enter().append("path")
+			.attr("d", arc)
+			.style("fill", function(d) {return color((d.children ? d : d.parent).name); })
+			.on("click", click)
+		//.append("title")
+			//.text(function(d) {return d.name + "\n" + formatNumber(d.value); });
 
+function click(d){
+	svg.transition()
+		.duration(750)
+		.tween("scale", function() {
+			var xd = d3.interpolate(x.domain(), [d.x, d.x + d.dx]),
+					yd = d3.interpolate(y.domain(), [d.y, 1]),
+					yr = d3.interpolate(y.range(), [d.y ? 20 : 0, radius]);
+				return function(t) {x.domain(xd(t)); y.domain(yd(t)).range(yr(t)); };
+			})
+		.selectAll("path")
+			.attrTween("d", function(d) {return function() {return arc(d); }; });
+}
 
-		/*
-	.enter().append("path")
-		.attr("d", arc)
-		.style("fill", function(d) { return color((d.
-		.on("click", click)
-	.append("title")
-		.text(function(d) { return d.name + "\n" + formatNumber(d.totalCO2); });
-*/
+d3.select(self.frameElement).style("height", height + "px");
 
 }

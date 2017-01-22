@@ -33,4 +33,4 @@ Today I mainly have been working on the correct data format. Raw data was in Exc
 - TODO day 9/10: Sunburst.
 
 # day 10
-- Started with sunburst. I'm struggling with appropriate data formatting to Sunburst Data structure. 
+- Implemented Sunburst below WorldMap, however not yet with my own data. I'm struggling with data formatting as the Sunburst contains a quite vertical Object/Array structure;
