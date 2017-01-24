@@ -1,8 +1,13 @@
 // a global variable
 var data;
 
+
+function re_draw_map(test){
+	console.log(test);
+}
+
 // function to draw the actual map
-function Draw_Map(year, data){
+function Draw_Map(year, data, industry){
 
 		// create map
 		map = new Datamap({
@@ -23,13 +28,13 @@ function Draw_Map(year, data){
 			},
 
 			// retrieve correct data from json
-			data: Worldmap_Data(year, data),
+			data: Worldmap_Data(year, data, industry),
 
 			// create pop up template
 			geographyConfig: {
 					popupTemplate: function(geo, data) {
 							return ['<div class="hoverinfo"><strong>' + data.name,
-											'</strong><br/>Total CO2 emission: ' + data.totalCO2 + ' MtCO2',
+											'</strong><br/>Total CO2 emission: ' + data.industry + ' MtCO2',
 											'</div>'].join('');
 					},
 					popupOnHover: true,
@@ -44,7 +49,7 @@ function Draw_Map(year, data){
 }
 
 // separate function to load the correct data from the json if user has given a year
-function Worldmap_Data(year, data) {
+function Worldmap_Data(year, data, industry) {
 
 	// because the JSON has two keys you have to retrieve the data via year (1st key) and then via continent (2nd key)
 	var continents = ["Africa", "Asia", "Europe", "North America", "Oceania", "South America"];
@@ -52,8 +57,20 @@ function Worldmap_Data(year, data) {
 	//create new object to store data in
 	var data_per_year = new Object;
 
+	//console.log(data[year][industry]);
+
 	// loop through all the six continents which are in one year of data
 	for (i = 0; i < 6; i++){
+
+		/*data[year][i][continents[i]].forEach(function(d) {
+
+			//console.log(industry);
+			console.log(data[industry]);
+
+
+		});*/
+
+
 
 		// store data from one year per country in new object
 		data[year][i][continents[i]].forEach(function(d){
@@ -67,12 +84,13 @@ function Worldmap_Data(year, data) {
 			else if (d.totalCO2 < 4000) {fillkey = "level6";}
 			else {fillkey = "level7";};
 
+
 			// save data per country in new json format
 			data_per_year[d.ccode] = {
 				name : d.name,
 				continent: continents[i],
 				fillKey: fillkey,
-				totalCO2: d.totalCO2
+				industry: d[industry]
 			};
 
 		});
@@ -80,6 +98,7 @@ function Worldmap_Data(year, data) {
 	};
 
 	// return data per year to function which draws the map
+	//console.log(data_per_year);
 	return data_per_year;
 }
 
@@ -165,8 +184,10 @@ d3.json("/CO2_emission/data/CO2_emission.json", function(error, json) {
 	if (error) return console.warn(error);
 	data = json;
 
+	var industry = "electricandheat";
+
 	// draw Map with default year 1992
-	Draw_Map(1992, data);
+	Draw_Map(1992, data, industry);
 
  	year = 2012;
 
@@ -321,16 +342,11 @@ updateChart(Sunburst_Data(year,data));
 });
 
 
+// functions such that the user can adjsut the slider
+d3.select('#slider').call(d3.slider().axis(true).min(1992).max(2012).step(1));
 
-// TODO: implement slider in HTML and retrieve value with D3!
 
-// this function returns the year chosen by the user on the time bar. Default: 1992.
-	d3.select("#year").on("input", function() {
-		// Save new value and show on screen
-		year = this.value;
-		d3.select("#range").text(year);
-		d3.select("#year").property("value", year);
-
+/*
 		// update choropleth with new data corresponding to new year when user adjusts timebar
 		map.updateChoropleth(Worldmap_Data(year, data));
 
@@ -340,6 +356,4 @@ updateChart(Sunburst_Data(year,data));
 		// updateChart(Sunburst_Data(year,data));
 		//return year;
 
-	});
-
-	//document.getElementById("range").innerHTML = year;
+	}); */

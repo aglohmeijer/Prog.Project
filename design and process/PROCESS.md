@@ -43,3 +43,7 @@ Today I mainly have been working on the correct data format. Raw data was in Exc
 ### day 10 - evening
 - Sunburst works fine, on clicking I can console.log the parent + childrens I clicked on.
 - Got extremely stuck on scopes from functions. If function A was out of scope I fixed it, then function B was out of scope etc.. It still doesn't work.
+
+# day 12
+- It took me literally ALL day today to figure out the d3.slider. I have finally made it work, for some reason I have to place the main script which calls the d3.slider after the <div slider itself.
+- Added radio inputs above the map. TODO: when the user chooses one radio input the map should update to the new data (category: industry).
