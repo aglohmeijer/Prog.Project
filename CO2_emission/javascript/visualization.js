@@ -1,11 +1,6 @@
 // a global variable
 var data;
 
-
-function re_draw_map(test){
-	console.log(test);
-}
-
 // function to draw the actual map
 function Draw_Map(year, data, industry){
 
@@ -62,26 +57,16 @@ function Worldmap_Data(year, data, industry) {
 	// loop through all the six continents which are in one year of data
 	for (i = 0; i < 6; i++){
 
-		/*data[year][i][continents[i]].forEach(function(d) {
-
-			//console.log(industry);
-			console.log(data[industry]);
-
-
-		});*/
-
-
-
 		// store data from one year per country in new object
 		data[year][i][continents[i]].forEach(function(d){
 
 			// determine fillkeys for totalCO2 per country (TO DO: create better color combinations and do better scaling of TOTALCO2)
-			if (d.totalCO2 < 250) {fillkey = "level1";}
-			else if (d.totalCO2 < 500) {fillkey = "level2";}
-			else if (d.totalCO2 < 1000) {fillkey = "level3";}
-			else if (d.totalCO2 < 2000) {fillkey = "level4";}
-			else if (d.totalCO2 < 3000) {fillkey = "level5";}
-			else if (d.totalCO2 < 4000) {fillkey = "level6";}
+			if (d[industry] < 250) {fillkey = "level1";}
+			else if (d[industry] < 500) {fillkey = "level2";}
+			else if (d[industry] < 1000) {fillkey = "level3";}
+			else if (d[industry] < 2000) {fillkey = "level4";}
+			else if (d[industry] < 3000) {fillkey = "level5";}
+			else if (d[industry] < 4000) {fillkey = "level6";}
 			else {fillkey = "level7";};
 
 
@@ -183,20 +168,16 @@ function Sunburst_Data(year, data){
 d3.json("/CO2_emission/data/CO2_emission.json", function(error, json) {
 	if (error) return console.warn(error);
 	data = json;
-
 	var industry = "electricandheat";
+	var year = 2012;
 
 	// draw Map with default year 1992
-	Draw_Map(1992, data, industry);
-
- 	year = 2012;
+	Draw_Map(2012, data, industry);
 
 // script which creates sunburst
 var width = 960,
 		height = 700,
 		radius = Math.min(width, height) / 2 - 20;
-
-// var formatNumber = d3.format(",d");
 
 var x = d3.scale.linear()
 	.range([0, 2 * Math.PI]);
@@ -254,7 +235,6 @@ function computeTextRotation(d) {
 		        return arc(b);
 		    };
 		}
-
 
 // function to update the sunburst
 var updateChart = function (items) {
@@ -334,26 +314,27 @@ var updateChart = function (items) {
 
 }
 
-
+// update chart to default year
 updateChart(Sunburst_Data(year,data));
-// END UPDATE FUNCTION
+
+// call d3 slider and update map and sunburst when slider is adjusted by user
+d3.select('#slider').call(d3.slider().axis(true).min(1992).max(2012).step(1)
+	// on new year adjust world map and sunburst
+	.on("slide", function(evt, value){
+		year = value;
+		map.updateChoropleth(Worldmap_Data(year, data, industry));
+
+		// update sunburst
+		//updateChart(Sunburst_Data(value, data));
+
+	}));
+
+	// select chosen industry and update map with that industry
+	d3.selectAll("input[name='industry']").on("change", function() {
+			// update choropleth with last known year and new industry
+			industry = this.value;
+			map.updateChoropleth(Worldmap_Data(year, data, industry));
+	});
 
 
 });
-
-
-// functions such that the user can adjsut the slider
-d3.select('#slider').call(d3.slider().axis(true).min(1992).max(2012).step(1));
-
-
-/*
-		// update choropleth with new data corresponding to new year when user adjusts timebar
-		map.updateChoropleth(Worldmap_Data(year, data));
-
-		updateChart(Sunburst_Data(year, data));
-		//console.log(year);
-		//console.log(typeof sunburst);
-		// updateChart(Sunburst_Data(year,data));
-		//return year;
-
-	}); */

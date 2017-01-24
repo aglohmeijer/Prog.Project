@@ -47,3 +47,7 @@ Today I mainly have been working on the correct data format. Raw data was in Exc
 # day 12
 - It took me literally ALL day today to figure out the d3.slider. I have finally made it work, for some reason I have to place the main script which calls the d3.slider after the <div slider itself.
 - Added radio inputs above the map. TODO: when the user chooses one radio input the map should update to the new data (category: industry).
+
+## day 12 - late
+- The Map updates now on both change in industry as change in year on the slider. The variables 'industry' and 'year' remain intact througout the script.
+- TODO: write functions for color transformation (i.e. every time the user adjusts year or industry the map changes color OR buttons where user can choose color scheme.
