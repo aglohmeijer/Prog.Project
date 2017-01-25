@@ -1,26 +1,52 @@
 // a global variable
 var data;
 
+// create 7 different colors for different levels:
+function choose_color(industry){
+
+	// create multiple colorschemes (definitely no elegant way, will try to improve this later)
+	var colorschemes = [];
+	//green
+	colorschemes[1] = "{level1:'#edf8e9',level2:'#c7e9c0',level3:'#a1d99b',level4:'#74c476',level5:'#31a354',level6:'#006d2c',defaultFill:'white'}";
+	// blue
+	colorschemes[2] = "{level1:'#eff3ff',level2:'#c6dbef',level3:'#9ecae1',level4:'#6baed6',level5:'#3182bd',level6:'#08519c',defaultFill:'white'}";
+	// orange
+	colorschemes[3] = "{level1:'#feedde',level2:'#fdd0a2',level3:'#fdae6b',level4:'#fd8d3c',level5:'#e6550d',level6:'#a63603',defaultFill:'white'}";
+	// purple
+	colorschemes[4] = "{level1:'#f2f0f7',level2:'#dadaeb',level3:'#bcbddc',level4:'#9e9ac8',level5:'#756bb1',level6:'#54278f',defaultFill:'white'}";
+	// grey
+	colorschemes[5] = "{level1:'#f7f7f7',level2:'#d9d9d9',level3:'#bdbdbd',level4:'#969696',level5:'#636363',level6:'#252525',defaultFill:'white'}";
+	// red
+	colorschemes[6] = "{level1:'#fee5d9',level2:'#fcbba1',level3:'#fc9272',level4:'#fb6a4a',level5:'#de2d26',level6:'#a50f15',defaultFill:'white'}";
+
+	var new_color;
+
+	if      (industry == "totalCO2") 				{return colorschemes[1];}
+	else if (industry == "electricandheat") {return colorschemes[2];}
+	else if (industry == "manufacturing")   {return colorschemes[3];}
+	else if (industry == "transportation")  {return colorschemes[4];}
+	else if (industry == "fuelcombustion")  {return colorschemes[5];}
+	else 																	  {return colorschemes[6];};
+
+	console.log("fills: " + new_color);
+	//return new_color;
+}
+
+//console.log(choose_color("totalCO2"));
+
+
 // function to draw the actual map
 function Draw_Map(year, data, industry){
 
+	//console.log(choose_color(industry));
 		// create map
 		map = new Datamap({
 			element: document.getElementById("map"),
 			projection: 'mercator',
 
-			// create 7 different colors for different levels:
-			fills:	{
-					level1:	"#edf8e9",
-					level2:	"#c7e9c0",
-					level3:	"#a1d99b",
-					level4:	"#74c476",
-					level5:	"#41ab5d",
-					level6:	"#238b45",
-					level7:	"#005a32",
-					unknown: "white",
-					defaultFill: "white",
-			},
+			//fills: choose_color("electricandheat"),
+			//fills: {level1:'#eff3ff',level2:'#c6dbef',level3:'#9ecae1',level4:'#6baed6',level5:'#3182bd',level6:'#08519c',defaultFill:'white'},
+			fills: choose_color(industry),
 
 			// retrieve correct data from json
 			data: Worldmap_Data(year, data, industry),
@@ -41,7 +67,11 @@ function Draw_Map(year, data, industry){
 
 		});
 
+
+
+
 }
+
 
 // separate function to load the correct data from the json if user has given a year
 function Worldmap_Data(year, data, industry) {
@@ -66,8 +96,8 @@ function Worldmap_Data(year, data, industry) {
 			else if (d[industry] < 1000) {fillkey = "level3";}
 			else if (d[industry] < 2000) {fillkey = "level4";}
 			else if (d[industry] < 3000) {fillkey = "level5";}
-			else if (d[industry] < 4000) {fillkey = "level6";}
-			else {fillkey = "level7";};
+			//else if (d[industry] < 4000) {fillkey = "level6";}
+			else {fillkey = "level6";};
 
 
 			// save data per country in new json format
@@ -185,7 +215,7 @@ var x = d3.scale.linear()
 var y = d3.scale.sqrt()
 	.range([0, radius]);
 
-var color = d3.scale.category20b();
+var color = d3.scale.category20c();
 
 var svg = d3.select("#sunburst").append("svg")
     .attr("width", width)
@@ -322,10 +352,10 @@ d3.select('#slider').call(d3.slider().axis(true).min(1992).max(2012).step(1)
 	// on new year adjust world map and sunburst
 	.on("slide", function(evt, value){
 		year = value;
-		map.updateChoropleth(Worldmap_Data(year, data, industry));
+		//map.updateChoropleth(Worldmap_Data(year, data, industry));
 
 		// update sunburst
-		//updateChart(Sunburst_Data(value, data));
+		updateChart(Sunburst_Data(value, data));
 
 	}));
 
@@ -333,7 +363,8 @@ d3.select('#slider').call(d3.slider().axis(true).min(1992).max(2012).step(1)
 	d3.selectAll("input[name='industry']").on("change", function() {
 			// update choropleth with last known year and new industry
 			industry = this.value;
-			map.updateChoropleth(Worldmap_Data(year, data, industry));
+			//console.log(choose_color(industry));
+			//map.updateChoropleth(Worldmap_Data(year, data, industry));
 	});
 
 

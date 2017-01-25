@@ -51,3 +51,6 @@ Today I mainly have been working on the correct data format. Raw data was in Exc
 ## day 12 - late
 - The Map updates now on both change in industry as change in year on the slider. The variables 'industry' and 'year' remain intact througout the script.
 - TODO: write functions for color transformation (i.e. every time the user adjusts year or industry the map changes color OR buttons where user can choose color scheme.
+
+# day 13
+- I cannot succesfully implement the variable color scheme for the choropleth. Functions which returns colorscheme works, but DataMap doesn't process it right for some reason. Can't figure out why (duh, else I would've fixed it).
