@@ -29,6 +29,7 @@ function Draw_Map(year, data, industry){
 	        highlightBorderOpacity: 1}
 
 		});
+		//map.legend();
 
 
 }
@@ -93,10 +94,10 @@ function Worldmap_Data(year, data, industry) {
 							 		fuelcombustion: 'orange',
 						 						fugitive: 'black'};
 
-	// linear color scale
+	// linear and variable color scale
 	var paletteScale = d3.scale.linear()
             .domain([minValue, maxValue])
-            .range(color_range[industry_color[industry]]); // blue color
+            .range(color_range[industry_color[industry]]);
 
 	// now save data per country and assign color
 	for (j = 0; j < 6; j++){
@@ -113,12 +114,8 @@ function Worldmap_Data(year, data, industry) {
 				value: d[industry]
 			};
 
-	});
-};
-
-
-	console.log(data_per_year);
-
+		});
+	};
 	// return data
 	return data_per_year;
 }
@@ -237,6 +234,7 @@ var svg = d3.select("#sunburst").append("svg")
     .attr("transform", "translate(" + width / 2 + "," + (height / 2 + 10) + ") rotate(-90 0 0)");
 
 var partition = d3.layout.partition()
+		.sort(null)
 		.value(function(d) {return d.size; });
 
 var arc = d3.svg.arc()
@@ -392,14 +390,24 @@ updateChart(Sunburst_Data(year, data));
 d3.select('#slider').call(d3.slider().axis(true).min(1992).max(2012).step(1)
 	// on new year adjust world map and sunburst
 	.on("slide", function(evt, value){
+		//console.log(typeof (value));
+
+		d3.select('#slidertext').text(value);
+		//console.log(test);
+
+		console.log(d3.event);
+		//console.log(z.invert(d3.event.x));
 		year = value;
 		map.updateChoropleth(Worldmap_Data(year, data, industry));
 
+		// console.log(d3.select('#slider'));
+		// console.log(slider.value);
 
-		// update sunburst
-		updateChart(Sunburst_Data(year, data));
+		//updateChart(Sunburst_Data(year, data));
+
 
 	}));
+
 
 	// select chosen industry and update map with that industry
 	d3.selectAll("input[name='industry']").on("change", function() {
