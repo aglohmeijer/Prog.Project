@@ -381,32 +381,148 @@ var updateChart = function (items) {
 		console.log(test[z].__data__.id);
 	}*/
 
+	//console.log(svg);
+
 }
 
 // update chart to default year
 updateChart(Sunburst_Data(year, data));
 
+// script for slider with brush
+var margin = {top: 20, right: 20, bottom: 20, left: 20},
+    width = 800 - margin.left - margin.right,
+    height = 80 - margin.bottom - margin.top;
+
+var x2 = d3.scale.linear()
+    .domain([1992, 2012])
+    .range([0, width])
+    .clamp(true);
+
+var brush = d3.svg.brush()
+    .x(x2)
+    .extent([0, 0])
+    .on("brush", brushed)
+    .on("brushend", brushend);
+
+
+var svg2 = d3.select("#slider").append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+svg2.append("g")
+    .attr("class", "x axis")
+    .attr("transform", "translate(0," + height / 2 + ")")
+    .call(d3.svg.axis()
+      .scale(x2)
+      .orient("bottom")
+      .tickValues(d3.range(1992, 2012, 2))
+      .tickFormat(function(d) { return d; })
+      .tickSize(0)
+      .tickPadding(12))
+  .select(".domain")
+  .select(function() { return this.parentNode.appendChild(this.cloneNode(true)); })
+    .attr("class", "halo");
+
+var slider = svg2.append("g")
+    .attr("class", "slider")
+    .call(brush);
+
+slider.selectAll(".extent,.resize")
+    .remove();
+
+slider.select(".background")
+    .attr("height", height);
+
+var handle = slider.append("circle")
+    .attr("class", "handle")
+    .attr("transform", "translate(0," + height / 2 + ")")
+    .attr("r", 9);
+
+slider
+    .call(brush.event)
+  .transition() // gratuitous intro!
+    .duration(750)
+    .call(brush.extent([70, 70]))
+    .call(brush.event);
+
+function brushed() {
+  var value = brush.extent()[0];
+  //console.log(value);
+  if (d3.event.sourceEvent) { // not a programmatic event
+    value = x2.invert(d3.mouse(this)[0]);
+    brush.extent([value, value]);
+  }
+
+  handle.attr("cx", x2(value));
+}
+
+function brushend() {
+   if (!d3.event.sourceEvent) {
+     return; // only transition after input
+   }
+
+   var value = brush.extent()[0];
+   brush.extent([value, value]);
+
+   d3.select(this)
+     .transition()
+     .duration(0)
+     .call(brush.event);
+
+   d3.select(this)
+     .transition()
+		 // on user input at timebar update choropleth and sunburst
+     .call(brush.extent(brush.extent().map(function(d) {
+			 var year = d3.round(d);
+			 // update choropleth
+			 map.updateChoropleth(Worldmap_Data(year, data, industry));
+			 // update sunburst
+			 //console.log(x);
+			 //console.log(svg);
+			 //updateChart(Sunburst_Data(year, data));
+			 //console.log(typeof d);
+			 //console.log(year);
+			 return d3.round(d); })))
+     .call(brush.event);
+
+
+		var year = d3.select(this)["0"]["0"].__chart__.i["0"];
+		console.log(Sunburst_Data(year, data));
+		 //console.log(year);
+		 	//updateChart(Sunburst_Data(year, data));
+ }
+
+
+
+
+
+
+
+
+
 // call d3 slider and update map and sunburst when slider is adjusted by user
-d3.select('#slider').call(d3.slider().axis(true).min(1992).max(2012).step(1)
-	// on new year adjust world map and sunburst
-	.on("slide", function(evt, value){
-		//console.log(typeof (value));
-
-		d3.select('#slidertext').text(value);
-		//console.log(test);
-
-		console.log(d3.event);
-		//console.log(z.invert(d3.event.x));
-		year = value;
-		map.updateChoropleth(Worldmap_Data(year, data, industry));
-
-		// console.log(d3.select('#slider'));
-		// console.log(slider.value);
-
-		//updateChart(Sunburst_Data(year, data));
-
-
-	}));
+// d3.select('#slider').call(d3.slider().axis(true).min(1992).max(2012).step(1)
+// 	// on new year adjust world map and sunburst
+// 	.on("slide", function(evt, value){
+// 		//console.log(typeof (value));
+//
+// 		d3.select('#slidertext').text(value);
+// 		//console.log(test);
+//
+// 		console.log(d3.event);
+// 		//console.log(z.invert(d3.event.x));
+// 		year = value;
+// 		map.updateChoropleth(Worldmap_Data(year, data, industry));
+//
+// 		// console.log(d3.select('#slider'));
+// 		// console.log(slider.value);
+//
+// 		//updateChart(Sunburst_Data(year, data));
+//
+//
+// 	}));
 
 
 	// select chosen industry and update map with that industry
