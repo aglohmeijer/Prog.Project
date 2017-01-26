@@ -1,0 +1,13 @@
+{
+ "1992": [
+ {"Africa":[
+ {"DZA" :{
+ "ccode": "DZA",
+ "name": "Algeria",
+ "totalCO2": "64.99",
+ "electricandheat": "24.06",
+ "manufacturing": "8.39",
+ "transportation": "16.63",
+ "fuelcombustion": "7.72", 
+ "fugitive": "8.19" 
+ }},
