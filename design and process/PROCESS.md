@@ -55,6 +55,13 @@ Today I mainly have been working on the correct data format. Raw data was in Exc
 # day 13
 - I cannot succesfully implement the variable color scheme for the choropleth. Functions which returns colorscheme works, but DataMap doesn't process it right for some reason. Can't figure out why (duh, else I would've fixed it).
 
-# day 14
+## day 14
 - 3.36PM. Lots of improvements. Implemented d3 linear coloring in choropleth. On change in industry choropleth updates with new different color. Still error on updating sunburst, but I know the bug;
 - TODO: choropleth legenda, sunburst text/legenda, linegraph through years;
+
+## day 14 - late
+- Fixed the Sunburst update error by implementing the BRUSH slider.
+- NB: default year has to be 2012, else it appends country codes to already existing country objecs.
+- Updating sunburst to country only works first time, not after timebar is used.
+- Wrote function to retrieve linechart data in correct format.
+- TODO day 15: choropleth legend, updateable linechart; some layout, and workout better design use/sunburst;

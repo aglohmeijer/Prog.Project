@@ -1,7 +1,7 @@
 // a global variable
 var data;
 
-// function to draw the actual map
+// draw choropleth
 function Draw_Map(year, data, industry){
 
 		map = new Datamap({
@@ -34,24 +34,31 @@ function Draw_Map(year, data, industry){
 
 }
 
-// function to put data in appropriate format for line chart
-function Linechart_Data(data, countrycode, continent){
+// load data in correct format for linechart
+function Linechart_Data(data, country_code, continent_link, country_num){
 
 	// because the JSON has two keys you have to retrieve the data via year (1st key) and then via continent (2nd key)
 	var continents = ["Africa", "Asia", "Europe", "North America", "Oceania", "South America"];
+	var continent_number = continents.indexOf(continent_link);
+	// console.log(country_code);
+	// console.log(continent_link);
+	// console.log(country_num);
 
-	var continent_number = continents.indexOf(continent);
-
-	var Year;
-	for (Year = 1992; Year < 2013; Year++){
-		//console.log(data[Year][continent_number][continent]);
+	for (year = 1992; year < 2013; year++){
+		console.log(year);
+		console.log(data[year][continent_number][continent_link][country_num]);
 	}
-	//console.log(data.items);
-	//console.log(countrycode);
+
+	// TODO: return data in correct format
+}
+
+function Draw_Linechart(data_per_country){
+	// TODO: call linechar_data and draw linechart.
 
 }
 
-// separate function to load the correct data from the json if user has given a year
+
+// load data in correct format for choropleth
 function Worldmap_Data(year, data, industry) {
 
 	// because the JSON has two keys you have to retrieve the data via year (1st key) and then via continent (2nd key)
@@ -72,6 +79,7 @@ function Worldmap_Data(year, data, industry) {
 			// push all values
 			all_values.push(d[industry]);
 		});
+
 	};
 
 	// determine min and max value for coloring
@@ -120,7 +128,7 @@ function Worldmap_Data(year, data, industry) {
 	return data_per_year;
 }
 
-// function to retrieve data in appropriate parent-> children format for sunburst
+// load data in correct format for sunburst
 function Sunburst_Data(year, data){
 
 	// create object in which I place formatted data
@@ -199,24 +207,20 @@ function Sunburst_Data(year, data){
 
 }
 
-// load data
+// load general data
 d3.json("data/CO2_emission.json", function(error, json) {
 	if (error) return console.warn(error);
 	data = json;
 	// set default values
 	var industry = "totalCO2";
-	var year = 1992;
-
-	Linechart_Data(data, "RUS", "Asia");
-
-	//console.log(data);
+	var year = 2012;
 
 	// draw Map with default year 1992
 	Draw_Map(1992, data, industry);
 
 // script which creates sunburst
-var width = 960,
-		height = 700,
+var width = 600,
+		height = 600,
 		radius = Math.min(width, height) / 2 - 20;
 
 var x = d3.scale.linear()
@@ -255,10 +259,12 @@ function computeTextRotation(d) {
 		        yr = d3.interpolate(y.range(), [d.y ? 20 : 0, radius]);
 		    return function(d, i) {
 		        return i ? function(t) {
+							// console.log(arc);
 		            return arc(d);
 		        } : function(t) {
 		            x.domain(xd(t));
 		            y.domain(yd(t)).range(yr(t));
+								//console.log(arc);
 		            return arc(d);
 		        };
 		    };
@@ -277,9 +283,10 @@ function computeTextRotation(d) {
 		    };
 		}
 
-// function to update the sunburst
+// update sunburst
 var updateChart = function (items) {
     var root = items;
+
     // DATA JOIN - Join new data with old elements, if any.
     var gs = svg.selectAll("g").data(partition.nodes(root));
 
@@ -287,16 +294,16 @@ var updateChart = function (items) {
     var g = gs.enter().append("g").on("click", click);
 
     // UPDATE
-   var path = g.append("path")
+   	var path = g.append("path")
+
 	 	// add ID's to countries so we can call them later
 	 	.attr("id", function(d) {
 			// only add country code to country and not it's children
-			if ("children" in d){
+			if ("ccode" in d){
+				//console.log(d.ccode);
 				return d.ccode;
 			}
 		});
-
-		//console.log(path);
 
 
  gs.select('path')
@@ -308,9 +315,10 @@ var updateChart = function (items) {
       this.x0 = d.x;
       this.dx0 = d.dx;
   })
-  .transition().duration(500)
+  .transition().duration(0)
   .attr("d", arc);
 
+	//console.log(g);
 
   var text = g.append("text");
 
@@ -329,59 +337,67 @@ var updateChart = function (items) {
   })
   .style("fill", "white");*/
 
-
+	// update sunburst on click
   function click(d) {
-      console.log(d);
+      //console.log(d);
       // fade out all text elements
       if (d.size !== undefined) {
           d.size += 100;
       };
       text.transition().attr("opacity", 0);
-
+			// console.log("TEST"
       path.transition()
-          .duration(750)
+          .duration(1000)
           .attrTween("d", arcTween(d))
-          .each("end", function(e, i) {
-              // check if the animated element's data e lies within the visible angle span given in d
-              if (e.x >= d.x && e.x < (d.x + d.dx)) {
-                  // get a selection of the associated text element
-                  var arcText = d3.select(this.parentNode).select("text");
-                  // fade in the text element and recalculate positions
-                  arcText.transition().duration(750)
-                      .attr("opacity", 1)
-                      .attr("transform", function() {
-                          return "rotate(" + computeTextRotation(e) + ")"
-                      })
-                      .attr("x", function(d) {
-                          return y(d.y);
-                      });
-              }
-          });
+          // .each("end", function(e, i) {
+          //     // check if the animated element's data e lies within the visible angle span given in d
+          //     if (e.x >= d.x && e.x < (d.x + d.dx)) {
+          //         // get a selection of the associated text element
+          //         var arcText = d3.select(this.parentNode).select("text");
+          //         // fade in the text element and recalculate positions
+          //         arcText.transition().duration(750)
+          //             .attr("opacity", 1)
+          //             .attr("transform", function() {
+          //                 return "rotate(" + computeTextRotation(e) + ")"
+          //             })
+          //             .attr("x", function(d) {
+          //                 return y(d.y);
+          //             });
+          //     }
+          // })
+					;
   } //});
 
 
   // EXIT - Remove old elements as needed.
   gs.exit().transition().duration(500).style("fill-opacity", 1e-6).remove();
 
-	// when user clicks on coutnry in choropleth, sunburst updates to that country
+
+	// select country code when clicked and ...
 	var datamap = d3.select('#map > svg > g');
 	datamap.selectAll('.datamaps-subunit').on('click', function(geography) {
 			// on click select the corresponding country in the sunburst and update sunburst to that country
+
+			var country_code = geography.id;
 			var country_link = d3.select('#' + geography.id)["0"]["0"].__data__;
+			// console.log(country_link);
+
 			var continent_link = country_link.parent.name;
+			// console.log("continent_link: \n" + continent_link);
+
 			var country_name = country_link.name;
-			console.log("country_name:" + country_name);
-			console.log("continent_link:" + continent_link);
-			click(country_link);
+			// console.log("country_name: \n" + country_name);
+
+			// find index number of country in continent
+			var country_num = country_link.parent.children.map(function(x) {return x.ccode; }).indexOf(geography.id);
+			console.log(country_code);
+			console.log(continent_link);
+			console.log(country_num);
+
+			Linechart_Data(data, country_code, continent_link, country_num);
+
+			// click(country_link);
 		});
-
-	var test = d3.select('#map > svg > g').selectAll('.datamaps-subunit')["0"];
-
-	/*for (z = 0; z < 177; z++){
-		console.log(test[z].__data__.id);
-	}*/
-
-	//console.log(svg);
 
 }
 
@@ -439,11 +455,12 @@ var handle = slider.append("circle")
     .attr("class", "handle")
     .attr("transform", "translate(0," + height / 2 + ")")
     .attr("r", 9);
+		//.attr("cx", x2.invert(2012));
 
 slider
     .call(brush.event)
   .transition() // gratuitous intro!
-    .duration(750)
+    .duration(0)
     .call(brush.extent([70, 70]))
     .call(brush.event);
 
@@ -476,64 +493,27 @@ function brushend() {
 		 // on user input at timebar update choropleth and sunburst
      .call(brush.extent(brush.extent().map(function(d) {
 			 var year = d3.round(d);
+
 			 // update choropleth
 			 map.updateChoropleth(Worldmap_Data(year, data, industry));
 			 // update sunburst
-			 //console.log(x);
-			 //console.log(svg);
-			 //updateChart(Sunburst_Data(year, data));
-			 //console.log(typeof d);
-			 //console.log(year);
-			 return d3.round(d); })))
+			 updateChart(Sunburst_Data(year, data));
+
+			 return year; })))
      .call(brush.event);
 
-
-		var year = d3.select(this)["0"]["0"].__chart__.i["0"];
-		console.log(Sunburst_Data(year, data));
-		 //console.log(year);
-		 	//updateChart(Sunburst_Data(year, data));
+		// this turned out to be unneccessary
+		// var year = d3.select(this)["0"]["0"].__chart__.i[1];
+		// updateChart(Sunburst_Data(year, data));
  }
 
-
-
-
-
-
-
-
-
-// call d3 slider and update map and sunburst when slider is adjusted by user
-// d3.select('#slider').call(d3.slider().axis(true).min(1992).max(2012).step(1)
-// 	// on new year adjust world map and sunburst
-// 	.on("slide", function(evt, value){
-// 		//console.log(typeof (value));
-//
-// 		d3.select('#slidertext').text(value);
-// 		//console.log(test);
-//
-// 		console.log(d3.event);
-// 		//console.log(z.invert(d3.event.x));
-// 		year = value;
-// 		map.updateChoropleth(Worldmap_Data(year, data, industry));
-//
-// 		// console.log(d3.select('#slider'));
-// 		// console.log(slider.value);
-//
-// 		//updateChart(Sunburst_Data(year, data));
-//
-//
-// 	}));
-
-
-	// select chosen industry and update map with that industry
+	// select chosen industry and update choropleth with that industry
 	d3.selectAll("input[name='industry']").on("change", function() {
 			// update choropleth with last known year and new industry
 			industry = this.value;
 
-			// update choropleth with new industry
+			// update choropleth
 			map.updateChoropleth(Worldmap_Data(year, data, industry));
 	});
-
-
 
 });
