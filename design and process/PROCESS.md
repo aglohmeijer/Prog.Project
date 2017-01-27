@@ -65,3 +65,11 @@ Today I mainly have been working on the correct data format. Raw data was in Exc
 - Updating sunburst to country only works first time, not after timebar is used.
 - Wrote function to retrieve linechart data in correct format.
 - TODO day 15: choropleth legend, updateable linechart; some layout, and workout better design use/sunburst;
+
+# TODO
+- I will try to focus not too much on the sunburst as this could cost a lost of time.
+- TODO: linechart, legend, move sunburst besides worldmap
+
+# day 15
+- started implementation of linegraph; need to figure out appropriate data format for linechart;
+- TODO: fix that it does not append new chart every time.

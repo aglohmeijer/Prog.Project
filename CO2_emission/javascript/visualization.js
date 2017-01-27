@@ -35,25 +35,121 @@ function Draw_Map(year, data, industry){
 }
 
 // load data in correct format for linechart
-function Linechart_Data(data, country_code, continent_link, country_num){
+function Linechart_Data(data, country_link, country_code){
+
+	// country_link is the object which contains the data from one country in one year
+	var continent_link = country_link.parent.name;
+
+	var country_name = country_link.name;
+
+	// find index number of country in continent
+	var country_num = country_link.parent.children.map(function(x) {return x.ccode; }).indexOf(country_code);
 
 	// because the JSON has two keys you have to retrieve the data via year (1st key) and then via continent (2nd key)
 	var continents = ["Africa", "Asia", "Europe", "North America", "Oceania", "South America"];
-	var continent_number = continents.indexOf(continent_link);
+	var continent_num = continents.indexOf(continent_link);
 	// console.log(country_code);
-	// console.log(continent_link);
+	// console.log(continent_num);
 	// console.log(country_num);
+	var industry = ['totalCO2', 'electricandheat', 'manufacturing', 'transportation', 'fuelcombustion', 'fugitive'];
+
+	var linechart_data = [];
 
 	for (year = 1992; year < 2013; year++){
-		console.log(year);
-		console.log(data[year][continent_number][continent_link][country_num]);
+
+		linechart_data[year] = new Object;
+		linechart_data[year]["year"] = year;
+		for (k = 0; k < industry.length; k++){
+			linechart_data[year][industry[k]] = data[year][continent_num][continent_link][country_num][industry[k]];
+		}
 	}
 
-	// TODO: return data in correct format
+	return linechart_data;
 }
 
-function Draw_Linechart(data_per_country){
-	// TODO: call linechar_data and draw linechart.
+
+function Draw_Linechart(data, country_link, country_code){
+
+	var margin = {top: 20, right: 80, bottom: 30, left: 50},
+			width = 900 - margin.left - margin.right,
+			height = 300 - margin.top - margin.bottom;
+
+	// functions to parse dates and values correctly
+	var parseDate = d3.time.format("%Y").parse;
+	//var formatValue = d3.format(",.2f");
+
+	var x = d3.scale.linear().range([0, width]);
+
+	var y = d3.scale.linear().range([height, 0]);
+
+	// first draw linecharts then assign colors
+	//var color = d3.scale.category10();
+
+	var xAxis = d3.svg.axis()
+		.scale(x)
+		.orient("bottom");
+
+	var yAxis = d3.svg.axis()
+		.scale(y)
+		.orient("left");
+
+	var line = d3.svg.line()
+			.interpolate('basis')
+			.x(function(d) { return x(d.year); })
+			.y(function(d) { return y(d.emission); });
+
+	var svg = d3.select("#linechart").append("svg")
+		.attr("width", width + margin.left + margin.right)
+		.attr("height", height + margin.top + margin.bottom)
+	.append("g")
+		.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+		console.log(svg);
+
+	line_data = Linechart_Data(data, country_link, country_code);
+	console.log(line_data);
+
+	// line_data.forEach(function(d) {
+		// console.log(d);
+		//console.log(d.year);
+		// console.log(d
+	// });
+
+	// var industries = color.domain().map(function(name){
+	// 	return {
+	// 		name: name,
+	// 			values: line_data.map(function(d) {
+	// 				// console.log({year: d.year, emission: +d[Year]});
+	// 				return {year: d.year, emission: +d[name]};
+	// 			})
+	// 		};
+	// });
+	// console.log(industries);
+
+
+
+	// make the x axis
+	svg.append("g")
+		.attr("class", "x axis")
+		.attr("transform", "translate(0," + height + ")")
+		.call(xAxis);
+
+	// make the y axis
+	svg.append("g")
+		.attr("class", "y axis")
+		.call(yAxis)
+	.append("text")
+		.attr("transform", "rotate(-90)")
+		.attr("y", 6)
+		.attr("dy", ".71em")
+		.style("text-anchor", "end")
+		.text("Emission");
+
+
+
+
+
+
 
 }
 
@@ -308,15 +404,23 @@ var updateChart = function (items) {
 
  gs.select('path')
   .style("fill", function(d) {
+			//console.log(color((d.children ? d : d.parent).name));
       return color((d.children ? d : d.parent).name);
+
+			// TODO color implementation for sunburst
+
+
   })
   //.on("click", click)
   .each(function(d) {
       this.x0 = d.x;
       this.dx0 = d.dx;
   })
-  .transition().duration(0)
+	// if you give duration a value between 0 and 1 it will give error
+  .transition().duration(1)
   .attr("d", arc);
+
+	// console.log(gs.select('path'));
 
 	//console.log(g);
 
@@ -394,9 +498,9 @@ var updateChart = function (items) {
 			console.log(continent_link);
 			console.log(country_num);
 
-			Linechart_Data(data, country_code, continent_link, country_num);
+			Draw_Linechart(data, country_link, country_code);
 
-			// click(country_link);
+			//click(country_link);
 		});
 
 }
