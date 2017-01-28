@@ -74,7 +74,7 @@ Today I mainly have been working on the correct data format. Raw data was in Exc
 - started implementation of linegraph; need to figure out appropriate data format for linechart;
 - TODO: fix that it does not append new chart every time.
 
-# day 16
+# day 16 - I
 - Sunburst now updates not only first time, also after changing slide (was scope issue);
 - Succesfully implemented Linechart which updates when clicked on country in world map;
 - Placed sunburst besides worldmap;
@@ -82,3 +82,7 @@ Today I mainly have been working on the correct data format. Raw data was in Exc
 - Idea / TODO: Render only data per continent in sunburst with radio buttons placed above sunburst with different continents ;
 - TODO: world map legenda;
 - TODO: implement constant scaling in worldmap when change on slider (at this moment user does not clearly see difference when sliding);
+
+# day 16 - II
+I want the Sunburst to render only one continent, which is better. Situation: when the Sunburst is rendering the whole world, it is easy to select the object from one country (I assigned an ID 'countrycode' to every part of the sunburst), and in that case it is easy (since all the elements in the sunburst are nested) to retrieve the corresponding continent (required for updating the sunburst)). Obstacle: if the sunburst only renders one continent AND the user clicks a country on the map which is NOT in the current sunburst selection you cannot select the corresponding country object easily. Thus, I have written a small function which retrieves the 'country_path' from the data, such that you can access that country fast in the general data set.
+- Few hours later: the above doesn't work. Only way of updating the sunburst I can make work is by deleting the whole sunburst and drawing it again. Not very subtile unfortunately, but everything works now.

@@ -17,6 +17,7 @@ with open('CO2_emission3.json', 'w') as targetfile:
             targetfile.write('{"%s": [' % visualizationdata[i][1]);
         targetfile.write('{\n "ccode": "%s",\n "name": "%s",\n "totalCO2": "%s",\n "electricandheat": "%s",\n "manufacturing": "%s",\n "transportation": "%s",\n "fuelcombustion": "%s", \n "fugitive": "%s" \n }' % (visualizationdata[i][2],
             visualizationdata[i][3], visualizationdata[i][9], visualizationdata[i][4], visualizationdata[i][5], visualizationdata[i][6], visualizationdata[i][7], visualizationdata[i][8]));
+        print "'" + visualizationdata[i][2] + "',";
         try:
             if (visualizationdata[i][1] != visualizationdata[i + 1][1]) and (visualizationdata[i][0] != visualizationdata[i + 1][0]):
                 targetfile.write(']}\n');

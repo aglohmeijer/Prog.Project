@@ -1,0 +1,6185 @@
+{
+ "1992": [
+ {"Africa":[{
+ "ccode": "DZA",
+ "name": "Algeria",
+ "totalCO2": "64.99",
+ "electricandheat": "24.06",
+ "manufacturing": "8.39",
+ "transportation": "16.63",
+ "fuelcombustion": "7.72", 
+ "fugitive": "8.19" 
+ },
+{
+ "ccode": "AGO",
+ "name": "Angola",
+ "totalCO2": "6.30",
+ "electricandheat": "0.40",
+ "manufacturing": "1.79",
+ "transportation": "1.17",
+ "fuelcombustion": "0.61", 
+ "fugitive": "2.33" 
+ },
+{
+ "ccode": "BEN",
+ "name": "Benin",
+ "totalCO2": "0.21",
+ "electricandheat": "0.03",
+ "manufacturing": "0.02",
+ "transportation": "0.12",
+ "fuelcombustion": "0.04", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "BWA",
+ "name": "Botswana",
+ "totalCO2": "3.25",
+ "electricandheat": "1.61",
+ "manufacturing": "0.68",
+ "transportation": "0.81",
+ "fuelcombustion": "0.15", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "BFA",
+ "name": "Burkina Faso",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "BDI",
+ "name": "Burundi",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "CMR",
+ "name": "Cameroon",
+ "totalCO2": "2.30",
+ "electricandheat": "0.03",
+ "manufacturing": "0.19",
+ "transportation": "1.55",
+ "fuelcombustion": "0.53", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "CPV",
+ "name": "Cape Verde",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "CAF",
+ "name": "Central African Republic",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "TCD",
+ "name": "Chad",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "COM",
+ "name": "Comoros",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "COG",
+ "name": "Congo, Dem. Rep.",
+ "totalCO2": "1.41",
+ "electricandheat": "0.05",
+ "manufacturing": "0.01",
+ "transportation": "0.44",
+ "fuelcombustion": "0.91", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "COD",
+ "name": "Congo, Rep.",
+ "totalCO2": "2.97",
+ "electricandheat": "0.01",
+ "manufacturing": "0.08",
+ "transportation": "0.43",
+ "fuelcombustion": "0.08", 
+ "fugitive": "2.37" 
+ },
+{
+ "ccode": "CIV",
+ "name": "Cote d'Ivoire",
+ "totalCO2": "2.79",
+ "electricandheat": "0.70",
+ "manufacturing": "0.44",
+ "transportation": "1.12",
+ "fuelcombustion": "0.53", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "DJI",
+ "name": "Djibouti",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "EGY",
+ "name": "Egypt",
+ "totalCO2": "86.19",
+ "electricandheat": "27.47",
+ "manufacturing": "28.21",
+ "transportation": "17.39",
+ "fuelcombustion": "9.00", 
+ "fugitive": "4.12" 
+ },
+{
+ "ccode": "ERI",
+ "name": "Eritrea",
+ "totalCO2": "0.42",
+ "electricandheat": "0.27",
+ "manufacturing": "0.02",
+ "transportation": "0.11",
+ "fuelcombustion": "0.02", 
+ "fugitive": "" 
+ },
+{
+ "ccode": "ETH",
+ "name": "Ethiopia",
+ "totalCO2": "1.46",
+ "electricandheat": "0.07",
+ "manufacturing": "0.33",
+ "transportation": "0.72",
+ "fuelcombustion": "0.34", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "GAB",
+ "name": "Gabon",
+ "totalCO2": "4.53",
+ "electricandheat": "0.30",
+ "manufacturing": "0.27",
+ "transportation": "0.36",
+ "fuelcombustion": "0.16", 
+ "fugitive": "3.44" 
+ },
+{
+ "ccode": "GMB",
+ "name": "Gambia, The",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "GHA",
+ "name": "Ghana",
+ "totalCO2": "2.85",
+ "electricandheat": "0.09",
+ "manufacturing": "0.52",
+ "transportation": "1.77",
+ "fuelcombustion": "0.47", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "KEN",
+ "name": "Kenya",
+ "totalCO2": "5.37",
+ "electricandheat": "0.47",
+ "manufacturing": "1.53",
+ "transportation": "2.53",
+ "fuelcombustion": "0.84", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "KIR",
+ "name": "Kiribati",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "LSO",
+ "name": "Lesotho",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "LBR",
+ "name": "Liberia",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "LBY",
+ "name": "Libya",
+ "totalCO2": "31.31",
+ "electricandheat": "15.27",
+ "manufacturing": "4.37",
+ "transportation": "6.26",
+ "fuelcombustion": "1.48", 
+ "fugitive": "3.93" 
+ },
+{
+ "ccode": "MDG",
+ "name": "Madagascar",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "MLI",
+ "name": "Mali",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "MRT",
+ "name": "Mauritania",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "MUS",
+ "name": "Mauritius",
+ "totalCO2": "1.31",
+ "electricandheat": "0.49",
+ "manufacturing": "0.20",
+ "transportation": "0.50",
+ "fuelcombustion": "0.12", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "MAR",
+ "name": "Morocco",
+ "totalCO2": "22.12",
+ "electricandheat": "8.35",
+ "manufacturing": "5.77",
+ "transportation": "4.74",
+ "fuelcombustion": "3.26", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "MOZ",
+ "name": "Mozambique",
+ "totalCO2": "1.08",
+ "electricandheat": "0.09",
+ "manufacturing": "0.15",
+ "transportation": "0.68",
+ "fuelcombustion": "0.16", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "NAM",
+ "name": "Namibia",
+ "totalCO2": "1.21",
+ "electricandheat": "0.03",
+ "manufacturing": "0.01",
+ "transportation": "0.50",
+ "fuelcombustion": "0.67", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "NER",
+ "name": "Niger",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "NGA",
+ "name": "Nigeria",
+ "totalCO2": "85.98",
+ "electricandheat": "11.49",
+ "manufacturing": "5.62",
+ "transportation": "18.52",
+ "fuelcombustion": "5.02", 
+ "fugitive": "45.33" 
+ },
+{
+ "ccode": "RWA",
+ "name": "Rwanda",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "STP",
+ "name": "Sao Tome & Principe",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "SEN",
+ "name": "Senegal",
+ "totalCO2": "2.31",
+ "electricandheat": "0.94",
+ "manufacturing": "0.28",
+ "transportation": "0.78",
+ "fuelcombustion": "0.31", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "SYC",
+ "name": "Seychelles",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "SLE",
+ "name": "Sierra Leone",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "ZAF",
+ "name": "South Africa",
+ "totalCO2": "245.37",
+ "electricandheat": "144.74",
+ "manufacturing": "56.35",
+ "transportation": "29.76",
+ "fuelcombustion": "14.52", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "SWZ",
+ "name": "Swaziland",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "TZA",
+ "name": "Tanzania",
+ "totalCO2": "1.67",
+ "electricandheat": "0.29",
+ "manufacturing": "0.39",
+ "transportation": "0.68",
+ "fuelcombustion": "0.31", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "TGO",
+ "name": "Togo",
+ "totalCO2": "0.37",
+ "electricandheat": "0.04",
+ "manufacturing": "0.01",
+ "transportation": "0.27",
+ "fuelcombustion": "0.05", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "TUN",
+ "name": "Tunisia",
+ "totalCO2": "13.17",
+ "electricandheat": "4.62",
+ "manufacturing": "3.36",
+ "transportation": "2.61",
+ "fuelcombustion": "2.56", 
+ "fugitive": "0.02" 
+ },
+{
+ "ccode": "UGA",
+ "name": "Uganda",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "ZMB",
+ "name": "Zambia",
+ "totalCO2": "2.74",
+ "electricandheat": "0.17",
+ "manufacturing": "1.40",
+ "transportation": "0.92",
+ "fuelcombustion": "0.25", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "ZWE",
+ "name": "Zimbabwe",
+ "totalCO2": "17.79",
+ "electricandheat": "8.65",
+ "manufacturing": "4.53",
+ "transportation": "2.19",
+ "fuelcombustion": "2.42", 
+ "fugitive": "0.00" 
+ }]},
+{"Asia": [{
+ "ccode": "AFG",
+ "name": "Afghanistan",
+ "totalCO2": "0.02",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.02" 
+ },
+{
+ "ccode": "BHR",
+ "name": "Bahrain",
+ "totalCO2": "13.92",
+ "electricandheat": "10.96",
+ "manufacturing": "1.70",
+ "transportation": "1.11",
+ "fuelcombustion": "0.15", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "BGD",
+ "name": "Bangladesh",
+ "totalCO2": "13.95",
+ "electricandheat": "5.18",
+ "manufacturing": "3.76",
+ "transportation": "2.09",
+ "fuelcombustion": "2.92", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "BTN",
+ "name": "Bhutan",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "BRN",
+ "name": "Brunei",
+ "totalCO2": "3.58",
+ "electricandheat": "2.70",
+ "manufacturing": "0.18",
+ "transportation": "0.65",
+ "fuelcombustion": "0.05", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "KHM",
+ "name": "Cambodia",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "CHN",
+ "name": "China",
+ "totalCO2": "2462.03",
+ "electricandheat": "863.21",
+ "manufacturing": "1010.09",
+ "transportation": "127.10",
+ "fuelcombustion": "461.63", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "IND",
+ "name": "India",
+ "totalCO2": "662.09",
+ "electricandheat": "308.86",
+ "manufacturing": "180.59",
+ "transportation": "68.52",
+ "fuelcombustion": "94.37", 
+ "fugitive": "9.75" 
+ },
+{
+ "ccode": "IDN",
+ "name": "Indonesia",
+ "totalCO2": "178.36",
+ "electricandheat": "55.89",
+ "manufacturing": "47.43",
+ "transportation": "37.53",
+ "fuelcombustion": "25.77", 
+ "fugitive": "11.74" 
+ },
+{
+ "ccode": "IRN",
+ "name": "Iran",
+ "totalCO2": "235.81",
+ "electricandheat": "45.47",
+ "manufacturing": "55.06",
+ "transportation": "43.70",
+ "fuelcombustion": "70.83", 
+ "fugitive": "20.75" 
+ },
+{
+ "ccode": "IRQ",
+ "name": "Iraq",
+ "totalCO2": "67.89",
+ "electricandheat": "29.55",
+ "manufacturing": "9.34",
+ "transportation": "24.08",
+ "fuelcombustion": "4.74", 
+ "fugitive": "0.18" 
+ },
+{
+ "ccode": "ISR",
+ "name": "Israel",
+ "totalCO2": "36.38",
+ "electricandheat": "22.51",
+ "manufacturing": "2.92",
+ "transportation": "6.96",
+ "fuelcombustion": "3.99", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "JPN",
+ "name": "Japan",
+ "totalCO2": "1074.14",
+ "electricandheat": "421.85",
+ "manufacturing": "265.90",
+ "transportation": "225.17",
+ "fuelcombustion": "161.22", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "JOR",
+ "name": "Jordan",
+ "totalCO2": "10.72",
+ "electricandheat": "4.53",
+ "manufacturing": "1.32",
+ "transportation": "2.64",
+ "fuelcombustion": "2.23", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "KAZ",
+ "name": "Kazakhstan",
+ "totalCO2": "254.94",
+ "electricandheat": "110.03",
+ "manufacturing": "92.82",
+ "transportation": "15.67",
+ "fuelcombustion": "35.69", 
+ "fugitive": "0.73" 
+ },
+{
+ "ccode": "PRK",
+ "name": "Korea, Dem. Rep. (North)",
+ "totalCO2": "95.51",
+ "electricandheat": "13.55",
+ "manufacturing": "63.01",
+ "transportation": "3.35",
+ "fuelcombustion": "15.60", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "KOR",
+ "name": "Korea, Rep. (South)",
+ "totalCO2": "276.92",
+ "electricandheat": "85.62",
+ "manufacturing": "68.61",
+ "transportation": "53.95",
+ "fuelcombustion": "68.74", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "KWT",
+ "name": "Kuwait",
+ "totalCO2": "24.39",
+ "electricandheat": "11.96",
+ "manufacturing": "6.77",
+ "transportation": "4.49",
+ "fuelcombustion": "0.26", 
+ "fugitive": "0.91" 
+ },
+{
+ "ccode": "KGZ",
+ "name": "Kyrgyzstan",
+ "totalCO2": "13.15",
+ "electricandheat": "2.69",
+ "manufacturing": "3.32",
+ "transportation": "2.68",
+ "fuelcombustion": "4.46", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "LAO",
+ "name": "Laos",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "LBN",
+ "name": "Lebanon",
+ "totalCO2": "6.89",
+ "electricandheat": "2.59",
+ "manufacturing": "0.40",
+ "transportation": "3.20",
+ "fuelcombustion": "0.70", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "MWI",
+ "name": "Malawi",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "MYS",
+ "name": "Malaysia",
+ "totalCO2": "67.30",
+ "electricandheat": "25.93",
+ "manufacturing": "19.24",
+ "transportation": "16.13",
+ "fuelcombustion": "3.33", 
+ "fugitive": "2.67" 
+ },
+{
+ "ccode": "MDV",
+ "name": "Maldives",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "MNG",
+ "name": "Mongolia",
+ "totalCO2": "12.60",
+ "electricandheat": "7.86",
+ "manufacturing": "2.62",
+ "transportation": "0.88",
+ "fuelcombustion": "1.24", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "MMR",
+ "name": "Myanmar",
+ "totalCO2": "4.17",
+ "electricandheat": "1.71",
+ "manufacturing": "1.21",
+ "transportation": "1.03",
+ "fuelcombustion": "0.21", 
+ "fugitive": "0.01" 
+ },
+{
+ "ccode": "NPL",
+ "name": "Nepal",
+ "totalCO2": "1.11",
+ "electricandheat": "0.04",
+ "manufacturing": "0.14",
+ "transportation": "0.43",
+ "fuelcombustion": "0.50", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "OMN",
+ "name": "Oman",
+ "totalCO2": "14.44",
+ "electricandheat": "6.05",
+ "manufacturing": "4.64",
+ "transportation": "1.93",
+ "fuelcombustion": "0.69", 
+ "fugitive": "1.13" 
+ },
+{
+ "ccode": "PAK",
+ "name": "Pakistan",
+ "totalCO2": "65.02",
+ "electricandheat": "19.79",
+ "manufacturing": "20.82",
+ "transportation": "15.94",
+ "fuelcombustion": "8.47", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "PHL",
+ "name": "Philippines",
+ "totalCO2": "40.64",
+ "electricandheat": "12.79",
+ "manufacturing": "8.53",
+ "transportation": "15.71",
+ "fuelcombustion": "3.61", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "QAT",
+ "name": "Qatar",
+ "totalCO2": "16.44",
+ "electricandheat": "9.32",
+ "manufacturing": "5.45",
+ "transportation": "1.57",
+ "fuelcombustion": "0.10", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "RUS",
+ "name": "Russian Federation",
+ "totalCO2": "2009.17",
+ "electricandheat": "1205.18",
+ "manufacturing": "249.42",
+ "transportation": "278.22",
+ "fuelcombustion": "256.99", 
+ "fugitive": "19.36" 
+ },
+{
+ "ccode": "SAU",
+ "name": "Saudi Arabia",
+ "totalCO2": "192.95",
+ "electricandheat": "81.28",
+ "manufacturing": "33.72",
+ "transportation": "53.97",
+ "fuelcombustion": "2.68", 
+ "fugitive": "21.30" 
+ },
+{
+ "ccode": "SGP",
+ "name": "Singapore",
+ "totalCO2": "32.54",
+ "electricandheat": "25.58",
+ "manufacturing": "1.53",
+ "transportation": "4.71",
+ "fuelcombustion": "0.72", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "LKA",
+ "name": "Sri Lanka",
+ "totalCO2": "4.87",
+ "electricandheat": "0.79",
+ "manufacturing": "0.59",
+ "transportation": "2.77",
+ "fuelcombustion": "0.72", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "SDN",
+ "name": "Sudan",
+ "totalCO2": "4.64",
+ "electricandheat": "0.50",
+ "manufacturing": "0.89",
+ "transportation": "3.09",
+ "fuelcombustion": "0.16", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "SYR",
+ "name": "Syria",
+ "totalCO2": "31.04",
+ "electricandheat": "8.35",
+ "manufacturing": "5.29",
+ "transportation": "7.08",
+ "fuelcombustion": "8.71", 
+ "fugitive": "1.61" 
+ },
+{
+ "ccode": "TJK",
+ "name": "Tajikistan",
+ "totalCO2": "7.42",
+ "electricandheat": "1.68",
+ "manufacturing": "0.00",
+ "transportation": "0.36",
+ "fuelcombustion": "5.38", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "THA",
+ "name": "Thailand",
+ "totalCO2": "97.74",
+ "electricandheat": "40.10",
+ "manufacturing": "19.47",
+ "transportation": "29.70",
+ "fuelcombustion": "8.47", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "TUR",
+ "name": "Turkey",
+ "totalCO2": "134.60",
+ "electricandheat": "43.66",
+ "manufacturing": "34.58",
+ "transportation": "27.03",
+ "fuelcombustion": "29.30", 
+ "fugitive": "0.03" 
+ },
+{
+ "ccode": "TKM",
+ "name": "Turkmenistan",
+ "totalCO2": "27.61",
+ "electricandheat": "6.06",
+ "manufacturing": "1.16",
+ "transportation": "5.99",
+ "fuelcombustion": "14.40", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "ARE",
+ "name": "United Arab Emirates",
+ "totalCO2": "58.14",
+ "electricandheat": "14.86",
+ "manufacturing": "29.80",
+ "transportation": "11.68",
+ "fuelcombustion": "0.27", 
+ "fugitive": "1.53" 
+ },
+{
+ "ccode": "UZB",
+ "name": "Uzbekistan",
+ "totalCO2": "114.14",
+ "electricandheat": "47.88",
+ "manufacturing": "3.78",
+ "transportation": "6.60",
+ "fuelcombustion": "55.88", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "VNM",
+ "name": "Vietnam",
+ "totalCO2": "18.28",
+ "electricandheat": "3.00",
+ "manufacturing": "7.51",
+ "transportation": "4.37",
+ "fuelcombustion": "3.40", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "YEM",
+ "name": "Yemen",
+ "totalCO2": "8.70",
+ "electricandheat": "2.26",
+ "manufacturing": "0.00",
+ "transportation": "5.35",
+ "fuelcombustion": "1.09", 
+ "fugitive": "0.00" 
+ }]},
+{"Europe": [{
+ "ccode": "ALB",
+ "name": "Albania",
+ "totalCO2": "2.72",
+ "electricandheat": "0.42",
+ "manufacturing": "1.34",
+ "transportation": "0.40",
+ "fuelcombustion": "0.56", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "ARM",
+ "name": "Armenia",
+ "totalCO2": "10.68",
+ "electricandheat": "4.82",
+ "manufacturing": "1.49",
+ "transportation": "1.81",
+ "fuelcombustion": "2.56", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "AUT",
+ "name": "Austria",
+ "totalCO2": "55.63",
+ "electricandheat": "17.38",
+ "manufacturing": "9.67",
+ "transportation": "15.01",
+ "fuelcombustion": "13.57", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "AZE",
+ "name": "Azerbaijan",
+ "totalCO2": "46.83",
+ "electricandheat": "22.96",
+ "manufacturing": "11.80",
+ "transportation": "4.01",
+ "fuelcombustion": "6.26", 
+ "fugitive": "1.80" 
+ },
+{
+ "ccode": "BLR",
+ "name": "Belarus",
+ "totalCO2": "99.22",
+ "electricandheat": "54.52",
+ "manufacturing": "18.28",
+ "transportation": "11.21",
+ "fuelcombustion": "15.21", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "BEL",
+ "name": "Belgium",
+ "totalCO2": "112.25",
+ "electricandheat": "30.75",
+ "manufacturing": "30.17",
+ "transportation": "21.89",
+ "fuelcombustion": "29.44", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "BIH",
+ "name": "Bosnia & Herzegovina",
+ "totalCO2": "15.64",
+ "electricandheat": "6.76",
+ "manufacturing": "3.60",
+ "transportation": "1.05",
+ "fuelcombustion": "4.23", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "BGR",
+ "name": "Bulgaria",
+ "totalCO2": "54.16",
+ "electricandheat": "37.16",
+ "manufacturing": "8.12",
+ "transportation": "3.77",
+ "fuelcombustion": "5.11", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "HRV",
+ "name": "Croatia",
+ "totalCO2": "15.18",
+ "electricandheat": "6.21",
+ "manufacturing": "3.85",
+ "transportation": "2.83",
+ "fuelcombustion": "2.29", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "CYP",
+ "name": "Cyprus",
+ "totalCO2": "4.72",
+ "electricandheat": "2.11",
+ "manufacturing": "1.11",
+ "transportation": "1.29",
+ "fuelcombustion": "0.21", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "CZE",
+ "name": "Czech Republic",
+ "totalCO2": "130.72",
+ "electricandheat": "63.06",
+ "manufacturing": "40.38",
+ "transportation": "8.16",
+ "fuelcombustion": "19.12", 
+ "fugitive": "" 
+ },
+{
+ "ccode": "DNK",
+ "name": "Denmark",
+ "totalCO2": "55.41",
+ "electricandheat": "30.18",
+ "manufacturing": "5.78",
+ "transportation": "10.80",
+ "fuelcombustion": "8.18", 
+ "fugitive": "0.47" 
+ },
+{
+ "ccode": "EST",
+ "name": "Estonia",
+ "totalCO2": "23.51",
+ "electricandheat": "19.07",
+ "manufacturing": "2.10",
+ "transportation": "1.08",
+ "fuelcombustion": "1.26", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "FIN",
+ "name": "Finland",
+ "totalCO2": "53.65",
+ "electricandheat": "18.99",
+ "manufacturing": "14.88",
+ "transportation": "11.24",
+ "fuelcombustion": "8.54", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "FRA",
+ "name": "France",
+ "totalCO2": "368.46",
+ "electricandheat": "63.71",
+ "manufacturing": "82.36",
+ "transportation": "118.76",
+ "fuelcombustion": "103.63", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "GEO",
+ "name": "Georgia",
+ "totalCO2": "19.89",
+ "electricandheat": "8.74",
+ "manufacturing": "4.14",
+ "transportation": "2.36",
+ "fuelcombustion": "4.65", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "DEU",
+ "name": "Germany",
+ "totalCO2": "887.23",
+ "electricandheat": "383.75",
+ "manufacturing": "145.92",
+ "transportation": "162.79",
+ "fuelcombustion": "194.07", 
+ "fugitive": "0.70" 
+ },
+{
+ "ccode": "GRC",
+ "name": "Greece",
+ "totalCO2": "71.84",
+ "electricandheat": "38.33",
+ "manufacturing": "9.34",
+ "transportation": "16.23",
+ "fuelcombustion": "7.93", 
+ "fugitive": "0.01" 
+ },
+{
+ "ccode": "HUN",
+ "name": "Hungary",
+ "totalCO2": "57.79",
+ "electricandheat": "24.35",
+ "manufacturing": "10.61",
+ "transportation": "7.04",
+ "fuelcombustion": "15.79", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "ISL",
+ "name": "Iceland",
+ "totalCO2": "1.88",
+ "electricandheat": "0.00",
+ "manufacturing": "0.46",
+ "transportation": "0.63",
+ "fuelcombustion": "0.79", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "IRL",
+ "name": "Ireland",
+ "totalCO2": "31.26",
+ "electricandheat": "12.01",
+ "manufacturing": "4.48",
+ "transportation": "5.49",
+ "fuelcombustion": "9.28", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "ITA",
+ "name": "Italy",
+ "totalCO2": "395.25",
+ "electricandheat": "137.67",
+ "manufacturing": "78.12",
+ "transportation": "102.42",
+ "fuelcombustion": "77.04", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "JAM",
+ "name": "Jamaica",
+ "totalCO2": "7.83",
+ "electricandheat": "3.58",
+ "manufacturing": "2.88",
+ "transportation": "1.06",
+ "fuelcombustion": "0.31", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "LVA",
+ "name": "Latvia",
+ "totalCO2": "13.73",
+ "electricandheat": "7.00",
+ "manufacturing": "1.57",
+ "transportation": "2.46",
+ "fuelcombustion": "2.70", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "LTU",
+ "name": "Lithuania",
+ "totalCO2": "19.75",
+ "electricandheat": "8.62",
+ "manufacturing": "3.64",
+ "transportation": "3.99",
+ "fuelcombustion": "3.50", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "LUX",
+ "name": "Luxembourg",
+ "totalCO2": "10.57",
+ "electricandheat": "1.61",
+ "manufacturing": "4.06",
+ "transportation": "3.41",
+ "fuelcombustion": "1.49", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "MKD",
+ "name": "Macedonia, FYR",
+ "totalCO2": "8.22",
+ "electricandheat": "5.57",
+ "manufacturing": "1.34",
+ "transportation": "0.78",
+ "fuelcombustion": "0.53", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "MLT",
+ "name": "Malta",
+ "totalCO2": "2.14",
+ "electricandheat": "1.52",
+ "manufacturing": "0.00",
+ "transportation": "0.52",
+ "fuelcombustion": "0.10", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "MDA",
+ "name": "Moldova",
+ "totalCO2": "19.63",
+ "electricandheat": "12.98",
+ "manufacturing": "1.19",
+ "transportation": "2.18",
+ "fuelcombustion": "3.28", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "MNE",
+ "name": "Montenegro",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "" 
+ },
+{
+ "ccode": "NLD",
+ "name": "Netherlands",
+ "totalCO2": "163.79",
+ "electricandheat": "61.66",
+ "manufacturing": "35.39",
+ "transportation": "27.04",
+ "fuelcombustion": "39.51", 
+ "fugitive": "0.19" 
+ },
+{
+ "ccode": "NOR",
+ "name": "Norway",
+ "totalCO2": "30.77",
+ "electricandheat": "10.55",
+ "manufacturing": "5.44",
+ "transportation": "10.30",
+ "fuelcombustion": "3.57", 
+ "fugitive": "0.91" 
+ },
+{
+ "ccode": "POL",
+ "name": "Poland",
+ "totalCO2": "334.18",
+ "electricandheat": "210.00",
+ "manufacturing": "38.45",
+ "transportation": "21.28",
+ "fuelcombustion": "64.45", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "PRT",
+ "name": "Portugal",
+ "totalCO2": "44.63",
+ "electricandheat": "20.07",
+ "manufacturing": "9.36",
+ "transportation": "11.25",
+ "fuelcombustion": "3.95", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "ROU",
+ "name": "Romania",
+ "totalCO2": "126.34",
+ "electricandheat": "83.95",
+ "manufacturing": "21.00",
+ "transportation": "10.34",
+ "fuelcombustion": "11.05", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "SRB",
+ "name": "Serbia",
+ "totalCO2": "47.54",
+ "electricandheat": "33.63",
+ "manufacturing": "7.54",
+ "transportation": "2.24",
+ "fuelcombustion": "4.13", 
+ "fugitive": "" 
+ },
+{
+ "ccode": "SVK",
+ "name": "Slovakia",
+ "totalCO2": "45.35",
+ "electricandheat": "16.12",
+ "manufacturing": "14.56",
+ "transportation": "3.51",
+ "fuelcombustion": "11.16", 
+ "fugitive": "" 
+ },
+{
+ "ccode": "SVN",
+ "name": "Slovenia",
+ "totalCO2": "12.29",
+ "electricandheat": "5.87",
+ "manufacturing": "1.83",
+ "transportation": "2.53",
+ "fuelcombustion": "2.06", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "ESP",
+ "name": "Spain",
+ "totalCO2": "224.54",
+ "electricandheat": "87.80",
+ "manufacturing": "44.05",
+ "transportation": "68.94",
+ "fuelcombustion": "23.63", 
+ "fugitive": "0.12" 
+ },
+{
+ "ccode": "SWE",
+ "name": "Sweden",
+ "totalCO2": "56.15",
+ "electricandheat": "11.62",
+ "manufacturing": "14.03",
+ "transportation": "20.21",
+ "fuelcombustion": "10.29", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "CHE",
+ "name": "Switzerland",
+ "totalCO2": "44.15",
+ "electricandheat": "3.06",
+ "manufacturing": "6.14",
+ "transportation": "15.19",
+ "fuelcombustion": "19.76", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "UKR",
+ "name": "Ukraine",
+ "totalCO2": "559.47",
+ "electricandheat": "270.09",
+ "manufacturing": "186.36",
+ "transportation": "40.56",
+ "fuelcombustion": "62.46", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "GBR",
+ "name": "United Kingdom",
+ "totalCO2": "549.25",
+ "electricandheat": "242.30",
+ "manufacturing": "77.53",
+ "transportation": "115.16",
+ "fuelcombustion": "114.26", 
+ "fugitive": "0.00" 
+ }]},
+{"North America": [{
+ "ccode": "ATG",
+ "name": "Antigua & Barbuda",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "BHS",
+ "name": "Bahamas, The",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "BRB",
+ "name": "Barbados",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "BLZ",
+ "name": "Belize",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "CAN",
+ "name": "Canada",
+ "totalCO2": "439.63",
+ "electricandheat": "145.45",
+ "manufacturing": "82.86",
+ "transportation": "124.38",
+ "fuelcombustion": "82.24", 
+ "fugitive": "4.70" 
+ },
+{
+ "ccode": "CRI",
+ "name": "Costa Rica",
+ "totalCO2": "3.82",
+ "electricandheat": "0.66",
+ "manufacturing": "0.55",
+ "transportation": "2.37",
+ "fuelcombustion": "0.24", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "DMA",
+ "name": "Dominica",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "DOM",
+ "name": "Dominican Republic",
+ "totalCO2": "9.00",
+ "electricandheat": "4.34",
+ "manufacturing": "0.89",
+ "transportation": "2.43",
+ "fuelcombustion": "1.34", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "GRD",
+ "name": "Grenada",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "GTM",
+ "name": "Guatemala",
+ "totalCO2": "4.22",
+ "electricandheat": "0.90",
+ "manufacturing": "0.83",
+ "transportation": "1.85",
+ "fuelcombustion": "0.64", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "HTI",
+ "name": "Haiti",
+ "totalCO2": "0.83",
+ "electricandheat": "0.13",
+ "manufacturing": "0.25",
+ "transportation": "0.40",
+ "fuelcombustion": "0.05", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "HND",
+ "name": "Honduras",
+ "totalCO2": "2.43",
+ "electricandheat": "0.11",
+ "manufacturing": "0.77",
+ "transportation": "1.15",
+ "fuelcombustion": "0.40", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "MEX",
+ "name": "Mexico",
+ "totalCO2": "292.32",
+ "electricandheat": "109.76",
+ "manufacturing": "64.00",
+ "transportation": "89.85",
+ "fuelcombustion": "28.71", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "NIC",
+ "name": "Nicaragua",
+ "totalCO2": "2.10",
+ "electricandheat": "0.77",
+ "manufacturing": "0.26",
+ "transportation": "0.91",
+ "fuelcombustion": "0.16", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "PAN",
+ "name": "Panama",
+ "totalCO2": "3.56",
+ "electricandheat": "1.21",
+ "manufacturing": "0.68",
+ "transportation": "1.42",
+ "fuelcombustion": "0.25", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "KNA",
+ "name": "Saint Kitts & Nevis",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "LCA",
+ "name": "Saint Lucia",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "VCT",
+ "name": "Saint Vincent & Grenadines",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "TTO",
+ "name": "Trinidad & Tobago",
+ "totalCO2": "15.52",
+ "electricandheat": "5.36",
+ "manufacturing": "5.04",
+ "transportation": "1.34",
+ "fuelcombustion": "0.23", 
+ "fugitive": "3.55" 
+ },
+{
+ "ccode": "USA",
+ "name": "United States",
+ "totalCO2": "4899.64",
+ "electricandheat": "2251.15",
+ "manufacturing": "607.72",
+ "transportation": "1423.24",
+ "fuelcombustion": "608.06", 
+ "fugitive": "9.47" 
+ }]},
+{"Oceania": [{
+ "ccode": "AUS",
+ "name": "Australia",
+ "totalCO2": "265.93",
+ "electricandheat": "145.39",
+ "manufacturing": "46.22",
+ "transportation": "61.45",
+ "fuelcombustion": "12.49", 
+ "fugitive": "0.38" 
+ },
+{
+ "ccode": "COK",
+ "name": "Cook Islands",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "GNQ",
+ "name": "Equatorial Guinea",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "FJI",
+ "name": "Fiji",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "GIN",
+ "name": "Guinea",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "GNB",
+ "name": "Guinea-Bissau",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "NRU",
+ "name": "Nauru",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "NZL",
+ "name": "New Zealand",
+ "totalCO2": "24.58",
+ "electricandheat": "6.14",
+ "manufacturing": "6.81",
+ "transportation": "8.95",
+ "fuelcombustion": "2.60", 
+ "fugitive": "0.08" 
+ },
+{
+ "ccode": "NIU",
+ "name": "Niue",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "PLW",
+ "name": "Palau",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "" 
+ },
+{
+ "ccode": "PNG",
+ "name": "Papua New Guinea",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "WSM",
+ "name": "Samoa",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "SLB",
+ "name": "Solomon Islands",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "TON",
+ "name": "Tonga",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "VUT",
+ "name": "Vanuatu",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ }]},
+{"South America": [{
+ "ccode": "ARG",
+ "name": "Argentina",
+ "totalCO2": "111.40",
+ "electricandheat": "37.57",
+ "manufacturing": "15.97",
+ "transportation": "31.80",
+ "fuelcombustion": "22.07", 
+ "fugitive": "3.99" 
+ },
+{
+ "ccode": "BOL",
+ "name": "Bolivia",
+ "totalCO2": "6.49",
+ "electricandheat": "1.68",
+ "manufacturing": "0.74",
+ "transportation": "2.29",
+ "fuelcombustion": "0.71", 
+ "fugitive": "1.07" 
+ },
+{
+ "ccode": "BRA",
+ "name": "Brazil",
+ "totalCO2": "206.06",
+ "electricandheat": "29.67",
+ "manufacturing": "59.44",
+ "transportation": "85.72",
+ "fuelcombustion": "28.28", 
+ "fugitive": "2.95" 
+ },
+{
+ "ccode": "CHL",
+ "name": "Chile",
+ "totalCO2": "32.07",
+ "electricandheat": "7.04",
+ "manufacturing": "9.41",
+ "transportation": "10.18",
+ "fuelcombustion": "4.26", 
+ "fugitive": "1.18" 
+ },
+{
+ "ccode": "COL",
+ "name": "Colombia",
+ "totalCO2": "50.96",
+ "electricandheat": "13.30",
+ "manufacturing": "13.92",
+ "transportation": "17.83",
+ "fuelcombustion": "5.04", 
+ "fugitive": "0.87" 
+ },
+{
+ "ccode": "CUB",
+ "name": "Cuba",
+ "totalCO2": "21.24",
+ "electricandheat": "9.00",
+ "manufacturing": "6.12",
+ "transportation": "2.66",
+ "fuelcombustion": "3.46", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "ECU",
+ "name": "Ecuador",
+ "totalCO2": "16.29",
+ "electricandheat": "2.40",
+ "manufacturing": "3.01",
+ "transportation": "8.05",
+ "fuelcombustion": "1.48", 
+ "fugitive": "1.35" 
+ },
+{
+ "ccode": "SLV",
+ "name": "El Salvador",
+ "totalCO2": "3.27",
+ "electricandheat": "0.64",
+ "manufacturing": "0.85",
+ "transportation": "1.58",
+ "fuelcombustion": "0.20", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "GUY",
+ "name": "Guyana",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "PRY",
+ "name": "Paraguay",
+ "totalCO2": "2.24",
+ "electricandheat": "0.04",
+ "manufacturing": "0.25",
+ "transportation": "1.81",
+ "fuelcombustion": "0.14", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "PER",
+ "name": "Peru",
+ "totalCO2": "19.81",
+ "electricandheat": "4.01",
+ "manufacturing": "4.37",
+ "transportation": "6.83",
+ "fuelcombustion": "4.23", 
+ "fugitive": "0.37" 
+ },
+{
+ "ccode": "SUR",
+ "name": "Suriname",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "URY",
+ "name": "Uruguay",
+ "totalCO2": "4.67",
+ "electricandheat": "1.08",
+ "manufacturing": "0.78",
+ "transportation": "1.72",
+ "fuelcombustion": "1.09", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "VEN",
+ "name": "Venezuela",
+ "totalCO2": "112.33",
+ "electricandheat": "42.75",
+ "manufacturing": "27.21",
+ "transportation": "29.48",
+ "fuelcombustion": "5.65", 
+ "fugitive": "7.24" 
+ }]}
+],
+"1993": [{"Africa": [{
+ "ccode": "DZA",
+ "name": "Algeria",
+ "totalCO2": "72.35",
+ "electricandheat": "25.25",
+ "manufacturing": "8.36",
+ "transportation": "16.79",
+ "fuelcombustion": "8.16", 
+ "fugitive": "13.79" 
+ },
+{
+ "ccode": "AGO",
+ "name": "Angola",
+ "totalCO2": "6.89",
+ "electricandheat": "0.34",
+ "manufacturing": "2.25",
+ "transportation": "1.20",
+ "fuelcombustion": "0.51", 
+ "fugitive": "2.59" 
+ },
+{
+ "ccode": "BEN",
+ "name": "Benin",
+ "totalCO2": "0.21",
+ "electricandheat": "0.03",
+ "manufacturing": "0.03",
+ "transportation": "0.12",
+ "fuelcombustion": "0.03", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "BWA",
+ "name": "Botswana",
+ "totalCO2": "3.20",
+ "electricandheat": "1.61",
+ "manufacturing": "0.63",
+ "transportation": "0.79",
+ "fuelcombustion": "0.17", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "BFA",
+ "name": "Burkina Faso",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "BDI",
+ "name": "Burundi",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "CMR",
+ "name": "Cameroon",
+ "totalCO2": "6.42",
+ "electricandheat": "0.03",
+ "manufacturing": "0.20",
+ "transportation": "1.67",
+ "fuelcombustion": "0.55", 
+ "fugitive": "3.97" 
+ },
+{
+ "ccode": "CPV",
+ "name": "Cape Verde",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "CAF",
+ "name": "Central African Republic",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "TCD",
+ "name": "Chad",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "COM",
+ "name": "Comoros",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "COG",
+ "name": "Congo, Dem. Rep.",
+ "totalCO2": "1.38",
+ "electricandheat": "0.06",
+ "manufacturing": "0.01",
+ "transportation": "0.44",
+ "fuelcombustion": "0.87", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "COD",
+ "name": "Congo, Rep.",
+ "totalCO2": "2.96",
+ "electricandheat": "0.00",
+ "manufacturing": "0.07",
+ "transportation": "0.44",
+ "fuelcombustion": "0.08", 
+ "fugitive": "2.37" 
+ },
+{
+ "ccode": "CIV",
+ "name": "Cote d'Ivoire",
+ "totalCO2": "2.98",
+ "electricandheat": "0.92",
+ "manufacturing": "0.45",
+ "transportation": "1.09",
+ "fuelcombustion": "0.52", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "DJI",
+ "name": "Djibouti",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "EGY",
+ "name": "Egypt",
+ "totalCO2": "86.66",
+ "electricandheat": "27.31",
+ "manufacturing": "30.87",
+ "transportation": "18.09",
+ "fuelcombustion": "8.02", 
+ "fugitive": "2.37" 
+ },
+{
+ "ccode": "ERI",
+ "name": "Eritrea",
+ "totalCO2": "0.63",
+ "electricandheat": "0.33",
+ "manufacturing": "0.04",
+ "transportation": "0.21",
+ "fuelcombustion": "0.05", 
+ "fugitive": "" 
+ },
+{
+ "ccode": "ETH",
+ "name": "Ethiopia",
+ "totalCO2": "1.85",
+ "electricandheat": "0.07",
+ "manufacturing": "0.46",
+ "transportation": "0.87",
+ "fuelcombustion": "0.45", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "GAB",
+ "name": "Gabon",
+ "totalCO2": "4.65",
+ "electricandheat": "0.33",
+ "manufacturing": "0.33",
+ "transportation": "0.39",
+ "fuelcombustion": "0.16", 
+ "fugitive": "3.44" 
+ },
+{
+ "ccode": "GMB",
+ "name": "Gambia, The",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "GHA",
+ "name": "Ghana",
+ "totalCO2": "2.82",
+ "electricandheat": "0.09",
+ "manufacturing": "0.47",
+ "transportation": "1.78",
+ "fuelcombustion": "0.48", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "KEN",
+ "name": "Kenya",
+ "totalCO2": "5.33",
+ "electricandheat": "0.49",
+ "manufacturing": "1.63",
+ "transportation": "2.36",
+ "fuelcombustion": "0.85", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "KIR",
+ "name": "Kiribati",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "LSO",
+ "name": "Lesotho",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "LBR",
+ "name": "Liberia",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "LBY",
+ "name": "Libya",
+ "totalCO2": "31.78",
+ "electricandheat": "15.70",
+ "manufacturing": "3.97",
+ "transportation": "7.36",
+ "fuelcombustion": "1.60", 
+ "fugitive": "3.15" 
+ },
+{
+ "ccode": "MDG",
+ "name": "Madagascar",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "MLI",
+ "name": "Mali",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "MRT",
+ "name": "Mauritania",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "MUS",
+ "name": "Mauritius",
+ "totalCO2": "1.45",
+ "electricandheat": "0.52",
+ "manufacturing": "0.26",
+ "transportation": "0.54",
+ "fuelcombustion": "0.13", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "MAR",
+ "name": "Morocco",
+ "totalCO2": "22.77",
+ "electricandheat": "9.18",
+ "manufacturing": "4.84",
+ "transportation": "5.17",
+ "fuelcombustion": "3.58", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "MOZ",
+ "name": "Mozambique",
+ "totalCO2": "1.28",
+ "electricandheat": "0.06",
+ "manufacturing": "0.20",
+ "transportation": "0.84",
+ "fuelcombustion": "0.18", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "NAM",
+ "name": "Namibia",
+ "totalCO2": "1.41",
+ "electricandheat": "0.21",
+ "manufacturing": "0.02",
+ "transportation": "0.52",
+ "fuelcombustion": "0.66", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "NER",
+ "name": "Niger",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "NGA",
+ "name": "Nigeria",
+ "totalCO2": "84.06",
+ "electricandheat": "11.69",
+ "manufacturing": "5.21",
+ "transportation": "15.91",
+ "fuelcombustion": "4.34", 
+ "fugitive": "46.91" 
+ },
+{
+ "ccode": "RWA",
+ "name": "Rwanda",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "STP",
+ "name": "Sao Tome & Principe",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "SEN",
+ "name": "Senegal",
+ "totalCO2": "2.26",
+ "electricandheat": "0.95",
+ "manufacturing": "0.28",
+ "transportation": "0.75",
+ "fuelcombustion": "0.28", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "SYC",
+ "name": "Seychelles",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "SLE",
+ "name": "Sierra Leone",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "ZAF",
+ "name": "South Africa",
+ "totalCO2": "251.99",
+ "electricandheat": "154.68",
+ "manufacturing": "48.03",
+ "transportation": "29.92",
+ "fuelcombustion": "19.36", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "SWZ",
+ "name": "Swaziland",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "TZA",
+ "name": "Tanzania",
+ "totalCO2": "1.73",
+ "electricandheat": "0.35",
+ "manufacturing": "0.44",
+ "transportation": "0.70",
+ "fuelcombustion": "0.24", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "TGO",
+ "name": "Togo",
+ "totalCO2": "0.26",
+ "electricandheat": "0.07",
+ "manufacturing": "0.00",
+ "transportation": "0.17",
+ "fuelcombustion": "0.02", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "TUN",
+ "name": "Tunisia",
+ "totalCO2": "14.73",
+ "electricandheat": "4.67",
+ "manufacturing": "3.41",
+ "transportation": "2.93",
+ "fuelcombustion": "2.92", 
+ "fugitive": "0.80" 
+ },
+{
+ "ccode": "UGA",
+ "name": "Uganda",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "ZMB",
+ "name": "Zambia",
+ "totalCO2": "2.41",
+ "electricandheat": "0.17",
+ "manufacturing": "1.37",
+ "transportation": "0.65",
+ "fuelcombustion": "0.22", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "ZWE",
+ "name": "Zimbabwe",
+ "totalCO2": "16.41",
+ "electricandheat": "7.89",
+ "manufacturing": "3.84",
+ "transportation": "1.95",
+ "fuelcombustion": "2.73", 
+ "fugitive": "0.00" 
+ }]},
+{"Asia": [{
+ "ccode": "AFG",
+ "name": "Afghanistan",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "BHR",
+ "name": "Bahrain",
+ "totalCO2": "14.83",
+ "electricandheat": "11.71",
+ "manufacturing": "1.82",
+ "transportation": "1.15",
+ "fuelcombustion": "0.15", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "BGD",
+ "name": "Bangladesh",
+ "totalCO2": "15.21",
+ "electricandheat": "5.77",
+ "manufacturing": "4.24",
+ "transportation": "2.15",
+ "fuelcombustion": "3.05", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "BTN",
+ "name": "Bhutan",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "BRN",
+ "name": "Brunei",
+ "totalCO2": "3.86",
+ "electricandheat": "2.94",
+ "manufacturing": "0.18",
+ "transportation": "0.68",
+ "fuelcombustion": "0.06", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "KHM",
+ "name": "Cambodia",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "CHN",
+ "name": "China",
+ "totalCO2": "2660.98",
+ "electricandheat": "981.06",
+ "manufacturing": "1061.22",
+ "transportation": "141.96",
+ "fuelcombustion": "476.74", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "IND",
+ "name": "India",
+ "totalCO2": "682.01",
+ "electricandheat": "339.50",
+ "manufacturing": "176.15",
+ "transportation": "68.14",
+ "fuelcombustion": "93.22", 
+ "fugitive": "5.00" 
+ },
+{
+ "ccode": "IDN",
+ "name": "Indonesia",
+ "totalCO2": "193.64",
+ "electricandheat": "62.28",
+ "manufacturing": "52.25",
+ "transportation": "40.07",
+ "fuelcombustion": "26.63", 
+ "fugitive": "12.41" 
+ },
+{
+ "ccode": "IRN",
+ "name": "Iran",
+ "totalCO2": "232.31",
+ "electricandheat": "53.85",
+ "manufacturing": "45.70",
+ "transportation": "49.30",
+ "fuelcombustion": "67.61", 
+ "fugitive": "15.85" 
+ },
+{
+ "ccode": "IRQ",
+ "name": "Iraq",
+ "totalCO2": "87.52",
+ "electricandheat": "46.22",
+ "manufacturing": "9.84",
+ "transportation": "24.26",
+ "fuelcombustion": "7.11", 
+ "fugitive": "0.09" 
+ },
+{
+ "ccode": "ISR",
+ "name": "Israel",
+ "totalCO2": "40.44",
+ "electricandheat": "24.00",
+ "manufacturing": "4.25",
+ "transportation": "7.29",
+ "fuelcombustion": "4.90", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "JPN",
+ "name": "Japan",
+ "totalCO2": "1069.40",
+ "electricandheat": "410.00",
+ "manufacturing": "260.55",
+ "transportation": "229.86",
+ "fuelcombustion": "168.99", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "JOR",
+ "name": "Jordan",
+ "totalCO2": "10.84",
+ "electricandheat": "4.66",
+ "manufacturing": "1.31",
+ "transportation": "2.72",
+ "fuelcombustion": "2.15", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "KAZ",
+ "name": "Kazakhstan",
+ "totalCO2": "217.79",
+ "electricandheat": "100.63",
+ "manufacturing": "78.90",
+ "transportation": "13.05",
+ "fuelcombustion": "24.66", 
+ "fugitive": "0.55" 
+ },
+{
+ "ccode": "PRK",
+ "name": "Korea, Dem. Rep. (North)",
+ "totalCO2": "87.75",
+ "electricandheat": "11.29",
+ "manufacturing": "58.05",
+ "transportation": "3.07",
+ "fuelcombustion": "15.34", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "KOR",
+ "name": "Korea, Rep. (South)",
+ "totalCO2": "304.19",
+ "electricandheat": "94.63",
+ "manufacturing": "76.99",
+ "transportation": "60.85",
+ "fuelcombustion": "71.72", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "KWT",
+ "name": "Kuwait",
+ "totalCO2": "31.06",
+ "electricandheat": "16.08",
+ "manufacturing": "9.08",
+ "transportation": "4.73",
+ "fuelcombustion": "0.26", 
+ "fugitive": "0.91" 
+ },
+{
+ "ccode": "KGZ",
+ "name": "Kyrgyzstan",
+ "totalCO2": "9.67",
+ "electricandheat": "1.50",
+ "manufacturing": "2.86",
+ "transportation": "1.56",
+ "fuelcombustion": "3.75", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "LAO",
+ "name": "Laos",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "LBN",
+ "name": "Lebanon",
+ "totalCO2": "10.14",
+ "electricandheat": "3.16",
+ "manufacturing": "0.70",
+ "transportation": "3.73",
+ "fuelcombustion": "2.55", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "MWI",
+ "name": "Malawi",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "MYS",
+ "name": "Malaysia",
+ "totalCO2": "71.00",
+ "electricandheat": "29.60",
+ "manufacturing": "22.00",
+ "transportation": "16.74",
+ "fuelcombustion": "2.66", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "MDV",
+ "name": "Maldives",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "MNG",
+ "name": "Mongolia",
+ "totalCO2": "11.63",
+ "electricandheat": "7.08",
+ "manufacturing": "2.38",
+ "transportation": "0.97",
+ "fuelcombustion": "1.20", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "MMR",
+ "name": "Myanmar",
+ "totalCO2": "4.77",
+ "electricandheat": "1.90",
+ "manufacturing": "0.90",
+ "transportation": "1.57",
+ "fuelcombustion": "0.40", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "NPL",
+ "name": "Nepal",
+ "totalCO2": "1.29",
+ "electricandheat": "0.05",
+ "manufacturing": "0.19",
+ "transportation": "0.48",
+ "fuelcombustion": "0.57", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "OMN",
+ "name": "Oman",
+ "totalCO2": "13.67",
+ "electricandheat": "6.49",
+ "manufacturing": "3.24",
+ "transportation": "2.06",
+ "fuelcombustion": "0.77", 
+ "fugitive": "1.11" 
+ },
+{
+ "ccode": "PAK",
+ "name": "Pakistan",
+ "totalCO2": "70.11",
+ "electricandheat": "20.12",
+ "manufacturing": "22.92",
+ "transportation": "18.22",
+ "fuelcombustion": "8.85", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "PHL",
+ "name": "Philippines",
+ "totalCO2": "43.81",
+ "electricandheat": "12.85",
+ "manufacturing": "10.28",
+ "transportation": "16.74",
+ "fuelcombustion": "3.94", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "QAT",
+ "name": "Qatar",
+ "totalCO2": "17.29",
+ "electricandheat": "9.93",
+ "manufacturing": "5.59",
+ "transportation": "1.66",
+ "fuelcombustion": "0.11", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "RUS",
+ "name": "Russian Federation",
+ "totalCO2": "1828.19",
+ "electricandheat": "1087.82",
+ "manufacturing": "222.06",
+ "transportation": "233.59",
+ "fuelcombustion": "284.72", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "SAU",
+ "name": "Saudi Arabia",
+ "totalCO2": "200.27",
+ "electricandheat": "89.10",
+ "manufacturing": "33.42",
+ "transportation": "56.85",
+ "fuelcombustion": "2.88", 
+ "fugitive": "18.02" 
+ },
+{
+ "ccode": "SGP",
+ "name": "Singapore",
+ "totalCO2": "37.36",
+ "electricandheat": "30.31",
+ "manufacturing": "1.64",
+ "transportation": "4.67",
+ "fuelcombustion": "0.74", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "LKA",
+ "name": "Sri Lanka",
+ "totalCO2": "4.76",
+ "electricandheat": "0.41",
+ "manufacturing": "0.64",
+ "transportation": "2.96",
+ "fuelcombustion": "0.75", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "SDN",
+ "name": "Sudan",
+ "totalCO2": "3.34",
+ "electricandheat": "0.88",
+ "manufacturing": "0.28",
+ "transportation": "2.03",
+ "fuelcombustion": "0.15", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "SYR",
+ "name": "Syria",
+ "totalCO2": "30.32",
+ "electricandheat": "8.62",
+ "manufacturing": "5.84",
+ "transportation": "7.43",
+ "fuelcombustion": "7.77", 
+ "fugitive": "0.66" 
+ },
+{
+ "ccode": "TJK",
+ "name": "Tajikistan",
+ "totalCO2": "4.98",
+ "electricandheat": "1.28",
+ "manufacturing": "0.00",
+ "transportation": "0.29",
+ "fuelcombustion": "3.41", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "THA",
+ "name": "Thailand",
+ "totalCO2": "110.45",
+ "electricandheat": "43.42",
+ "manufacturing": "24.16",
+ "transportation": "34.97",
+ "fuelcombustion": "7.90", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "TUR",
+ "name": "Turkey",
+ "totalCO2": "140.45",
+ "electricandheat": "44.04",
+ "manufacturing": "34.65",
+ "transportation": "32.19",
+ "fuelcombustion": "29.50", 
+ "fugitive": "0.07" 
+ },
+{
+ "ccode": "TKM",
+ "name": "Turkmenistan",
+ "totalCO2": "26.14",
+ "electricandheat": "8.39",
+ "manufacturing": "1.37",
+ "transportation": "6.14",
+ "fuelcombustion": "10.24", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "ARE",
+ "name": "United Arab Emirates",
+ "totalCO2": "60.61",
+ "electricandheat": "17.10",
+ "manufacturing": "29.85",
+ "transportation": "12.47",
+ "fuelcombustion": "0.26", 
+ "fugitive": "0.93" 
+ },
+{
+ "ccode": "UZB",
+ "name": "Uzbekistan",
+ "totalCO2": "113.75",
+ "electricandheat": "46.81",
+ "manufacturing": "2.33",
+ "transportation": "6.02",
+ "fuelcombustion": "58.59", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "VNM",
+ "name": "Vietnam",
+ "totalCO2": "22.38",
+ "electricandheat": "2.74",
+ "manufacturing": "7.25",
+ "transportation": "6.83",
+ "fuelcombustion": "4.16", 
+ "fugitive": "1.40" 
+ },
+{
+ "ccode": "YEM",
+ "name": "Yemen",
+ "totalCO2": "7.71",
+ "electricandheat": "2.15",
+ "manufacturing": "0.00",
+ "transportation": "4.36",
+ "fuelcombustion": "1.20", 
+ "fugitive": "0.00" 
+ }]},
+{"Europe": [{
+ "ccode": "ALB",
+ "name": "Albania",
+ "totalCO2": "2.22",
+ "electricandheat": "0.56",
+ "manufacturing": "0.77",
+ "transportation": "0.50",
+ "fuelcombustion": "0.39", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "ARM",
+ "name": "Armenia",
+ "totalCO2": "5.00",
+ "electricandheat": "0.81",
+ "manufacturing": "2.10",
+ "transportation": "1.18",
+ "fuelcombustion": "0.91", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "AUT",
+ "name": "Austria",
+ "totalCO2": "55.95",
+ "electricandheat": "17.48",
+ "manufacturing": "10.08",
+ "transportation": "15.14",
+ "fuelcombustion": "13.25", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "AZE",
+ "name": "Azerbaijan",
+ "totalCO2": "55.68",
+ "electricandheat": "22.29",
+ "manufacturing": "9.76",
+ "transportation": "3.68",
+ "fuelcombustion": "4.11", 
+ "fugitive": "15.84" 
+ },
+{
+ "ccode": "BLR",
+ "name": "Belarus",
+ "totalCO2": "83.22",
+ "electricandheat": "46.08",
+ "manufacturing": "13.80",
+ "transportation": "9.38",
+ "fuelcombustion": "13.96", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "BEL",
+ "name": "Belgium",
+ "totalCO2": "109.77",
+ "electricandheat": "30.60",
+ "manufacturing": "27.91",
+ "transportation": "22.36",
+ "fuelcombustion": "28.90", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "BIH",
+ "name": "Bosnia & Herzegovina",
+ "totalCO2": "13.12",
+ "electricandheat": "5.87",
+ "manufacturing": "2.68",
+ "transportation": "0.84",
+ "fuelcombustion": "3.73", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "BGR",
+ "name": "Bulgaria",
+ "totalCO2": "55.14",
+ "electricandheat": "37.54",
+ "manufacturing": "7.67",
+ "transportation": "4.27",
+ "fuelcombustion": "5.66", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "HRV",
+ "name": "Croatia",
+ "totalCO2": "15.74",
+ "electricandheat": "6.71",
+ "manufacturing": "3.55",
+ "transportation": "2.99",
+ "fuelcombustion": "2.49", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "CYP",
+ "name": "Cyprus",
+ "totalCO2": "4.92",
+ "electricandheat": "2.22",
+ "manufacturing": "1.18",
+ "transportation": "1.32",
+ "fuelcombustion": "0.20", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "CZE",
+ "name": "Czech Republic",
+ "totalCO2": "127.97",
+ "electricandheat": "64.02",
+ "manufacturing": "33.42",
+ "transportation": "8.12",
+ "fuelcombustion": "22.41", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "DNK",
+ "name": "Denmark",
+ "totalCO2": "57.70",
+ "electricandheat": "31.74",
+ "manufacturing": "5.70",
+ "transportation": "11.07",
+ "fuelcombustion": "8.78", 
+ "fugitive": "0.41" 
+ },
+{
+ "ccode": "EST",
+ "name": "Estonia",
+ "totalCO2": "17.99",
+ "electricandheat": "13.99",
+ "manufacturing": "1.87",
+ "transportation": "1.16",
+ "fuelcombustion": "0.97", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "FIN",
+ "name": "Finland",
+ "totalCO2": "54.71",
+ "electricandheat": "21.99",
+ "manufacturing": "14.24",
+ "transportation": "11.01",
+ "fuelcombustion": "7.47", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "FRA",
+ "name": "France",
+ "totalCO2": "349.30",
+ "electricandheat": "50.23",
+ "manufacturing": "78.36",
+ "transportation": "119.90",
+ "fuelcombustion": "100.81", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "GEO",
+ "name": "Georgia",
+ "totalCO2": "16.03",
+ "electricandheat": "6.06",
+ "manufacturing": "3.23",
+ "transportation": "2.04",
+ "fuelcombustion": "4.70", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "DEU",
+ "name": "Germany",
+ "totalCO2": "880.52",
+ "electricandheat": "375.97",
+ "manufacturing": "137.48",
+ "transportation": "167.36",
+ "fuelcombustion": "199.06", 
+ "fugitive": "0.65" 
+ },
+{
+ "ccode": "GRC",
+ "name": "Greece",
+ "totalCO2": "71.68",
+ "electricandheat": "38.40",
+ "manufacturing": "9.05",
+ "transportation": "16.44",
+ "fuelcombustion": "7.79", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "HUN",
+ "name": "Hungary",
+ "totalCO2": "57.89",
+ "electricandheat": "24.69",
+ "manufacturing": "9.89",
+ "transportation": "7.02",
+ "fuelcombustion": "16.29", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "ISL",
+ "name": "Iceland",
+ "totalCO2": "1.94",
+ "electricandheat": "0.01",
+ "manufacturing": "0.47",
+ "transportation": "0.63",
+ "fuelcombustion": "0.83", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "IRL",
+ "name": "Ireland",
+ "totalCO2": "31.36",
+ "electricandheat": "12.02",
+ "manufacturing": "4.60",
+ "transportation": "5.51",
+ "fuelcombustion": "9.23", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "ITA",
+ "name": "Italy",
+ "totalCO2": "391.01",
+ "electricandheat": "134.41",
+ "manufacturing": "74.75",
+ "transportation": "104.42",
+ "fuelcombustion": "77.43", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "JAM",
+ "name": "Jamaica",
+ "totalCO2": "8.02",
+ "electricandheat": "4.71",
+ "manufacturing": "1.79",
+ "transportation": "1.15",
+ "fuelcombustion": "0.37", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "LVA",
+ "name": "Latvia",
+ "totalCO2": "11.65",
+ "electricandheat": "5.26",
+ "manufacturing": "1.56",
+ "transportation": "2.29",
+ "fuelcombustion": "2.54", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "LTU",
+ "name": "Lithuania",
+ "totalCO2": "15.65",
+ "electricandheat": "7.36",
+ "manufacturing": "2.27",
+ "transportation": "3.05",
+ "fuelcombustion": "2.97", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "LUX",
+ "name": "Luxembourg",
+ "totalCO2": "10.86",
+ "electricandheat": "1.63",
+ "manufacturing": "4.33",
+ "transportation": "3.44",
+ "fuelcombustion": "1.46", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "MKD",
+ "name": "Macedonia, FYR",
+ "totalCO2": "8.51",
+ "electricandheat": "5.80",
+ "manufacturing": "1.10",
+ "transportation": "1.44",
+ "fuelcombustion": "0.17", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "MLT",
+ "name": "Malta",
+ "totalCO2": "2.77",
+ "electricandheat": "2.08",
+ "manufacturing": "0.00",
+ "transportation": "0.59",
+ "fuelcombustion": "0.10", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "MDA",
+ "name": "Moldova",
+ "totalCO2": "16.85",
+ "electricandheat": "10.37",
+ "manufacturing": "1.25",
+ "transportation": "1.38",
+ "fuelcombustion": "3.85", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "MNE",
+ "name": "Montenegro",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "" 
+ },
+{
+ "ccode": "NLD",
+ "name": "Netherlands",
+ "totalCO2": "168.26",
+ "electricandheat": "63.39",
+ "manufacturing": "35.87",
+ "transportation": "27.55",
+ "fuelcombustion": "41.18", 
+ "fugitive": "0.27" 
+ },
+{
+ "ccode": "NOR",
+ "name": "Norway",
+ "totalCO2": "32.10",
+ "electricandheat": "11.64",
+ "manufacturing": "5.48",
+ "transportation": "10.89",
+ "fuelcombustion": "3.44", 
+ "fugitive": "0.65" 
+ },
+{
+ "ccode": "POL",
+ "name": "Poland",
+ "totalCO2": "335.30",
+ "electricandheat": "197.23",
+ "manufacturing": "49.23",
+ "transportation": "20.69",
+ "fuelcombustion": "68.15", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "PRT",
+ "name": "Portugal",
+ "totalCO2": "43.40",
+ "electricandheat": "18.75",
+ "manufacturing": "8.84",
+ "transportation": "11.79",
+ "fuelcombustion": "4.02", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "ROU",
+ "name": "Romania",
+ "totalCO2": "116.47",
+ "electricandheat": "80.82",
+ "manufacturing": "18.66",
+ "transportation": "8.29",
+ "fuelcombustion": "8.70", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "SRB",
+ "name": "Serbia",
+ "totalCO2": "42.18",
+ "electricandheat": "30.93",
+ "manufacturing": "4.60",
+ "transportation": "2.67",
+ "fuelcombustion": "3.98", 
+ "fugitive": "" 
+ },
+{
+ "ccode": "SVK",
+ "name": "Slovakia",
+ "totalCO2": "43.28",
+ "electricandheat": "17.54",
+ "manufacturing": "11.83",
+ "transportation": "2.91",
+ "fuelcombustion": "11.00", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "SVN",
+ "name": "Slovenia",
+ "totalCO2": "13.10",
+ "electricandheat": "5.93",
+ "manufacturing": "1.74",
+ "transportation": "3.06",
+ "fuelcombustion": "2.37", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "ESP",
+ "name": "Spain",
+ "totalCO2": "210.17",
+ "electricandheat": "77.31",
+ "manufacturing": "41.96",
+ "transportation": "67.90",
+ "fuelcombustion": "22.97", 
+ "fugitive": "0.03" 
+ },
+{
+ "ccode": "SWE",
+ "name": "Sweden",
+ "totalCO2": "55.77",
+ "electricandheat": "11.87",
+ "manufacturing": "14.92",
+ "transportation": "19.33",
+ "fuelcombustion": "9.65", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "CHE",
+ "name": "Switzerland",
+ "totalCO2": "41.89",
+ "electricandheat": "2.68",
+ "manufacturing": "5.74",
+ "transportation": "14.18",
+ "fuelcombustion": "19.29", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "UKR",
+ "name": "Ukraine",
+ "totalCO2": "486.52",
+ "electricandheat": "257.41",
+ "manufacturing": "130.69",
+ "transportation": "35.11",
+ "fuelcombustion": "63.31", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "GBR",
+ "name": "United Kingdom",
+ "totalCO2": "537.51",
+ "electricandheat": "221.67",
+ "manufacturing": "78.61",
+ "transportation": "116.36",
+ "fuelcombustion": "116.48", 
+ "fugitive": "4.39" 
+ }]},
+{"North America": [{
+ "ccode": "ATG",
+ "name": "Antigua & Barbuda",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "BHS",
+ "name": "Bahamas, The",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "BRB",
+ "name": "Barbados",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "BLZ",
+ "name": "Belize",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "CAN",
+ "name": "Canada",
+ "totalCO2": "438.55",
+ "electricandheat": "137.28",
+ "manufacturing": "83.83",
+ "transportation": "126.29",
+ "fuelcombustion": "86.88", 
+ "fugitive": "4.27" 
+ },
+{
+ "ccode": "CRI",
+ "name": "Costa Rica",
+ "totalCO2": "3.77",
+ "electricandheat": "0.49",
+ "manufacturing": "0.57",
+ "transportation": "2.44",
+ "fuelcombustion": "0.27", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "DMA",
+ "name": "Dominica",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "DOM",
+ "name": "Dominican Republic",
+ "totalCO2": "8.93",
+ "electricandheat": "4.00",
+ "manufacturing": "0.76",
+ "transportation": "2.63",
+ "fuelcombustion": "1.54", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "GRD",
+ "name": "Grenada",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "GTM",
+ "name": "Guatemala",
+ "totalCO2": "4.59",
+ "electricandheat": "0.90",
+ "manufacturing": "1.03",
+ "transportation": "2.03",
+ "fuelcombustion": "0.63", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "HTI",
+ "name": "Haiti",
+ "totalCO2": "0.67",
+ "electricandheat": "0.08",
+ "manufacturing": "0.15",
+ "transportation": "0.38",
+ "fuelcombustion": "0.06", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "HND",
+ "name": "Honduras",
+ "totalCO2": "2.58",
+ "electricandheat": "0.16",
+ "manufacturing": "0.76",
+ "transportation": "1.31",
+ "fuelcombustion": "0.35", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "MEX",
+ "name": "Mexico",
+ "totalCO2": "292.82",
+ "electricandheat": "110.26",
+ "manufacturing": "59.06",
+ "transportation": "91.32",
+ "fuelcombustion": "29.33", 
+ "fugitive": "2.85" 
+ },
+{
+ "ccode": "NIC",
+ "name": "Nicaragua",
+ "totalCO2": "2.09",
+ "electricandheat": "0.73",
+ "manufacturing": "0.25",
+ "transportation": "0.94",
+ "fuelcombustion": "0.17", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "PAN",
+ "name": "Panama",
+ "totalCO2": "3.57",
+ "electricandheat": "1.07",
+ "manufacturing": "0.72",
+ "transportation": "1.53",
+ "fuelcombustion": "0.25", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "KNA",
+ "name": "Saint Kitts & Nevis",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "LCA",
+ "name": "Saint Lucia",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "VCT",
+ "name": "Saint Vincent & Grenadines",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "TTO",
+ "name": "Trinidad & Tobago",
+ "totalCO2": "15.94",
+ "electricandheat": "5.25",
+ "manufacturing": "4.88",
+ "transportation": "1.21",
+ "fuelcombustion": "0.23", 
+ "fugitive": "4.37" 
+ },
+{
+ "ccode": "USA",
+ "name": "United States",
+ "totalCO2": "5019.98",
+ "electricandheat": "2310.74",
+ "manufacturing": "623.68",
+ "transportation": "1446.71",
+ "fuelcombustion": "626.10", 
+ "fugitive": "12.75" 
+ }]},
+{"Oceania": [{
+ "ccode": "AUS",
+ "name": "Australia",
+ "totalCO2": "269.93",
+ "electricandheat": "146.80",
+ "manufacturing": "47.33",
+ "transportation": "62.54",
+ "fuelcombustion": "12.89", 
+ "fugitive": "0.37" 
+ },
+{
+ "ccode": "COK",
+ "name": "Cook Islands",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "GNQ",
+ "name": "Equatorial Guinea",
+ "totalCO2": "0.93",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.93" 
+ },
+{
+ "ccode": "FJI",
+ "name": "Fiji",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "GIN",
+ "name": "Guinea",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "GNB",
+ "name": "Guinea-Bissau",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "NRU",
+ "name": "Nauru",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "NZL",
+ "name": "New Zealand",
+ "totalCO2": "24.12",
+ "electricandheat": "5.39",
+ "manufacturing": "7.06",
+ "transportation": "9.34",
+ "fuelcombustion": "2.33", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "NIU",
+ "name": "Niue",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "PLW",
+ "name": "Palau",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "" 
+ },
+{
+ "ccode": "PNG",
+ "name": "Papua New Guinea",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "WSM",
+ "name": "Samoa",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "SLB",
+ "name": "Solomon Islands",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "TON",
+ "name": "Tonga",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "VUT",
+ "name": "Vanuatu",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ }]},
+{"South America": [{
+ "ccode": "ARG",
+ "name": "Argentina",
+ "totalCO2": "112.50",
+ "electricandheat": "34.01",
+ "manufacturing": "16.11",
+ "transportation": "35.39",
+ "fuelcombustion": "22.81", 
+ "fugitive": "4.18" 
+ },
+{
+ "ccode": "BOL",
+ "name": "Bolivia",
+ "totalCO2": "7.39",
+ "electricandheat": "1.59",
+ "manufacturing": "0.73",
+ "transportation": "2.65",
+ "fuelcombustion": "0.66", 
+ "fugitive": "1.76" 
+ },
+{
+ "ccode": "BRA",
+ "name": "Brazil",
+ "totalCO2": "212.52",
+ "electricandheat": "30.01",
+ "manufacturing": "62.04",
+ "transportation": "89.15",
+ "fuelcombustion": "29.48", 
+ "fugitive": "1.84" 
+ },
+{
+ "ccode": "CHL",
+ "name": "Chile",
+ "totalCO2": "32.55",
+ "electricandheat": "7.14",
+ "manufacturing": "9.61",
+ "transportation": "11.29",
+ "fuelcombustion": "4.35", 
+ "fugitive": "0.16" 
+ },
+{
+ "ccode": "COL",
+ "name": "Colombia",
+ "totalCO2": "56.00",
+ "electricandheat": "13.95",
+ "manufacturing": "18.09",
+ "transportation": "18.08",
+ "fuelcombustion": "5.56", 
+ "fugitive": "0.32" 
+ },
+{
+ "ccode": "CUB",
+ "name": "Cuba",
+ "totalCO2": "19.62",
+ "electricandheat": "9.15",
+ "manufacturing": "5.74",
+ "transportation": "2.00",
+ "fuelcombustion": "2.73", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "ECU",
+ "name": "Ecuador",
+ "totalCO2": "15.41",
+ "electricandheat": "1.85",
+ "manufacturing": "2.80",
+ "transportation": "8.08",
+ "fuelcombustion": "1.50", 
+ "fugitive": "1.18" 
+ },
+{
+ "ccode": "SLV",
+ "name": "El Salvador",
+ "totalCO2": "3.67",
+ "electricandheat": "0.84",
+ "manufacturing": "0.87",
+ "transportation": "1.73",
+ "fuelcombustion": "0.23", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "GUY",
+ "name": "Guyana",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "PRY",
+ "name": "Paraguay",
+ "totalCO2": "2.58",
+ "electricandheat": "0.03",
+ "manufacturing": "0.15",
+ "transportation": "2.25",
+ "fuelcombustion": "0.15", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "PER",
+ "name": "Peru",
+ "totalCO2": "20.60",
+ "electricandheat": "4.09",
+ "manufacturing": "4.90",
+ "transportation": "6.98",
+ "fuelcombustion": "4.23", 
+ "fugitive": "0.40" 
+ },
+{
+ "ccode": "SUR",
+ "name": "Suriname",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "URY",
+ "name": "Uruguay",
+ "totalCO2": "4.38",
+ "electricandheat": "0.62",
+ "manufacturing": "0.72",
+ "transportation": "1.93",
+ "fuelcombustion": "1.11", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "VEN",
+ "name": "Venezuela",
+ "totalCO2": "117.60",
+ "electricandheat": "43.46",
+ "manufacturing": "30.26",
+ "transportation": "31.59",
+ "fuelcombustion": "5.43", 
+ "fugitive": "6.86" 
+ }]}
+],
+"1994": [{"Africa": [{
+ "ccode": "DZA",
+ "name": "Algeria",
+ "totalCO2": "70.23",
+ "electricandheat": "24.93",
+ "manufacturing": "7.73",
+ "transportation": "15.37",
+ "fuelcombustion": "8.10", 
+ "fugitive": "14.10" 
+ },
+{
+ "ccode": "AGO",
+ "name": "Angola",
+ "totalCO2": "6.68",
+ "electricandheat": "0.42",
+ "manufacturing": "1.68",
+ "transportation": "1.53",
+ "fuelcombustion": "0.63", 
+ "fugitive": "2.42" 
+ },
+{
+ "ccode": "BEN",
+ "name": "Benin",
+ "totalCO2": "0.21",
+ "electricandheat": "0.03",
+ "manufacturing": "0.02",
+ "transportation": "0.12",
+ "fuelcombustion": "0.04", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "BWA",
+ "name": "Botswana",
+ "totalCO2": "3.03",
+ "electricandheat": "1.63",
+ "manufacturing": "0.47",
+ "transportation": "0.76",
+ "fuelcombustion": "0.17", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "BFA",
+ "name": "Burkina Faso",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "BDI",
+ "name": "Burundi",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "CMR",
+ "name": "Cameroon",
+ "totalCO2": "7.09",
+ "electricandheat": "0.03",
+ "manufacturing": "0.20",
+ "transportation": "1.74",
+ "fuelcombustion": "0.61", 
+ "fugitive": "4.51" 
+ },
+{
+ "ccode": "CPV",
+ "name": "Cape Verde",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "CAF",
+ "name": "Central African Republic",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "TCD",
+ "name": "Chad",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "COM",
+ "name": "Comoros",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "COG",
+ "name": "Congo, Dem. Rep.",
+ "totalCO2": "1.21",
+ "electricandheat": "0.04",
+ "manufacturing": "0.01",
+ "transportation": "0.45",
+ "fuelcombustion": "0.71", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "COD",
+ "name": "Congo, Rep.",
+ "totalCO2": "2.86",
+ "electricandheat": "0.00",
+ "manufacturing": "0.06",
+ "transportation": "0.36",
+ "fuelcombustion": "0.07", 
+ "fugitive": "2.37" 
+ },
+{
+ "ccode": "CIV",
+ "name": "Cote d'Ivoire",
+ "totalCO2": "3.10",
+ "electricandheat": "1.06",
+ "manufacturing": "0.45",
+ "transportation": "1.08",
+ "fuelcombustion": "0.51", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "DJI",
+ "name": "Djibouti",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "EGY",
+ "name": "Egypt",
+ "totalCO2": "81.13",
+ "electricandheat": "26.69",
+ "manufacturing": "23.26",
+ "transportation": "19.82",
+ "fuelcombustion": "9.18", 
+ "fugitive": "2.18" 
+ },
+{
+ "ccode": "ERI",
+ "name": "Eritrea",
+ "totalCO2": "0.70",
+ "electricandheat": "0.32",
+ "manufacturing": "0.05",
+ "transportation": "0.28",
+ "fuelcombustion": "0.05", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "ETH",
+ "name": "Ethiopia",
+ "totalCO2": "2.12",
+ "electricandheat": "0.07",
+ "manufacturing": "0.58",
+ "transportation": "0.97",
+ "fuelcombustion": "0.50", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "GAB",
+ "name": "Gabon",
+ "totalCO2": "4.41",
+ "electricandheat": "0.25",
+ "manufacturing": "0.43",
+ "transportation": "0.31",
+ "fuelcombustion": "0.18", 
+ "fugitive": "3.24" 
+ },
+{
+ "ccode": "GMB",
+ "name": "Gambia, The",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "GHA",
+ "name": "Ghana",
+ "totalCO2": "3.04",
+ "electricandheat": "0.12",
+ "manufacturing": "0.52",
+ "transportation": "1.86",
+ "fuelcombustion": "0.54", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "KEN",
+ "name": "Kenya",
+ "totalCO2": "5.28",
+ "electricandheat": "0.56",
+ "manufacturing": "1.67",
+ "transportation": "2.25",
+ "fuelcombustion": "0.80", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "KIR",
+ "name": "Kiribati",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "LSO",
+ "name": "Lesotho",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "LBR",
+ "name": "Liberia",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "LBY",
+ "name": "Libya",
+ "totalCO2": "36.31",
+ "electricandheat": "18.20",
+ "manufacturing": "4.35",
+ "transportation": "8.75",
+ "fuelcombustion": "1.79", 
+ "fugitive": "3.22" 
+ },
+{
+ "ccode": "MDG",
+ "name": "Madagascar",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "MLI",
+ "name": "Mali",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "MRT",
+ "name": "Mauritania",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "MUS",
+ "name": "Mauritius",
+ "totalCO2": "1.50",
+ "electricandheat": "0.60",
+ "manufacturing": "0.23",
+ "transportation": "0.54",
+ "fuelcombustion": "0.13", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "MAR",
+ "name": "Morocco",
+ "totalCO2": "24.94",
+ "electricandheat": "10.12",
+ "manufacturing": "5.43",
+ "transportation": "5.58",
+ "fuelcombustion": "3.81", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "MOZ",
+ "name": "Mozambique",
+ "totalCO2": "1.07",
+ "electricandheat": "0.03",
+ "manufacturing": "0.20",
+ "transportation": "0.69",
+ "fuelcombustion": "0.15", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "NAM",
+ "name": "Namibia",
+ "totalCO2": "1.64",
+ "electricandheat": "0.23",
+ "manufacturing": "0.02",
+ "transportation": "0.57",
+ "fuelcombustion": "0.82", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "NER",
+ "name": "Niger",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "NGA",
+ "name": "Nigeria",
+ "totalCO2": "80.39",
+ "electricandheat": "10.54",
+ "manufacturing": "4.51",
+ "transportation": "12.77",
+ "fuelcombustion": "3.58", 
+ "fugitive": "48.99" 
+ },
+{
+ "ccode": "RWA",
+ "name": "Rwanda",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "STP",
+ "name": "Sao Tome & Principe",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "SEN",
+ "name": "Senegal",
+ "totalCO2": "2.32",
+ "electricandheat": "1.00",
+ "manufacturing": "0.31",
+ "transportation": "0.74",
+ "fuelcombustion": "0.27", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "SYC",
+ "name": "Seychelles",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "SLE",
+ "name": "Sierra Leone",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "ZAF",
+ "name": "South Africa",
+ "totalCO2": "257.60",
+ "electricandheat": "158.52",
+ "manufacturing": "49.32",
+ "transportation": "31.01",
+ "fuelcombustion": "18.75", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "SWZ",
+ "name": "Swaziland",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "TZA",
+ "name": "Tanzania",
+ "totalCO2": "1.80",
+ "electricandheat": "0.43",
+ "manufacturing": "0.43",
+ "transportation": "0.70",
+ "fuelcombustion": "0.24", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "TGO",
+ "name": "Togo",
+ "totalCO2": "0.59",
+ "electricandheat": "0.11",
+ "manufacturing": "0.11",
+ "transportation": "0.32",
+ "fuelcombustion": "0.05", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "TUN",
+ "name": "Tunisia",
+ "totalCO2": "14.71",
+ "electricandheat": "4.74",
+ "manufacturing": "3.18",
+ "transportation": "3.06",
+ "fuelcombustion": "3.00", 
+ "fugitive": "0.73" 
+ },
+{
+ "ccode": "UGA",
+ "name": "Uganda",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "ZMB",
+ "name": "Zambia",
+ "totalCO2": "2.07",
+ "electricandheat": "0.15",
+ "manufacturing": "0.92",
+ "transportation": "0.80",
+ "fuelcombustion": "0.20", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "ZWE",
+ "name": "Zimbabwe",
+ "totalCO2": "15.26",
+ "electricandheat": "8.34",
+ "manufacturing": "2.37",
+ "transportation": "1.73",
+ "fuelcombustion": "2.82", 
+ "fugitive": "0.00" 
+ }]},
+{"Asia": [{
+ "ccode": "AFG",
+ "name": "Afghanistan",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "BHR",
+ "name": "Bahrain",
+ "totalCO2": "15.15",
+ "electricandheat": "11.97",
+ "manufacturing": "1.84",
+ "transportation": "1.18",
+ "fuelcombustion": "0.16", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "BGD",
+ "name": "Bangladesh",
+ "totalCO2": "16.35",
+ "electricandheat": "6.07",
+ "manufacturing": "4.85",
+ "transportation": "2.19",
+ "fuelcombustion": "3.24", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "BTN",
+ "name": "Bhutan",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "BRN",
+ "name": "Brunei",
+ "totalCO2": "4.13",
+ "electricandheat": "3.16",
+ "manufacturing": "0.19",
+ "transportation": "0.72",
+ "fuelcombustion": "0.06", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "KHM",
+ "name": "Cambodia",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "CHN",
+ "name": "China",
+ "totalCO2": "2775.01",
+ "electricandheat": "1065.78",
+ "manufacturing": "1116.41",
+ "transportation": "132.43",
+ "fuelcombustion": "460.39", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "IND",
+ "name": "India",
+ "totalCO2": "718.79",
+ "electricandheat": "354.99",
+ "manufacturing": "186.62",
+ "transportation": "70.19",
+ "fuelcombustion": "102.99", 
+ "fugitive": "4.00" 
+ },
+{
+ "ccode": "IDN",
+ "name": "Indonesia",
+ "totalCO2": "201.67",
+ "electricandheat": "63.50",
+ "manufacturing": "56.26",
+ "transportation": "44.89",
+ "fuelcombustion": "27.54", 
+ "fugitive": "9.48" 
+ },
+{
+ "ccode": "IRN",
+ "name": "Iran",
+ "totalCO2": "261.72",
+ "electricandheat": "57.30",
+ "manufacturing": "50.39",
+ "transportation": "56.17",
+ "fuelcombustion": "81.52", 
+ "fugitive": "16.34" 
+ },
+{
+ "ccode": "IRQ",
+ "name": "Iraq",
+ "totalCO2": "98.41",
+ "electricandheat": "55.50",
+ "manufacturing": "10.60",
+ "transportation": "24.54",
+ "fuelcombustion": "7.68", 
+ "fugitive": "0.09" 
+ },
+{
+ "ccode": "ISR",
+ "name": "Israel",
+ "totalCO2": "43.09",
+ "electricandheat": "25.65",
+ "manufacturing": "4.44",
+ "transportation": "7.81",
+ "fuelcombustion": "5.19", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "JPN",
+ "name": "Japan",
+ "totalCO2": "1122.27",
+ "electricandheat": "452.65",
+ "manufacturing": "263.67",
+ "transportation": "241.74",
+ "fuelcombustion": "164.21", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "JOR",
+ "name": "Jordan",
+ "totalCO2": "11.49",
+ "electricandheat": "4.83",
+ "manufacturing": "1.67",
+ "transportation": "2.72",
+ "fuelcombustion": "2.27", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "KAZ",
+ "name": "Kazakhstan",
+ "totalCO2": "191.35",
+ "electricandheat": "103.31",
+ "manufacturing": "58.61",
+ "transportation": "8.96",
+ "fuelcombustion": "19.65", 
+ "fugitive": "0.82" 
+ },
+{
+ "ccode": "PRK",
+ "name": "Korea, Dem. Rep. (North)",
+ "totalCO2": "80.01",
+ "electricandheat": "11.82",
+ "manufacturing": "51.61",
+ "transportation": "2.06",
+ "fuelcombustion": "14.52", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "KOR",
+ "name": "Korea, Rep. (South)",
+ "totalCO2": "329.04",
+ "electricandheat": "105.96",
+ "manufacturing": "85.41",
+ "transportation": "63.90",
+ "fuelcombustion": "73.77", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "KWT",
+ "name": "Kuwait",
+ "totalCO2": "36.30",
+ "electricandheat": "21.13",
+ "manufacturing": "8.99",
+ "transportation": "4.99",
+ "fuelcombustion": "0.28", 
+ "fugitive": "0.91" 
+ },
+{
+ "ccode": "KGZ",
+ "name": "Kyrgyzstan",
+ "totalCO2": "6.28",
+ "electricandheat": "1.17",
+ "manufacturing": "2.60",
+ "transportation": "0.50",
+ "fuelcombustion": "2.01", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "LAO",
+ "name": "Laos",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "LBN",
+ "name": "Lebanon",
+ "totalCO2": "11.15",
+ "electricandheat": "3.49",
+ "manufacturing": "1.15",
+ "transportation": "3.50",
+ "fuelcombustion": "3.01", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "MWI",
+ "name": "Malawi",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "MYS",
+ "name": "Malaysia",
+ "totalCO2": "75.60",
+ "electricandheat": "31.25",
+ "manufacturing": "22.04",
+ "transportation": "18.48",
+ "fuelcombustion": "3.83", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "MDV",
+ "name": "Maldives",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "MNG",
+ "name": "Mongolia",
+ "totalCO2": "10.11",
+ "electricandheat": "6.51",
+ "manufacturing": "1.80",
+ "transportation": "0.66",
+ "fuelcombustion": "1.14", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "MMR",
+ "name": "Myanmar",
+ "totalCO2": "5.58",
+ "electricandheat": "2.20",
+ "manufacturing": "1.04",
+ "transportation": "1.81",
+ "fuelcombustion": "0.53", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "NPL",
+ "name": "Nepal",
+ "totalCO2": "1.59",
+ "electricandheat": "0.07",
+ "manufacturing": "0.32",
+ "transportation": "0.55",
+ "fuelcombustion": "0.65", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "OMN",
+ "name": "Oman",
+ "totalCO2": "13.33",
+ "electricandheat": "7.10",
+ "manufacturing": "2.44",
+ "transportation": "2.09",
+ "fuelcombustion": "0.86", 
+ "fugitive": "0.84" 
+ },
+{
+ "ccode": "PAK",
+ "name": "Pakistan",
+ "totalCO2": "73.95",
+ "electricandheat": "22.36",
+ "manufacturing": "22.80",
+ "transportation": "19.27",
+ "fuelcombustion": "9.52", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "PHL",
+ "name": "Philippines",
+ "totalCO2": "47.11",
+ "electricandheat": "15.03",
+ "manufacturing": "9.68",
+ "transportation": "18.29",
+ "fuelcombustion": "4.11", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "QAT",
+ "name": "Qatar",
+ "totalCO2": "18.08",
+ "electricandheat": "10.49",
+ "manufacturing": "5.69",
+ "transportation": "1.77",
+ "fuelcombustion": "0.13", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "RUS",
+ "name": "Russian Federation",
+ "totalCO2": "1611.64",
+ "electricandheat": "1001.32",
+ "manufacturing": "175.79",
+ "transportation": "205.31",
+ "fuelcombustion": "229.22", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "SAU",
+ "name": "Saudi Arabia",
+ "totalCO2": "212.06",
+ "electricandheat": "91.09",
+ "manufacturing": "38.80",
+ "transportation": "60.61",
+ "fuelcombustion": "2.99", 
+ "fugitive": "18.57" 
+ },
+{
+ "ccode": "SGP",
+ "name": "Singapore",
+ "totalCO2": "39.24",
+ "electricandheat": "31.67",
+ "manufacturing": "1.74",
+ "transportation": "5.08",
+ "fuelcombustion": "0.75", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "LKA",
+ "name": "Sri Lanka",
+ "totalCO2": "5.35",
+ "electricandheat": "0.44",
+ "manufacturing": "0.63",
+ "transportation": "3.45",
+ "fuelcombustion": "0.83", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "SDN",
+ "name": "Sudan",
+ "totalCO2": "4.84",
+ "electricandheat": "0.67",
+ "manufacturing": "1.04",
+ "transportation": "2.95",
+ "fuelcombustion": "0.18", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "SYR",
+ "name": "Syria",
+ "totalCO2": "31.59",
+ "electricandheat": "10.36",
+ "manufacturing": "6.41",
+ "transportation": "7.45",
+ "fuelcombustion": "6.70", 
+ "fugitive": "0.67" 
+ },
+{
+ "ccode": "TJK",
+ "name": "Tajikistan",
+ "totalCO2": "2.91",
+ "electricandheat": "0.71",
+ "manufacturing": "0.00",
+ "transportation": "0.19",
+ "fuelcombustion": "2.01", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "THA",
+ "name": "Thailand",
+ "totalCO2": "125.28",
+ "electricandheat": "47.91",
+ "manufacturing": "30.47",
+ "transportation": "38.86",
+ "fuelcombustion": "8.04", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "TUR",
+ "name": "Turkey",
+ "totalCO2": "138.79",
+ "electricandheat": "49.46",
+ "manufacturing": "31.53",
+ "transportation": "31.27",
+ "fuelcombustion": "26.41", 
+ "fugitive": "0.12" 
+ },
+{
+ "ccode": "TKM",
+ "name": "Turkmenistan",
+ "totalCO2": "32.52",
+ "electricandheat": "11.30",
+ "manufacturing": "1.50",
+ "transportation": "3.35",
+ "fuelcombustion": "16.37", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "ARE",
+ "name": "United Arab Emirates",
+ "totalCO2": "66.24",
+ "electricandheat": "18.81",
+ "manufacturing": "34.08",
+ "transportation": "12.36",
+ "fuelcombustion": "0.28", 
+ "fugitive": "0.71" 
+ },
+{
+ "ccode": "UZB",
+ "name": "Uzbekistan",
+ "totalCO2": "112.44",
+ "electricandheat": "41.49",
+ "manufacturing": "6.75",
+ "transportation": "5.97",
+ "fuelcombustion": "58.23", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "VNM",
+ "name": "Vietnam",
+ "totalCO2": "24.62",
+ "electricandheat": "3.66",
+ "manufacturing": "7.38",
+ "transportation": "7.53",
+ "fuelcombustion": "4.64", 
+ "fugitive": "1.41" 
+ },
+{
+ "ccode": "YEM",
+ "name": "Yemen",
+ "totalCO2": "8.07",
+ "electricandheat": "2.33",
+ "manufacturing": "0.00",
+ "transportation": "4.40",
+ "fuelcombustion": "1.34", 
+ "fugitive": "0.00" 
+ }]},
+{"Europe": [{
+ "ccode": "ALB",
+ "name": "Albania",
+ "totalCO2": "2.35",
+ "electricandheat": "0.63",
+ "manufacturing": "0.69",
+ "transportation": "0.63",
+ "fuelcombustion": "0.33", 
+ "fugitive": "0.07" 
+ },
+{
+ "ccode": "ARM",
+ "name": "Armenia",
+ "totalCO2": "2.76",
+ "electricandheat": "0.82",
+ "manufacturing": "0.73",
+ "transportation": "0.16",
+ "fuelcombustion": "1.05", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "AUT",
+ "name": "Austria",
+ "totalCO2": "56.15",
+ "electricandheat": "18.87",
+ "manufacturing": "9.84",
+ "transportation": "15.20",
+ "fuelcombustion": "12.24", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "AZE",
+ "name": "Azerbaijan",
+ "totalCO2": "49.84",
+ "electricandheat": "16.84",
+ "manufacturing": "9.48",
+ "transportation": "3.24",
+ "fuelcombustion": "6.21", 
+ "fugitive": "14.07" 
+ },
+{
+ "ccode": "BLR",
+ "name": "Belarus",
+ "totalCO2": "70.55",
+ "electricandheat": "42.14",
+ "manufacturing": "11.03",
+ "transportation": "6.67",
+ "fuelcombustion": "10.71", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "BEL",
+ "name": "Belgium",
+ "totalCO2": "115.48",
+ "electricandheat": "32.81",
+ "manufacturing": "31.00",
+ "transportation": "22.74",
+ "fuelcombustion": "28.93", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "BIH",
+ "name": "Bosnia & Herzegovina",
+ "totalCO2": "3.03",
+ "electricandheat": "0.67",
+ "manufacturing": "0.65",
+ "transportation": "0.96",
+ "fuelcombustion": "0.75", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "BGR",
+ "name": "Bulgaria",
+ "totalCO2": "52.62",
+ "electricandheat": "34.49",
+ "manufacturing": "8.99",
+ "transportation": "3.90",
+ "fuelcombustion": "5.24", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "HRV",
+ "name": "Croatia",
+ "totalCO2": "14.96",
+ "electricandheat": "5.48",
+ "manufacturing": "3.76",
+ "transportation": "3.15",
+ "fuelcombustion": "2.57", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "CYP",
+ "name": "Cyprus",
+ "totalCO2": "5.13",
+ "electricandheat": "2.35",
+ "manufacturing": "1.21",
+ "transportation": "1.37",
+ "fuelcombustion": "0.20", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "CZE",
+ "name": "Czech Republic",
+ "totalCO2": "122.15",
+ "electricandheat": "63.80",
+ "manufacturing": "28.24",
+ "transportation": "8.74",
+ "fuelcombustion": "21.37", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "DNK",
+ "name": "Denmark",
+ "totalCO2": "61.58",
+ "electricandheat": "35.86",
+ "manufacturing": "5.75",
+ "transportation": "11.51",
+ "fuelcombustion": "8.05", 
+ "fugitive": "0.41" 
+ },
+{
+ "ccode": "EST",
+ "name": "Estonia",
+ "totalCO2": "17.66",
+ "electricandheat": "13.68",
+ "manufacturing": "1.80",
+ "transportation": "1.39",
+ "fuelcombustion": "0.79", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "FIN",
+ "name": "Finland",
+ "totalCO2": "61.29",
+ "electricandheat": "26.63",
+ "manufacturing": "15.63",
+ "transportation": "11.45",
+ "fuelcombustion": "7.58", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "FRA",
+ "name": "France",
+ "totalCO2": "344.69",
+ "electricandheat": "51.09",
+ "manufacturing": "77.64",
+ "transportation": "120.79",
+ "fuelcombustion": "95.17", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "GEO",
+ "name": "Georgia",
+ "totalCO2": "10.40",
+ "electricandheat": "4.48",
+ "manufacturing": "2.19",
+ "transportation": "1.49",
+ "fuelcombustion": "2.24", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "DEU",
+ "name": "Germany",
+ "totalCO2": "869.84",
+ "electricandheat": "376.24",
+ "manufacturing": "139.31",
+ "transportation": "164.81",
+ "fuelcombustion": "188.14", 
+ "fugitive": "1.34" 
+ },
+{
+ "ccode": "GRC",
+ "name": "Greece",
+ "totalCO2": "73.17",
+ "electricandheat": "39.87",
+ "manufacturing": "8.93",
+ "transportation": "16.53",
+ "fuelcombustion": "7.84", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "HUN",
+ "name": "Hungary",
+ "totalCO2": "57.34",
+ "electricandheat": "24.12",
+ "manufacturing": "9.57",
+ "transportation": "6.85",
+ "fuelcombustion": "16.80", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "ISL",
+ "name": "Iceland",
+ "totalCO2": "2.04",
+ "electricandheat": "0.01",
+ "manufacturing": "0.55",
+ "transportation": "0.65",
+ "fuelcombustion": "0.83", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "IRL",
+ "name": "Ireland",
+ "totalCO2": "32.50",
+ "electricandheat": "12.47",
+ "manufacturing": "4.88",
+ "transportation": "5.75",
+ "fuelcombustion": "9.40", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "ITA",
+ "name": "Italy",
+ "totalCO2": "387.31",
+ "electricandheat": "136.84",
+ "manufacturing": "77.31",
+ "transportation": "104.07",
+ "fuelcombustion": "69.09", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "JAM",
+ "name": "Jamaica",
+ "totalCO2": "8.10",
+ "electricandheat": "4.01",
+ "manufacturing": "2.61",
+ "transportation": "1.15",
+ "fuelcombustion": "0.33", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "LVA",
+ "name": "Latvia",
+ "totalCO2": "10.08",
+ "electricandheat": "4.42",
+ "manufacturing": "1.42",
+ "transportation": "2.12",
+ "fuelcombustion": "2.12", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "LTU",
+ "name": "Lithuania",
+ "totalCO2": "14.91",
+ "electricandheat": "7.27",
+ "manufacturing": "2.54",
+ "transportation": "2.40",
+ "fuelcombustion": "2.70", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "LUX",
+ "name": "Luxembourg",
+ "totalCO2": "10.03",
+ "electricandheat": "1.29",
+ "manufacturing": "3.85",
+ "transportation": "3.49",
+ "fuelcombustion": "1.40", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "MKD",
+ "name": "Macedonia, FYR",
+ "totalCO2": "8.23",
+ "electricandheat": "5.82",
+ "manufacturing": "0.88",
+ "transportation": "0.93",
+ "fuelcombustion": "0.60", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "MLT",
+ "name": "Malta",
+ "totalCO2": "2.48",
+ "electricandheat": "1.79",
+ "manufacturing": "0.00",
+ "transportation": "0.59",
+ "fuelcombustion": "0.10", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "MDA",
+ "name": "Moldova",
+ "totalCO2": "13.69",
+ "electricandheat": "7.97",
+ "manufacturing": "0.99",
+ "transportation": "1.16",
+ "fuelcombustion": "3.57", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "MNE",
+ "name": "Montenegro",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "" 
+ },
+{
+ "ccode": "NLD",
+ "name": "Netherlands",
+ "totalCO2": "169.81",
+ "electricandheat": "65.85",
+ "manufacturing": "36.02",
+ "transportation": "28.06",
+ "fuelcombustion": "39.59", 
+ "fugitive": "0.29" 
+ },
+{
+ "ccode": "NOR",
+ "name": "Norway",
+ "totalCO2": "33.75",
+ "electricandheat": "12.29",
+ "manufacturing": "6.40",
+ "transportation": "10.73",
+ "fuelcombustion": "3.61", 
+ "fugitive": "0.72" 
+ },
+{
+ "ccode": "POL",
+ "name": "Poland",
+ "totalCO2": "330.04",
+ "electricandheat": "196.39",
+ "manufacturing": "50.60",
+ "transportation": "21.36",
+ "fuelcombustion": "61.69", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "PRT",
+ "name": "Portugal",
+ "totalCO2": "44.79",
+ "electricandheat": "18.77",
+ "manufacturing": "9.56",
+ "transportation": "12.39",
+ "fuelcombustion": "4.07", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "ROU",
+ "name": "Romania",
+ "totalCO2": "112.95",
+ "electricandheat": "68.79",
+ "manufacturing": "28.02",
+ "transportation": "8.81",
+ "fuelcombustion": "7.33", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "SRB",
+ "name": "Serbia",
+ "totalCO2": "38.41",
+ "electricandheat": "28.29",
+ "manufacturing": "4.05",
+ "transportation": "2.60",
+ "fuelcombustion": "3.47", 
+ "fugitive": "" 
+ },
+{
+ "ccode": "SVK",
+ "name": "Slovakia",
+ "totalCO2": "40.31",
+ "electricandheat": "15.84",
+ "manufacturing": "11.92",
+ "transportation": "3.32",
+ "fuelcombustion": "9.23", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "SVN",
+ "name": "Slovenia",
+ "totalCO2": "13.12",
+ "electricandheat": "5.53",
+ "manufacturing": "2.03",
+ "transportation": "3.41",
+ "fuelcombustion": "2.15", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "ESP",
+ "name": "Spain",
+ "totalCO2": "219.87",
+ "electricandheat": "79.26",
+ "manufacturing": "46.19",
+ "transportation": "70.22",
+ "fuelcombustion": "24.20", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "SWE",
+ "name": "Sweden",
+ "totalCO2": "58.05",
+ "electricandheat": "12.39",
+ "manufacturing": "15.51",
+ "transportation": "20.08",
+ "fuelcombustion": "10.07", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "CHE",
+ "name": "Switzerland",
+ "totalCO2": "40.89",
+ "electricandheat": "2.88",
+ "manufacturing": "6.01",
+ "transportation": "14.54",
+ "fuelcombustion": "17.46", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "UKR",
+ "name": "Ukraine",
+ "totalCO2": "408.16",
+ "electricandheat": "218.24",
+ "manufacturing": "98.23",
+ "transportation": "31.96",
+ "fuelcombustion": "59.73", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "GBR",
+ "name": "United Kingdom",
+ "totalCO2": "531.76",
+ "electricandheat": "216.00",
+ "manufacturing": "79.57",
+ "transportation": "116.73",
+ "fuelcombustion": "113.68", 
+ "fugitive": "5.78" 
+ }]},
+{"North America": [{
+ "ccode": "ATG",
+ "name": "Antigua & Barbuda",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "BHS",
+ "name": "Bahamas, The",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "BRB",
+ "name": "Barbados",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "BLZ",
+ "name": "Belize",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "CAN",
+ "name": "Canada",
+ "totalCO2": "454.05",
+ "electricandheat": "141.82",
+ "manufacturing": "87.08",
+ "transportation": "132.46",
+ "fuelcombustion": "88.41", 
+ "fugitive": "4.28" 
+ },
+{
+ "ccode": "CRI",
+ "name": "Costa Rica",
+ "totalCO2": "4.41",
+ "electricandheat": "0.89",
+ "manufacturing": "0.65",
+ "transportation": "2.57",
+ "fuelcombustion": "0.30", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "DMA",
+ "name": "Dominica",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "DOM",
+ "name": "Dominican Republic",
+ "totalCO2": "10.55",
+ "electricandheat": "4.90",
+ "manufacturing": "0.96",
+ "transportation": "3.12",
+ "fuelcombustion": "1.57", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "GRD",
+ "name": "Grenada",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "GTM",
+ "name": "Guatemala",
+ "totalCO2": "4.88",
+ "electricandheat": "1.00",
+ "manufacturing": "1.08",
+ "transportation": "2.15",
+ "fuelcombustion": "0.65", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "HTI",
+ "name": "Haiti",
+ "totalCO2": "0.19",
+ "electricandheat": "0.03",
+ "manufacturing": "0.02",
+ "transportation": "0.11",
+ "fuelcombustion": "0.03", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "HND",
+ "name": "Honduras",
+ "totalCO2": "2.96",
+ "electricandheat": "0.32",
+ "manufacturing": "0.77",
+ "transportation": "1.52",
+ "fuelcombustion": "0.35", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "MEX",
+ "name": "Mexico",
+ "totalCO2": "313.47",
+ "electricandheat": "124.56",
+ "manufacturing": "60.72",
+ "transportation": "95.16",
+ "fuelcombustion": "30.24", 
+ "fugitive": "2.79" 
+ },
+{
+ "ccode": "NIC",
+ "name": "Nicaragua",
+ "totalCO2": "2.38",
+ "electricandheat": "0.83",
+ "manufacturing": "0.32",
+ "transportation": "1.00",
+ "fuelcombustion": "0.23", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "PAN",
+ "name": "Panama",
+ "totalCO2": "3.81",
+ "electricandheat": "1.10",
+ "manufacturing": "0.80",
+ "transportation": "1.63",
+ "fuelcombustion": "0.28", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "KNA",
+ "name": "Saint Kitts & Nevis",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "LCA",
+ "name": "Saint Lucia",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "VCT",
+ "name": "Saint Vincent & Grenadines",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "TTO",
+ "name": "Trinidad & Tobago",
+ "totalCO2": "16.93",
+ "electricandheat": "5.26",
+ "manufacturing": "5.50",
+ "transportation": "1.27",
+ "fuelcombustion": "0.18", 
+ "fugitive": "4.72" 
+ },
+{
+ "ccode": "USA",
+ "name": "United States",
+ "totalCO2": "5100.67",
+ "electricandheat": "2335.26",
+ "manufacturing": "636.17",
+ "transportation": "1499.20",
+ "fuelcombustion": "617.22", 
+ "fugitive": "12.82" 
+ }]},
+{"Oceania": [{
+ "ccode": "AUS",
+ "name": "Australia",
+ "totalCO2": "275.95",
+ "electricandheat": "149.53",
+ "manufacturing": "49.20",
+ "transportation": "64.17",
+ "fuelcombustion": "12.77", 
+ "fugitive": "0.28" 
+ },
+{
+ "ccode": "COK",
+ "name": "Cook Islands",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "GNQ",
+ "name": "Equatorial Guinea",
+ "totalCO2": "0.93",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.93" 
+ },
+{
+ "ccode": "FJI",
+ "name": "Fiji",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "GIN",
+ "name": "Guinea",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "GNB",
+ "name": "Guinea-Bissau",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "NRU",
+ "name": "Nauru",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "NZL",
+ "name": "New Zealand",
+ "totalCO2": "24.71",
+ "electricandheat": "4.72",
+ "manufacturing": "7.26",
+ "transportation": "10.00",
+ "fuelcombustion": "2.67", 
+ "fugitive": "0.06" 
+ },
+{
+ "ccode": "NIU",
+ "name": "Niue",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "PLW",
+ "name": "Palau",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "" 
+ },
+{
+ "ccode": "PNG",
+ "name": "Papua New Guinea",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "WSM",
+ "name": "Samoa",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "SLB",
+ "name": "Solomon Islands",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "TON",
+ "name": "Tonga",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "VUT",
+ "name": "Vanuatu",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ }]},
+{"South America": [{
+ "ccode": "ARG",
+ "name": "Argentina",
+ "totalCO2": "120.29",
+ "electricandheat": "32.32",
+ "manufacturing": "23.20",
+ "transportation": "36.78",
+ "fuelcombustion": "23.90", 
+ "fugitive": "4.09" 
+ },
+{
+ "ccode": "BOL",
+ "name": "Bolivia",
+ "totalCO2": "8.53",
+ "electricandheat": "1.83",
+ "manufacturing": "0.81",
+ "transportation": "2.75",
+ "fuelcombustion": "0.71", 
+ "fugitive": "2.43" 
+ },
+{
+ "ccode": "BRA",
+ "name": "Brazil",
+ "totalCO2": "220.80",
+ "electricandheat": "29.89",
+ "manufacturing": "64.52",
+ "transportation": "93.23",
+ "fuelcombustion": "31.21", 
+ "fugitive": "1.95" 
+ },
+{
+ "ccode": "CHL",
+ "name": "Chile",
+ "totalCO2": "36.29",
+ "electricandheat": "9.16",
+ "manufacturing": "10.12",
+ "transportation": "12.21",
+ "fuelcombustion": "4.57", 
+ "fugitive": "0.23" 
+ },
+{
+ "ccode": "COL",
+ "name": "Colombia",
+ "totalCO2": "56.43",
+ "electricandheat": "12.34",
+ "manufacturing": "19.42",
+ "transportation": "16.85",
+ "fuelcombustion": "7.50", 
+ "fugitive": "0.32" 
+ },
+{
+ "ccode": "CUB",
+ "name": "Cuba",
+ "totalCO2": "21.12",
+ "electricandheat": "10.37",
+ "manufacturing": "6.01",
+ "transportation": "1.93",
+ "fuelcombustion": "2.81", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "ECU",
+ "name": "Ecuador",
+ "totalCO2": "16.37",
+ "electricandheat": "1.81",
+ "manufacturing": "3.19",
+ "transportation": "8.59",
+ "fuelcombustion": "1.60", 
+ "fugitive": "1.18" 
+ },
+{
+ "ccode": "SLV",
+ "name": "El Salvador",
+ "totalCO2": "4.15",
+ "electricandheat": "1.20",
+ "manufacturing": "0.86",
+ "transportation": "1.84",
+ "fuelcombustion": "0.25", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "GUY",
+ "name": "Guyana",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "PRY",
+ "name": "Paraguay",
+ "totalCO2": "3.04",
+ "electricandheat": "0.00",
+ "manufacturing": "0.33",
+ "transportation": "2.54",
+ "fuelcombustion": "0.17", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "PER",
+ "name": "Peru",
+ "totalCO2": "21.35",
+ "electricandheat": "3.80",
+ "manufacturing": "4.81",
+ "transportation": "7.92",
+ "fuelcombustion": "4.42", 
+ "fugitive": "0.40" 
+ },
+{
+ "ccode": "SUR",
+ "name": "Suriname",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "URY",
+ "name": "Uruguay",
+ "totalCO2": "4.07",
+ "electricandheat": "0.13",
+ "manufacturing": "0.66",
+ "transportation": "2.18",
+ "fuelcombustion": "1.10", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "VEN",
+ "name": "Venezuela",
+ "totalCO2": "118.18",
+ "electricandheat": "44.44",
+ "manufacturing": "30.29",
+ "transportation": "32.07",
+ "fuelcombustion": "4.96", 
+ "fugitive": "6.42" 
+ }]}
+],
+"1995": [{"Africa": [{
+ "ccode": "DZA",
+ "name": "Algeria",
+ "totalCO2": "71.29",
+ "electricandheat": "25.85",
+ "manufacturing": "7.88",
+ "transportation": "14.96",
+ "fuelcombustion": "8.03", 
+ "fugitive": "14.57" 
+ },
+{
+ "ccode": "AGO",
+ "name": "Angola",
+ "totalCO2": "10.77",
+ "electricandheat": "0.41",
+ "manufacturing": "1.83",
+ "transportation": "1.06",
+ "fuelcombustion": "0.66", 
+ "fugitive": "6.81" 
+ },
+{
+ "ccode": "BEN",
+ "name": "Benin",
+ "totalCO2": "0.22",
+ "electricandheat": "0.03",
+ "manufacturing": "0.03",
+ "transportation": "0.12",
+ "fuelcombustion": "0.04", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "BWA",
+ "name": "Botswana",
+ "totalCO2": "3.16",
+ "electricandheat": "1.72",
+ "manufacturing": "0.40",
+ "transportation": "0.89",
+ "fuelcombustion": "0.15", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "BFA",
+ "name": "Burkina Faso",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "BDI",
+ "name": "Burundi",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "CMR",
+ "name": "Cameroon",
+ "totalCO2": "6.91",
+ "electricandheat": "0.03",
+ "manufacturing": "0.22",
+ "transportation": "1.69",
+ "fuelcombustion": "0.56", 
+ "fugitive": "4.41" 
+ },
+{
+ "ccode": "CPV",
+ "name": "Cape Verde",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "CAF",
+ "name": "Central African Republic",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "TCD",
+ "name": "Chad",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "COM",
+ "name": "Comoros",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "COG",
+ "name": "Congo, Dem. Rep.",
+ "totalCO2": "1.14",
+ "electricandheat": "0.04",
+ "manufacturing": "0.01",
+ "transportation": "0.45",
+ "fuelcombustion": "0.64", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "COD",
+ "name": "Congo, Rep.",
+ "totalCO2": "2.84",
+ "electricandheat": "0.00",
+ "manufacturing": "0.06",
+ "transportation": "0.33",
+ "fuelcombustion": "0.08", 
+ "fugitive": "2.37" 
+ },
+{
+ "ccode": "CIV",
+ "name": "Cote d'Ivoire",
+ "totalCO2": "3.28",
+ "electricandheat": "1.03",
+ "manufacturing": "0.47",
+ "transportation": "1.22",
+ "fuelcombustion": "0.56", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "DJI",
+ "name": "Djibouti",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "EGY",
+ "name": "Egypt",
+ "totalCO2": "86.24",
+ "electricandheat": "27.23",
+ "manufacturing": "26.11",
+ "transportation": "21.01",
+ "fuelcombustion": "9.80", 
+ "fugitive": "2.09" 
+ },
+{
+ "ccode": "ERI",
+ "name": "Eritrea",
+ "totalCO2": "0.78",
+ "electricandheat": "0.31",
+ "manufacturing": "0.06",
+ "transportation": "0.33",
+ "fuelcombustion": "0.08", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "ETH",
+ "name": "Ethiopia",
+ "totalCO2": "2.37",
+ "electricandheat": "0.07",
+ "manufacturing": "0.63",
+ "transportation": "1.08",
+ "fuelcombustion": "0.59", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "GAB",
+ "name": "Gabon",
+ "totalCO2": "4.57",
+ "electricandheat": "0.33",
+ "manufacturing": "0.47",
+ "transportation": "0.34",
+ "fuelcombustion": "0.19", 
+ "fugitive": "3.24" 
+ },
+{
+ "ccode": "GMB",
+ "name": "Gambia, The",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "GHA",
+ "name": "Ghana",
+ "totalCO2": "3.32",
+ "electricandheat": "0.11",
+ "manufacturing": "0.57",
+ "transportation": "2.02",
+ "fuelcombustion": "0.62", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "KEN",
+ "name": "Kenya",
+ "totalCO2": "5.76",
+ "electricandheat": "0.52",
+ "manufacturing": "1.74",
+ "transportation": "2.51",
+ "fuelcombustion": "0.99", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "KIR",
+ "name": "Kiribati",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "LSO",
+ "name": "Lesotho",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "LBR",
+ "name": "Liberia",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "LBY",
+ "name": "Libya",
+ "totalCO2": "38.35",
+ "electricandheat": "18.82",
+ "manufacturing": "4.95",
+ "transportation": "9.41",
+ "fuelcombustion": "1.93", 
+ "fugitive": "3.24" 
+ },
+{
+ "ccode": "MDG",
+ "name": "Madagascar",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "MLI",
+ "name": "Mali",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "MRT",
+ "name": "Mauritania",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "MUS",
+ "name": "Mauritius",
+ "totalCO2": "1.54",
+ "electricandheat": "0.63",
+ "manufacturing": "0.24",
+ "transportation": "0.54",
+ "fuelcombustion": "0.13", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "MAR",
+ "name": "Morocco",
+ "totalCO2": "25.99",
+ "electricandheat": "11.56",
+ "manufacturing": "4.53",
+ "transportation": "5.92",
+ "fuelcombustion": "3.98", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "MOZ",
+ "name": "Mozambique",
+ "totalCO2": "1.15",
+ "electricandheat": "0.03",
+ "manufacturing": "0.20",
+ "transportation": "0.72",
+ "fuelcombustion": "0.20", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "NAM",
+ "name": "Namibia",
+ "totalCO2": "1.76",
+ "electricandheat": "0.04",
+ "manufacturing": "0.02",
+ "transportation": "0.61",
+ "fuelcombustion": "1.09", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "NER",
+ "name": "Niger",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "NGA",
+ "name": "Nigeria",
+ "totalCO2": "81.53",
+ "electricandheat": "10.92",
+ "manufacturing": "4.32",
+ "transportation": "14.76",
+ "fuelcombustion": "3.81", 
+ "fugitive": "47.72" 
+ },
+{
+ "ccode": "RWA",
+ "name": "Rwanda",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "STP",
+ "name": "Sao Tome & Principe",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "SEN",
+ "name": "Senegal",
+ "totalCO2": "2.48",
+ "electricandheat": "1.02",
+ "manufacturing": "0.37",
+ "transportation": "0.78",
+ "fuelcombustion": "0.31", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "SYC",
+ "name": "Seychelles",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "SLE",
+ "name": "Sierra Leone",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "ZAF",
+ "name": "South Africa",
+ "totalCO2": "274.49",
+ "electricandheat": "166.47",
+ "manufacturing": "55.54",
+ "transportation": "34.82",
+ "fuelcombustion": "17.66", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "SWZ",
+ "name": "Swaziland",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "TZA",
+ "name": "Tanzania",
+ "totalCO2": "2.51",
+ "electricandheat": "0.58",
+ "manufacturing": "0.42",
+ "transportation": "0.89",
+ "fuelcombustion": "0.62", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "TGO",
+ "name": "Togo",
+ "totalCO2": "0.58",
+ "electricandheat": "0.06",
+ "manufacturing": "0.07",
+ "transportation": "0.39",
+ "fuelcombustion": "0.06", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "TUN",
+ "name": "Tunisia",
+ "totalCO2": "14.92",
+ "electricandheat": "4.72",
+ "manufacturing": "3.19",
+ "transportation": "3.16",
+ "fuelcombustion": "3.14", 
+ "fugitive": "0.71" 
+ },
+{
+ "ccode": "UGA",
+ "name": "Uganda",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "ZMB",
+ "name": "Zambia",
+ "totalCO2": "2.05",
+ "electricandheat": "0.13",
+ "manufacturing": "0.83",
+ "transportation": "0.80",
+ "fuelcombustion": "0.29", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "ZWE",
+ "name": "Zimbabwe",
+ "totalCO2": "14.84",
+ "electricandheat": "7.30",
+ "manufacturing": "2.60",
+ "transportation": "2.15",
+ "fuelcombustion": "2.79", 
+ "fugitive": "0.00" 
+ }]},
+{"Asia": [{
+ "ccode": "AFG",
+ "name": "Afghanistan",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "BHR",
+ "name": "Bahrain",
+ "totalCO2": "15.39",
+ "electricandheat": "12.08",
+ "manufacturing": "1.93",
+ "transportation": "1.23",
+ "fuelcombustion": "0.15", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "BGD",
+ "name": "Bangladesh",
+ "totalCO2": "20.26",
+ "electricandheat": "6.70",
+ "manufacturing": "7.18",
+ "transportation": "2.64",
+ "fuelcombustion": "3.74", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "BTN",
+ "name": "Bhutan",
+ "totalCO2": "0.00",
+ "electricandheat": "",
+ "manufacturing": "",
+ "transportation": "",
+ "fuelcombustion": "", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "BRN",
+ "name": "Brunei",
+ "totalCO2": "4.50",
+ "electricandheat": "3.46",
+ "manufacturing": "0.21",
+ "transportation": "0.77",
+ "fuelcombustion": "0.06", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "KHM",
+ "name": "Cambodia",
+ "totalCO2": "1.47",
+ "electricandheat": "0.16",
+ "manufacturing": "0.03",
+ "transportation": "1.16",
+ "fuelcombustion": "0.12", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "CHN",
+ "name": "China",
+ "totalCO2": "3021.64",
+ "electricandheat": "1169.82",
+ "manufacturing": "1227.79",
+ "transportation": "141.91",
+ "fuelcombustion": "482.12", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "IND",
+ "name": "India",
+ "totalCO2": "777.79",
+ "electricandheat": "405.27",
+ "manufacturing": "182.66",
+ "transportation": "77.53",
+ "fuelcombustion": "107.03", 
+ "fugitive": "5.30" 
+ },
+{
+ "ccode": "IDN",
+ "name": "Indonesia",
+ "totalCO2": "223.86",
+ "electricandheat": "73.86",
+ "manufacturing": "62.29",
+ "transportation": "48.75",
+ "fuelcombustion": "29.48", 
+ "fugitive": "9.48" 
+ },
+{
+ "ccode": "IRN",
+ "name": "Iran",
+ "totalCO2": "272.67",
+ "electricandheat": "61.07",
+ "manufacturing": "52.02",
+ "transportation": "55.14",
+ "fuelcombustion": "83.14", 
+ "fugitive": "21.30" 
+ },
+{
+ "ccode": "IRQ",
+ "name": "Iraq",
+ "totalCO2": "97.55",
+ "electricandheat": "53.31",
+ "manufacturing": "10.39",
+ "transportation": "24.21",
+ "fuelcombustion": "9.55", 
+ "fugitive": "0.09" 
+ },
+{
+ "ccode": "ISR",
+ "name": "Israel",
+ "totalCO2": "46.27",
+ "electricandheat": "26.90",
+ "manufacturing": "4.92",
+ "transportation": "8.50",
+ "fuelcombustion": "5.95", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "JPN",
+ "name": "Japan",
+ "totalCO2": "1136.67",
+ "electricandheat": "444.65",
+ "manufacturing": "266.98",
+ "transportation": "249.21",
+ "fuelcombustion": "175.83", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "JOR",
+ "name": "Jordan",
+ "totalCO2": "12.18",
+ "electricandheat": "5.19",
+ "manufacturing": "1.76",
+ "transportation": "2.97",
+ "fuelcombustion": "2.26", 
+ "fugitive": "0.00" 
+ },
+{
+ "ccode": "KAZ",
+ "name": "Kazakhstan",
+ "totalCO2": "168.78",
+ "electricandheat": "78.74",
+ "manufacturing": "58.04",
+ "transportation": "9.06",
+ "fuelcombustion": "21.67", 
+ "fugitive": "1.27" 
+ }

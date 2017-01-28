@@ -35,14 +35,13 @@ function Draw_Map(year, data, industry){
 }
 
 // load data in correct format for linechart
-function Linechart_Data(data, country_link){
+function Linechart_Data(data, country_path){
 
 	// define some variables needed to retrieve the correct data
-	var continent_link = country_link.parent.name,
-			country_code = country_link.ccode,
-			country_num = country_link.parent.children.map(function(x) {return x.ccode; }).indexOf(country_code),
-			continents = ["Africa", "Asia", "Europe", "North America", "Oceania", "South America"],
-			continent_num = continents.indexOf(continent_link);
+	var continent_name = country_path.continent,
+			country_code = country_path.country_code,
+			country_num = country_path.country_num,
+			continent_num = country_path.continent_num;
 
 	var linechart_data = new Object;
 	linechart_data.values = [];
@@ -50,10 +49,10 @@ function Linechart_Data(data, country_link){
 	// loop through every year per country
 	for (year = 1992; year < 2013; year++){
 
-		linechart_data.ccode = data[year][continent_num][continent_link][country_num].ccode;
+		linechart_data.ccode = country_path.country_code;
 
 		// write data in appropriate format
-		[data[year][continent_num][continent_link][country_num]].forEach(function(d){
+		[data[year][continent_num][continent_name][country_num]].forEach(function(d){
 			linechart_data.values.push({
 				"year" : year,
 				"totalCO2" : d.totalCO2,
@@ -238,7 +237,7 @@ function Worldmap_Data(year, data, industry) {
 }
 
 // load data in correct format for sunburst
-function Sunburst_Data(year, data){
+function Sunburst_Data(year, data, continent){
 
 	// create object in which I place formatted data
 	var sunburst_data = new Object;
@@ -311,13 +310,14 @@ function Sunburst_Data(year, data){
 	sunburst_data["children"] = continents_total;
 	sunburst_data.name = "World";
 
-	//console.log(sunburst_data);
-	return sunburst_data;
+	// only return data for one continent
+	continent_num = continents.indexOf(continent);
+	return sunburst_data.children[continent_num];
 
 }
 
 // draw sunburst
-function Draw_Sunburst(year, data){
+function Draw_Sunburst(year, data, continent){
 
 	// script which creates sunburst
 	var width = 600,
@@ -330,7 +330,11 @@ function Draw_Sunburst(year, data){
 	var y = d3.scale.sqrt()
 		.range([0, radius]);
 
+
+	// TODO: add different color scales per continent
 	var color = d3.scale.category20c();
+
+
 
 	var svg = d3.select("#sunburst").append("svg")
 			.attr("width", width)
@@ -428,7 +432,7 @@ function Draw_Sunburst(year, data){
 		var text = g.append("text");
 
 
-		/*gs.select('text')
+		gs.select('text')
 		.attr("x", function(d) {
 				return y(d.y);
 		})
@@ -440,11 +444,11 @@ function Draw_Sunburst(year, data){
 		.text(function(d) {
 				return d.name;
 		})
-		.style("fill", "white");*/
+		.style("fill", "white");
 
 		// update sunburst on click
 		function click(d) {
-				//console.log(d);
+				console.log(d);
 				// fade out all text elements
 				if (d.size !== undefined) {
 						d.size += 100;
@@ -454,22 +458,22 @@ function Draw_Sunburst(year, data){
 				path.transition()
 						.duration(1000)
 						.attrTween("d", arcTween(d))
-						// .each("end", function(e, i) {
-						//     // check if the animated element's data e lies within the visible angle span given in d
-						//     if (e.x >= d.x && e.x < (d.x + d.dx)) {
-						//         // get a selection of the associated text element
-						//         var arcText = d3.select(this.parentNode).select("text");
-						//         // fade in the text element and recalculate positions
-						//         arcText.transition().duration(750)
-						//             .attr("opacity", 1)
-						//             .attr("transform", function() {
-						//                 return "rotate(" + computeTextRotation(e) + ")"
-						//             })
-						//             .attr("x", function(d) {
-						//                 return y(d.y);
-						//             });
-						//     }
-						// })
+						.each("end", function(e, i) {
+						    // check if the animated element's data e lies within the visible angle span given in d
+						    if (e.x >= d.x && e.x < (d.x + d.dx)) {
+						        // get a selection of the associated text element
+						        var arcText = d3.select(this.parentNode).select("text");
+						        // fade in the text element and recalculate positions
+						        arcText.transition().duration(750)
+						            .attr("opacity", 1)
+						            .attr("transform", function() {
+						                return "rotate(" + computeTextRotation(e) + ")"
+						            })
+						            .attr("x", function(d) {
+						                return y(d.y);
+						            });
+						    }
+						})
 						;
 		} //});
 
@@ -481,12 +485,19 @@ function Draw_Sunburst(year, data){
 
 	}
 
+	//updateChart.Call_Sunburst_Data = Call_Sunburst_Data;
+
+	var sunburst_data = Sunburst_Data(year, data, continent);
+	console.log(sunburst_data);
+
 	// update chart to default year
-	updateChart(Sunburst_Data(year, data));
+	updateChart(sunburst_data);
 
 	// in this way updateChart can be called from outside this function
 	Draw_Sunburst.updateChart = updateChart;
 	Draw_Sunburst.click = updateChart.click;
+
+
 }
 
 // draw slider
@@ -580,14 +591,15 @@ function Draw_Slider(){
 			 .call(brush.extent(brush.extent().map(function(d) {
 				 var year = d3.round(d);
 
-				 // select industry which is currently checked
+				 // check which industry and continent are selected
 				 var industry = d3.select("input[name='industry']:checked").node().value;
+				 var curr_continent = d3.select("input[name='continent']:checked").node().value;
 
 				 // update choropleth
 				 map.updateChoropleth(Worldmap_Data(year, data, industry));
 
 				 // update sunburst
-				 Draw_Sunburst.updateChart(Sunburst_Data(year, data));
+				 Draw_Sunburst.updateChart(Sunburst_Data(year, data, curr_continent));
 
 				 return year; })))
 			 .call(brush.event);
@@ -598,6 +610,37 @@ function Draw_Slider(){
 	 }
  }
 
+// function to retrieve indices and keys from a given country in the general data set (very usefull);
+function Country_Path(country_code){
+ var properties = new Object;
+ [data[2012]].forEach(function(d){
+	 d.forEach(function(c, i){
+		 for (var p in c){
+			 [c[p]].forEach(function(e){
+				 e.forEach(function(f, j){
+					 if (f.ccode === country_code){
+						 properties.continent_num = i;
+						 properties.continent = p;
+						 properties.country_num = j;
+						 properties.country_code = country_code;
+						 return;}
+				 });
+			 });
+		 };
+	 });
+ });
+ return properties;
+}
+
+// small help function which checks if object is empty
+function isEmpty(obj) {
+    for(var key in obj) {
+        if(obj.hasOwnProperty(key))
+            return false;
+    }
+    return true;
+}
+
 // load general json data
 d3.json("data/CO2_emission.json", function(error, json) {
 	if (error) return console.warn(error);
@@ -606,36 +649,83 @@ d3.json("data/CO2_emission.json", function(error, json) {
 	// set default values
 	var industry = "totalCO2";
 	var year = 2012;
+	var default_country = 'DEU';
 
 	// draw Map with default year 1992
 	Draw_Map(year, data, industry);
-	Draw_Sunburst(year, data);
+	Draw_Sunburst(year, data, "Europe");
 	Draw_Slider();
 
 	// draw first linegraph with default country germany (only possible AFTER Draw_Sunburst!)
-	var germany = d3.select('#DEU')["0"]["0"].__data__;
+	var germany = Country_Path(default_country);
 	Draw_Linechart(data, germany);
 
 	 // when user clicks on country update linechart and sunburst
  	d3.select('#map > svg > g').selectAll('.datamaps-subunit').on('click', function(geography) {
 
- 			/* when a country is clicked, the corresponding object in the sunburst is selected,
-			because that Object contains usefull information (parent, child etc.) for the linechart_data function*/
+			// retrieve some usefull data from the clicked country
+			var country_path = Country_Path(geography.id);
+			console.log(country_path);
 
-			// select country object
- 			var country_link = d3.select('#' + geography.id)["0"]["0"].__data__;
+			// check which continent is displayed by the sunburst first
+			var curr_continent = d3.select("input[name='continent']:checked").node().value;
+			var new_continent = country_path.continent;
 
-			// update linechart and sunburst
-			Update_Linechart(data, country_link);
- 			Draw_Sunburst.click(country_link);
+			// if no data available give user notice
+			if(isEmpty(country_path)){
+				alert("There is no data available for this country");
+			}
+			// check if clicked country is in continent which is currently displayed by sunburst
+			else if (new_continent == curr_continent)
+			{
+				// update linechart
+				Update_Linechart(data, country_path);
+
+				// this is a very brute way of updating but else I cannot make it work
+				d3.select('#sunburst > svg').remove();
+				Draw_Sunburst(year, data, curr_continent);
+
+				// zoom in on clicked country
+				var country_object = d3.select('#' + geography.id)["0"]["0"].__data__;
+				Draw_Sunburst.click(country_object);
+			}
+			// if sunburst displays different continent first update sunburst
+			else {
+				//update linechart
+				Update_Linechart(data, country_path);
+
+				// update sunburst and change radio button
+				//Draw_Sunburst.updateChart(Sunburst_Data(year, data, new_continent));
+
+				// for some reason you can only (un)check radio button with document (not d3)
+				document.getElementById(new_continent).checked = true;
+
+				// this is a very brute way of updating but else I cannot make it work
+				d3.select("#sunburst > svg").remove();
+				Draw_Sunburst(year, data, new_continent);
+
+				// zoom in on clicked country
+				var country_object = d3.select('#' + geography.id)["0"]["0"].__data__;
+				Draw_Sunburst.click(country_object);
+			}
+
  		});
 
-	// select chosen industry and update choropleth with that industry
+	//  on industry change update chloropleth
 	d3.selectAll("input[name='industry']").on("change", function() {
-
 			// update choropleth with last known year and new industry
 			industry = this.value;
 			map.updateChoropleth(Worldmap_Data(year, data, industry));
+	});
+
+	// on continent change update sunburst
+	d3.selectAll("input[name='continent']").on("change", function(){
+
+		// update sunburst
+		d3.select('#sunburst > svg').remove();
+		new_continent = this.value;
+		Draw_Sunburst(year, data, new_continent);
+
 	});
 
 });
