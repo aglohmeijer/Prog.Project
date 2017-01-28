@@ -73,3 +73,12 @@ Today I mainly have been working on the correct data format. Raw data was in Exc
 # day 15
 - started implementation of linegraph; need to figure out appropriate data format for linechart;
 - TODO: fix that it does not append new chart every time.
+
+# day 16
+- Sunburst now updates not only first time, also after changing slide (was scope issue);
+- Succesfully implemented Linechart which updates when clicked on country in world map;
+- Placed sunburst besides worldmap;
+- TODO: give notice when clicked on country where no data available (or all zero);
+- Idea / TODO: Render only data per continent in sunburst with radio buttons placed above sunburst with different continents ;
+- TODO: world map legenda;
+- TODO: implement constant scaling in worldmap when change on slider (at this moment user does not clearly see difference when sliding);
