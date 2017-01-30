@@ -7,37 +7,45 @@
     <script src="javascript/d3.min.js"></script>
     <!script src="javascript/d3.v4.min.js"></script>
     <!script src="javascript/jquery-3.1.1.js"></script>
+    <script src="javascript/d3-legend.min.js"></script>
     <script src="javascript/topojson.min.js"></script>
     <script src="javascript/datamaps.json.js"></script>
     <!script src=javascript/d3.v3.min.js"></script>
     <script src="javascript/d3.slider.js"></script>
-    <h1 class="header" style="text/css">CO2 Emission Visualization (1992 - 2012)</h1>
+    <h1 class="header" style="text/css">CO<sub>2</sub> Emission Worldwide (1992 - 2012)</h1>
     <link rel="shortcut icon" href="">
   </head>
   <body>
-      <form>
-        <input type="radio" name="industry" value="totalCO2" checked> Total CO2
-        <input type="radio" name="industry" value="electricandheat"> Electric and Heat
-        <input type="radio" name="industry" value="manufacturing"> Manufacturing
-        <input type="radio" name="industry" value="transportation"> Transportation
-        <input type="radio" name="industry" value="fuelcombustion"> Fuel Combustion
-        <input type="radio" name="industry" value="fugitive"> Fugitive
-      </form>
-      <form>
-        <input id="Africa" type="radio" name="continent" value="Africa"> Africa
-        <input id="Asia" type="radio" name="continent" value="Asia"> Asia
-        <input id="Europe" type="radio" name="continent" value="Europe" checked> Europe
-        <input id="North America" type="radio" name="continent" value="North America"> North America
-        <input id="Oceania" type="radio" name="continent" value="Oceania"> Oceania
-        <input id="South America" type="radio" name="continent" value="South America"> South America
-      </form>
-      <div id="map" style="width: 900px; height: 500px"></div>
-      <div id="sunburst" style="height: 400px; width: 400px"></div>
-
-      <div id="slider"></div>
-      <script src=" javascript/visualization.js"></script>
-      <div id="linechart" style="height: 300px; width: 900px"></div>
-
-
+    <div class="parent" style="text-align: center">
+      <div id="parent_div_1">
+        <div id="map" style="height: 700px; width: 900px">
+          <div id="industries">Industry: </div>
+          <form>
+            <input type="radio" name="industry" value="totalCO2" checked> Total CO2
+            <input type="radio" name="industry" value="electricandheat"> Electric and Heat
+            <input type="radio" name="industry" value="manufacturing"> Manufacturing
+            <input type="radio" name="industry" value="transportation"> Transportation
+            <input type="radio" name="industry" value="fuelcombustion"> Fuel Combustion
+            <input type="radio" name="industry" value="fugitive"> Fugitive
+          </form>
+        <svg id="legend" class='legend' style="height: 180px; width: 160px"></svg></div>
+      </div>
+      <div id="parent_div_2">
+        <div id="sunburst" style="height: 700px; width: 800px">
+          <div id="continents">Continent: </div>
+          <form>
+            <input id="Africa" type="radio" name="continent" value="Africa"> Africa
+            <input id="Asia" type="radio" name="continent" value="Asia"> Asia
+            <input id="Europe" type="radio" name="continent" value="Europe" checked> Europe
+            <input id="North America" type="radio" name="continent" value="North America"> North America
+            <input id="Oceania" type="radio" name="continent" value="Oceania"> Oceania
+            <input id="South America" type="radio" name="continent" value="South America"> South America
+          </form>
+        <svg id="legend_sunburst" class='legend' style="height: 180px; width: 175px"></svg></div>
+      </div>
+    </div>
+    <div id="slider"></div>
+    <script src=" javascript/visualization.js"></script>
+    <div id="linechart" style="height: 300px; width: 900px"></div>
   </body>
 </html>

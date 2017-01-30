@@ -86,3 +86,25 @@ Today I mainly have been working on the correct data format. Raw data was in Exc
 # day 16 - II
 I want the Sunburst to render only one continent, which is better. Situation: when the Sunburst is rendering the whole world, it is easy to select the object from one country (I assigned an ID 'countrycode' to every part of the sunburst), and in that case it is easy (since all the elements in the sunburst are nested) to retrieve the corresponding continent (required for updating the sunburst)). Obstacle: if the sunburst only renders one continent AND the user clicks a country on the map which is NOT in the current sunburst selection you cannot select the corresponding country object easily. Thus, I have written a small function which retrieves the 'country_path' from the data, such that you can access that country fast in the general data set.
 - Few hours later: the above doesn't work. Only way of updating the sunburst I can make work is by deleting the whole sunburst and drawing it again. Not very subtile unfortunately, but everything works now.
+
+# day 17 - I
+- Implemented legend for choropleth which updates on change in industry;
+- Fixed issue with changing range (worldmap) over time. Colorscaling now stays the same on slider change;
+- Corrected popup on hover in choropleth, now renders correct data;
+- Started with overall page styling, it starts to look like something.
+- TODO: choropleth fillcolors from most outer ring & text in sunburst, Legenda / coloring in linechart. Linechart styling (is now automatically the same as slider);
+
+# day 17 - II
+- Fixed colors from Sunburst' most outer ring;
+- I'm trying to implement a legend for the sunburst with the industry per color, only the d3.legend library cannot omit values (I use v3).
+
+# day 17 - III
+- With the d3.legend used in the world map used as reference I wrote a function for an updateable sunburst legend, which works.
+## TODO:
+- multiple colorschemes for sunburst, + finetune legenda (add country and values) + country names in sunburst;
+- work on linechart styling/popups etc;
+- work on overall styling;
+- find earth ice surface data;
+- idea: add text area in the lower right area of the page with additonal information per country.
+- divide functions into different javascripts. ATM there is only one javasript consisting of 800 lines of code which is too much I think.
+- ADD DATA SOURCE!

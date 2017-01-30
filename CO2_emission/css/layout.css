@@ -1,34 +1,92 @@
-h1.header{
+h1.header {
+	display: block;
 	position: relative;
-	left: 30px;
 	font-family: verdana;
-	font-size: 180%;
-
+	font-size: 150%;
+	border: 2px solid lightgrey;
+	text-align: center;
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
 }
+
+body > h1 {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+
 
 .hoverinfo{
 	font-family: verdana;
 	font-size: 100%;
 	/*font-weight: normal;*/
 	color: black;
+	text-align: left;
 
 }
 
-h2 {
-    font-size: 1.2em;
-    margin: 60px 0 5px 0;
-}
 
-form {
-font-family: verdana;
-font-size: 100%;
+/*style settings for worldmap legend*/
+.legend {
+position: absolute;
+/*z-index: 1;*/
+bottom: 10px;
+left: 10px;
 /*background-color: lightgrey;*/
-margin-bottom: 20px;
+
+
+}
+/*
+#industries{
+	position: absolute;
+	top: 20px;
+
+}*/
+
+#continents, #industries{
+	font-family: verdana;
+	font-size: 110%;
+	background-color: lightgrey;
+	font-weight: bold;
+
+
 }
 
 
-	#slider {
-		margin-left: 50px;
+
+/*style settings for industry and continent buttons*/
+form, .legend {
+font-family: verdana;
+font-size: 90%;
+background-color: lightgrey;
+/*margin-top: 20px;*/
+/*margin-bottom: 20px;*/
+/*border: 2px solid blue;*/
+}
+
+
+
+body > div.parent {
+	display: block;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+#parent_div_1, #parent_div_2{
+	display: inline-block;
+	border: 2px solid lightgrey;
+	vertical-align: top;
+	background-color: #fcfcfc;
+}
+
+
+/*style settings for time slider*/
+	#slider > svg {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		border: 2px solid lightgrey;
 	}
 
 
@@ -70,6 +128,12 @@ margin-bottom: 20px;
   stroke-width: 1.5px;
 }
 
+path {
+  stroke: #fff;
+  fill-rule: evenodd;
+}
+
+
 #linechart{
 	position: relative;
 	border: 3px solid lightgrey;
@@ -80,18 +144,13 @@ margin-bottom: 20px;
 
 #map{
 	position: relative;
-	left: 30px;
-	top: 0;
-	right: 50px;
+	/*left: 10px;
+	top: 10px;
+	right: 10px;*/
 	/*border: 3px solid black;*/
-	display:inline-block;
+	/*display:inline-block;*/
 }
-
 
 #sunburst{
 	position: relative;
-	left: 50px;
-	top: 0px;
-	/* border: 1px solid black;*/
-	display:inline-block;
 }
