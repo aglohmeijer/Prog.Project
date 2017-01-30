@@ -4,10 +4,13 @@ h1.header {
 	font-family: verdana;
 	font-size: 150%;
 	border: 2px solid lightgrey;
+	height: 70px;
+	line-height: 70px;
 	text-align: center;
-	width: 50%;
+	width: 1710px;
 	margin-left: auto;
 	margin-right: auto;
+	background-color: #fcfcfc;
 }
 
 body > h1 {
@@ -16,7 +19,9 @@ body > h1 {
 }
 
 
-
+html {
+	background-color: #4682B4;
+}
 .hoverinfo{
 	font-family: verdana;
 	font-size: 100%;
@@ -69,8 +74,8 @@ background-color: lightgrey;
 
 body > div.parent {
 	display: block;
-	margin-top: 20px;
-	margin-bottom: 20px;
+	margin-top: 0px;
+	margin-bottom: 5px;
 }
 
 #parent_div_1, #parent_div_2{
@@ -81,12 +86,15 @@ body > div.parent {
 }
 
 
+
+
 /*style settings for time slider*/
 	#slider > svg {
 		display: block;
 		margin-left: auto;
 		margin-right: auto;
 		border: 2px solid lightgrey;
+		background-color: #fcfcfc;
 	}
 
 
@@ -130,15 +138,28 @@ body > div.parent {
 
 path {
   stroke: #fff;
-  fill-rule: evenodd;
+  /*fill-rule: evenodd;*/
+}
+
+#parent_div_3 {
+	display:block;
+	border: 2px solid lightgrey;
+	background-color: #fcfcfc;
+	width: 1710px;
+	height: 400px;
+	position: relative;
+	margin-top: 5px;
+	margin-left: auto;
+	margin-right: auto;
+
 }
 
 
 #linechart{
-	position: relative;
-	border: 3px solid lightgrey;
-	top: 30px;
-	left: 30px;
+	position: absolute;
+	/*border: 3px solid lightgrey;*/
+	margin-top: 20px;
+	margin-left: 20px;
 }
 
 

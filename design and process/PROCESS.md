@@ -108,3 +108,10 @@ I want the Sunburst to render only one continent, which is better. Situation: wh
 - idea: add text area in the lower right area of the page with additonal information per country.
 - divide functions into different javascripts. ATM there is only one javasript consisting of 800 lines of code which is too much I think.
 - ADD DATA SOURCE!
+
+
+# day 18
+- fixed bug in worldmap with non-colored countries in a few years;
+- implemented legend title which updates when clicked on worldmap or in sunburst;
+- implemented dual y axis in linechart with sea level rise data.
+- TODO: line chart styling, slider styling.
