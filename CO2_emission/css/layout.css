@@ -1,3 +1,4 @@
+/*title styling*/
 h1.header {
 	display: block;
 	position: relative;
@@ -21,14 +22,6 @@ body > h1 {
 
 html {
 	background-color: #4682B4;
-}
-.hoverinfo{
-	font-family: verdana;
-	font-size: 100%;
-	/*font-weight: normal;*/
-	color: black;
-	text-align: left;
-
 }
 
 
@@ -55,7 +48,6 @@ left: 10px;
 	background-color: lightgrey;
 	font-weight: bold;
 
-
 }
 
 
@@ -71,7 +63,7 @@ background-color: lightgrey;
 }
 
 
-
+/*placement of central div which contains choropleth and sunburst*/
 body > div.parent {
 	display: block;
 	margin-top: 0px;
@@ -85,11 +77,8 @@ body > div.parent {
 	background-color: #fcfcfc;
 }
 
-
-
-
 /*style settings for time slider*/
-	#slider > svg {
+#slider > svg {
 		display: block;
 		margin-left: auto;
 		margin-right: auto;
@@ -97,16 +86,15 @@ body > div.parent {
 		background-color: #fcfcfc;
 	}
 
-
-	.axis {
-	  font: 10px sans-serif;
+#slider > svg > g > g.x.axis {
+	  font: 12px sans-serif;
 
 	  -webkit-user-select: none;
 	  -moz-user-select: none;
 	  user-select: none;
 	}
 
-	.axis .domain {
+#slider > svg > g > g.x.axis > path.domain {
 	  fill: none;
 	  stroke: black;
 	  stroke-opacity: .3;
@@ -114,14 +102,14 @@ body > div.parent {
 	  stroke-linecap: round;
 	}
 
-	.axis .halo {
+#slider > svg > g > g.x.axis > path.halo {
 	  fill: none;
 	  stroke: #ddd;
 	  stroke-width: 8px;
 	  stroke-linecap: round;
 	}
 
-	.slider .handle {
+#slider > svg > g > g.slider > circle {
 	  fill: #fff;
 	  stroke: #000;
 	  stroke-opacity: .5;
@@ -130,15 +118,20 @@ body > div.parent {
 	}
 
 
+/*style settings for linechart */
 .line {
   fill: none;
-  stroke: steelblue;
-  stroke-width: 1.5px;
+  /*stroke: black;*/
+  stroke-width: 4px;
 }
 
 path {
   stroke: #fff;
   /*fill-rule: evenodd;*/
+}
+
+.legendTitle {
+	font-weight: bold;
 }
 
 #parent_div_3 {
@@ -154,22 +147,64 @@ path {
 
 }
 
-
-#linechart{
+/*style settings linechart*/
+#linechart {
 	position: absolute;
 	/*border: 3px solid lightgrey;*/
 	margin-top: 20px;
 	margin-left: 20px;
 }
 
+#linechart > svg > g > .axis{
+	  font: 14px sans-serif;
+	}
 
-#map{
+/*#linechart > svg > g > g.x.axis > path.domain {
+	  fill: none;
+	  stroke: black;
+	  stroke-opacity: .3;
+	  stroke-width: 10px;
+	  stroke-linecap: round;
+	}*/
+
+#linechart > svg > g > .axis > path.domain {
+	  fill: none;
+	  stroke: #ddd;
+	  stroke-width: 2;
+	  /*stroke-linecap: round;*/
+	}
+
+
+
+
+/*style settings for data source*/
+#source {
+	position: absolute;
+	margin-top: 300px;
+	margin-left: 1440px;
+	border: 2px solid lightgrey;
+	font: 14px sans-serif;
+	font-weight: bold;
+	height: 70px;
+	line-height: 25px;
+}
+
+
+#map {
 	position: relative;
 	/*left: 10px;
 	top: 10px;
 	right: 10px;*/
 	/*border: 3px solid black;*/
 	/*display:inline-block;*/
+}
+
+.hoverinfo{
+	font-family: verdana;
+	font-size: 100%;
+	/*font-weight: normal;*/
+	color: black;
+	text-align: left;
 }
 
 #sunburst{

@@ -115,3 +115,18 @@ I want the Sunburst to render only one continent, which is better. Situation: wh
 - implemented legend title which updates when clicked on worldmap or in sunburst;
 - implemented dual y axis in linechart with sea level rise data.
 - TODO: line chart styling, slider styling.
+
+# day 19
+- added separate styling for the slider and the linechart;
+- changed color schemes. Every industry now has the same color in every part of the visualization;
+- added data source;
+- I discovered that on changing the industry or continent it uses the default year (2012) as new year instead of the current year displayed by the slider, so I fixed that immediately;
+- implemented stylish error alert in case of an country which is not in the dataset or in case of a country with a total emission of zero in the current year (sunburst and linechart shouldn't update then because they will both vanish);
+- added country names to sunburst, only have to change the radius at which they appear because atm the majority is not readable because there are too many countries in one continent;
+
+## TODO
+- solve country names issue sunburst;
+- add coloring to sunburst countries;
+- add legenda and mouseover to linechart;
+- optional: add info buttons for each part of the visualization to expain the visualizations;
+- optional: add hover to sunburst with full country names or something like that.

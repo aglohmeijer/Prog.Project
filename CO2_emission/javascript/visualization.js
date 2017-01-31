@@ -54,7 +54,7 @@ function Linechart_Data(data, country_path){
 		[data[year][continent_num][continent_name][country_num]].forEach(function(d){
 			linechart_data.values.push({
 				"year" : year,
-				"totalCO2" : d.totalCO2,
+				// "totalCO2" : d.totalCO2,
 				"electricandheat" : d.electricandheat,
 				"manufacturing" : d.manufacturing,
 				"transportation" : d.transportation,
@@ -69,15 +69,14 @@ function Linechart_Data(data, country_path){
 }
 
 // draw line chart
-function Draw_Linechart(data, country_link){
+function Draw_Linechart(data, country_link, sea_data){
 
-	var margin = {top: 20, right: 80, bottom: 30, left: 50},
-			width = 1000 - margin.left - margin.right,
+	var margin = {top: 20, right: 100, bottom: 30, left: 100},
+			width = 1100 - margin.left - margin.right,
 			height = 350 - margin.top - margin.bottom;
 
 	// functions to parse dates and values correctly
 	var parseDate = d3.time.format("%Y").parse;
-	//var formatValue = d3.format(",.2f");
 
 	var x = d3.scale.linear().range([0, width]);
 
@@ -103,6 +102,7 @@ function Draw_Linechart(data, country_link){
 			.y(function(d) { return y(d.values); });
 
 	var line_2 = d3.svg.line()
+			.interpolate('bundle')
 			.x(function(d) { return x(d.year); })
 			.y(function(d) { return y2(d.level); });
 
@@ -113,21 +113,16 @@ function Draw_Linechart(data, country_link){
 		.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 
-	//load emission data
+	//load emission data (sea-level data is given)
 	line_data = Linechart_Data(data, country_link);
-	// console.log(line_data);
-
-	// load sealevel data
-	sea_data = Sealevel_Data();
-	// console.log(sea_data);
 
 	// set x domain
 	x.domain(d3.extent(line_data.values, function(d) { return d.year;}));
 
 	// set y domain for emission
-	y.domain([d3.min(line_data.values, function(d) { return Math.min(d.totalCO2, d.electricandheat, d.manufacturing, d.transportation, d.fuelcombustion, d.fugitive);
+	y.domain([d3.min(line_data.values, function(d) { return Math.min("-20", d.electricandheat, d.manufacturing, d.transportation, d.fuelcombustion, d.fugitive);
 			}),
-			d3.max(line_data.values, function(d) { return Math.max(d.totalCO2, d.electricandheat, d.manufacturing, d.transportation, d.fuelcombustion, d.fugitive);})]);
+			d3.max(line_data.values, function(d) { return Math.max(d.electricandheat, d.manufacturing, d.transportation, d.fuelcombustion, d.fugitive);})]);
 
 	// set y domain for sealevel
 	y2.domain([d3.min(sea_data, function(d) { return Math.min(d.level); }), d3.max(sea_data, function(d) { return Math.max(d.level); })]);
@@ -145,9 +140,9 @@ function Draw_Linechart(data, country_link){
 	.append("text")
 		.attr("transform", "rotate(-90)")
 		.attr("y", 6)
-		.attr("dy", ".71em")
+		.attr("dy", "-4em")
 		.style("text-anchor", "end")
-		.text("MtCO2");
+		.text("Emission (MtCO2)");
 
 	// draw right y axis
 	svg.append("g")
@@ -156,10 +151,10 @@ function Draw_Linechart(data, country_link){
 		.call(yAxisRight)
 	.append("text")
 		.attr("y", 6)
-		.attr("dy", ".71em")
+		.attr("dy", "4em")
 		.attr("transform", "rotate(-90)")
 		.style("text-anchor", "end")
-		.text("Sea-level rise");
+		.text("Sea-level variation (mm)");
 
 	// Define variable for the plot
  	var plot = svg.selectAll(".plot")
@@ -170,9 +165,13 @@ function Draw_Linechart(data, country_link){
 	var plot_2 = svg.selectAll(".plot_2")
 		.data([sea_data])
 		.enter().append("g")
-		.attr("class", "line_graph");
+		.attr("class", "line_graph_2");
 
-	var industry = ['totalCO2', 'electricandheat', 'manufacturing', 'transportation', 'fuelcombustion', 'fugitive'];
+	var industry = ['electricandheat', 'manufacturing', 'transportation', 'fuelcombustion', 'fugitive'];
+
+	var industry_color = new Object;
+	var industry_color = {'electricandheat' : 'rgb(81, 117, 159)', 'manufacturing': '#fed976	', 'transportation' : '#d73027', 'fuelcombustion' : 'rgb(79, 143, 111)', 'fugitive' : 'rgb(130, 93, 172)'};
+
 
 	// draw all lines seperately
 	for (m = 0; m < industry.length; m++){
@@ -183,19 +182,30 @@ function Draw_Linechart(data, country_link){
 
 		plot.append("path")
 			.attr("class", "line")
+			.style('stroke', industry_color[industry[m]])
 			.attr("d", function(d) {return line(d.values);});
+			// .attr("")
 	}
 
 	plot_2.append("path")
 		.attr("class", "line")
+		.style('stroke', 'black')
+		.style('stroke-width', '2px')
 		.attr("d", function (d) {return line_2(d);});
+
+		// draw black line
+		svg.append("path") // this is the black vertical line to follow mouse
+  	.attr("class","mouseLine")
+  	.style("stroke","black")
+  	.style("stroke-width", "1px")
+  	.style("opacity", "0");
 
 }
 
 // function to update linechart when user clicks on new country
-function Update_Linechart(data, country_link){
+function Update_Linechart(data, country_link, sea_data){
 	d3.select("#linechart > svg").remove();
-	Draw_Linechart(data, country_link);
+	Draw_Linechart(data, country_link, sea_data);
 }
 
 // load data in correct format for choropleth
@@ -235,16 +245,17 @@ function Worldmap_Data(year, data, industry) {
 										green: ['#edf8e9','#005a32'],
 											red: ['#fee5d9','#99000d'],
 									 purple: ['#f2f0f7','#4a1486'],
-								 	 orange: ['#feedde','#8c2d04'],
-									  black: ['#f7f7f7','#252525']};
+								 	 yellow: ['#ffffcc','#b10026'],
+									  black: ['#f7f7f7','#252525'],
+						  yellow_blue: ['#ffffd9', '#0c2c84']};
 
 	// asign a different colorscheme to every industry
-	var industry_color = {totalCO2: 'blue',
-								 electricandheat: 'green',
-								 	 manufacturing: 'red',
-								 	transportation: 'purple',
-							 		fuelcombustion: 'orange',
-						 						fugitive: 'black'};
+	var industry_color = {totalCO2: 'yellow_blue',
+								 electricandheat: 'blue',
+								 	 manufacturing: 'yellow',
+								 	transportation: 'red',
+							 		fuelcombustion: 'green',
+						 						fugitive: 'purple'};
 
 	// linear and variable color scale
 	var paletteScale = d3.scale.linear()
@@ -402,7 +413,7 @@ function Draw_Sunburst(year, data, continent){
 	var color = d3.scale.category20c();
 
 	var industry_color = new Object;
-	industry_color = {'electricandheat' : '#d7191c', 'manufacturing': '#ffffbf', 'transportation' : '#abd9e9', 'fuelcombustion' : '#2c7bb6'};
+	industry_color = {'electricandheat' : 'rgb(81, 117, 159)', 'manufacturing': '#fed976	', 'transportation' : '#d73027', 'fuelcombustion' : 'rgb(79, 143, 111)'};
 
 	// console.log(industry_color);
 	var svg = d3.select("#sunburst").append("svg")
@@ -557,20 +568,21 @@ function Draw_Sunburst(year, data, continent){
 		Sunburst_Legend(items);
 
 		var text = g.append("text");
-		//
-		// gs.select('text')
-		// .attr("x", function(d) {
-		// 		return y(d.y);
-		// })
-		// .attr("dx", "6") // margin
-		// .attr("dy", ".35em") // vertical-align
-		// .attr("transform", function(d) {
-		// 		return "rotate(" + computeTextRotation(d) + ")";
-		// })
-		// .text(function(d) {
-		// 		return d.name;
-		// })
-		// .style("fill", "white");
+
+		gs.select('text')
+		.attr("x", function(d) {
+				return y(d.y);
+		})
+		.attr("dx", "6") // margin
+		.attr("dy", ".35em") // vertical-align
+		.attr("transform", function(d) {
+				return "rotate(" + computeTextRotation(d) + ")";
+		})
+		.text(function(d) {
+				// only add countries to sunburst
+				return (d.ccode ? d.name : '');
+		})
+		.style("fill", "white");
 
 		// update sunburst on click
 		function click(d) {
@@ -578,7 +590,6 @@ function Draw_Sunburst(year, data, continent){
 				// update legend to clicked continent or country
 				Update_Legend(d.ccode ? d.ccode : d.name);
 
-				// console.log(d);
 				// fade out all text elements
 				if (d.size !== undefined) {
 						d.size += 100;
@@ -588,22 +599,22 @@ function Draw_Sunburst(year, data, continent){
 				path.transition()
 						.duration(1000)
 						.attrTween("d", arcTween(d))
-						// .each("end", function(e, i) {
-						//     // check if the animated element's data e lies within the visible angle span given in d
-						//     if (e.x >= d.x && e.x < (d.x + d.dx)) {
-						//         // get a selection of the associated text element
-						//         var arcText = d3.select(this.parentNode).select("text");
-						//         // fade in the text element and recalculate positions
-						//         arcText.transition().duration(750)
-						//             .attr("opacity", 1)
-						//             .attr("transform", function() {
-						//                 return "rotate(" + computeTextRotation(e) + ")"
-						//             })
-						//             .attr("x", function(d) {
-						//                 return y(d.y);
-						//             });
-						//     }
-						// })
+						.each("end", function(e, i) {
+						    // check if the animated element's data e lies within the visible angle span given in d
+						    if (e.x >= d.x && e.x < (d.x + d.dx)) {
+						        // get a selection of the associated text element
+						        var arcText = d3.select(this.parentNode).select("text");
+						        // fade in the text element and recalculate positions
+						        arcText.transition().duration(750)
+						            .attr("opacity", 1)
+						            .attr("transform", function() {
+						                return "rotate(" + computeTextRotation(e) + ")"
+						            })
+						            .attr("x", function(d) {
+						                return y(d.y);
+						            });
+						    }
+						})
 						;
 		} //});
 
@@ -627,7 +638,7 @@ function Draw_Sunburst(year, data, continent){
 
 }
 
-// function to load sealevel_data (small array so not necessary to import from external file)
+// function to load sealevel_data (only called when loading the page)
 function Sealevel_Data() {
 
 	// load json data via query else I can only use it inside the d3.json function
@@ -660,6 +671,12 @@ function Update_Legend(new_country){
 		title.text(new_country);
 	}
 }
+
+// draw and update legenda for Linechart_Legend
+function Linechart_Legend(new_country){
+
+
+	}
 
 // draw slider
 function Draw_Slider(year){
@@ -730,15 +747,15 @@ function Draw_Slider(year){
 			brush.extent([value, value]);
 		}
 
-		handle.attr("cx", x2(value));
+		// add x coordinate and current year to slider (needed for other functions)
+		handle.attr("cx", x2(value))
+					.attr("curr_year", value);
 	}
 
 	function hue(h) {
   handle.attr("cx", x(h));
   	svg.style("background-color", d3.hsl(h, 0.8, 0.8));
 	}
-
-	// #slider > svg > g > g.slider > circle
 
 	function brushend() {
 		 if (!d3.event.sourceEvent) {
@@ -771,14 +788,10 @@ function Draw_Slider(year){
 
 				 return year; })))
 			 .call(brush.event);
-
-			// this turned out to be unneccessary
-			// var year = d3.select(this)["0"]["0"].__chart__.i[1];
-			// updateChart(Sunburst_Data(year, data));
 	 }
  }
 
-// function to retrieve indices and keys from a given country in the general data set (very usefull);
+// function to retrieve indices and keys from a given country in the general data set (very usefull!);
 function Country_Path(country_code){
  var properties = new Object;
  [data[2012]].forEach(function(d){
@@ -829,76 +842,95 @@ d3.json("data/CO2_emission.json", function(error, json) {
 
 	// draw first linegraph with default country germany (only possible AFTER Draw_Sunburst!)
 	var germany = Country_Path(default_country);
-	Draw_Linechart(data, germany);
+	var sea_data = Sealevel_Data();
+	Draw_Linechart(data, germany, sea_data);
 
-	 // when user clicks on country update linechart and sunburst
+	 // when user clicks on country update linechart and sunburst or give error
  	d3.select('#map > svg.datamap > g').selectAll('.datamaps-subunit').on('click', function(geography) {
 
 			// retrieve some usefull data from the clicked country
 			var country_path = Country_Path(geography.id);
-			// console.log(country_path);
 
-			// check which continent is displayed by the sunburst first
-			var curr_continent = d3.select("input[name='continent']:checked").node().value;
-			var new_continent = country_path.continent;
+			// read current year and parse as int
+			var curr_year = parseInt(d3.select('#slider > svg > g > g.slider > circle')["0"]["0"].attributes[4].value);
 
-			// if no data available give user notice
-			if(isEmpty(country_path)){
-				alert("There is no data available for this country");
+			// if no data available for the clicked country give user notice
+			if (isEmpty(country_path)) {
+				swal({
+					title: "Oops!",
+					text: "Unfortunately we have no data available for this country",
+					type: "error",
+					confirmButtonText: "OK"});
 			}
-			// check if clicked country is in continent which is currently displayed by sunburst
-			else if (new_continent == curr_continent)
-			{
-				// update linechart
-				Update_Linechart(data, country_path);
 
-				// this is a very brute way of updating but else I cannot make it work
-				d3.select('#sunburst > svg:nth-child(4)').remove();
-				Draw_Sunburst(year, data, curr_continent);
-
-				// zoom in on clicked country
-				var country_object = d3.select('#' + geography.id)["0"]["0"].__data__;
-				Draw_Sunburst.click(country_object);
+			// if the total emission for the clicked country in the current year is zero do not update sunburst and linechart
+			else if (data[curr_year][country_path.continent_num][country_path.continent][country_path.country_num].totalCO2 == 0) {
+				swal({
+					title: "Oops!",
+					text: "For "  + curr_year + " the total emission in " +  country_path.name +
+					" is unknown or zero, unfortunately we cannot update the Sunburst and Linechart for you",
+					type: "error",
+					confirmButtonText: "OK, I'll try another one"});
 			}
-			// if sunburst displays different continent first update sunburst
+			// if total CO2 is nonzero for the clicked country in that year update sunburst and linechart
 			else {
-				//update linechart
-				Update_Linechart(data, country_path);
+				// check which continent is currently displayed by the sunburst
+				var curr_continent = d3.select("input[name='continent']:checked").node().value;
+				var new_continent = country_path.continent;
 
-				// update sunburst and change radio button
-				//Draw_Sunburst.updateChart(Sunburst_Data(year, data, new_continent));
+				// check if clicked country is in continent which is currently displayed by sunburst
+				if (new_continent == curr_continent)
+				{
+					// update linechart
+					Update_Linechart(data, country_path, sea_data);
 
-				// for some reason you can only (un)check radio button with document (not d3)
-				document.getElementById(new_continent).checked = true;
+					// this is a very brute way of updating but else I cannot make it work
+					d3.select('#sunburst > svg:nth-child(4)').remove();
+					Draw_Sunburst(curr_year, data, curr_continent);
 
-				// this is a very brute way of updating but else I cannot make it work
-				d3.select('#sunburst > svg:nth-child(4)').remove();
-				Draw_Sunburst(year, data, new_continent);
+					// zoom in on clicked country
+					var country_object = d3.select('#' + geography.id)["0"]["0"].__data__;
+					Draw_Sunburst.click(country_object);
+				}
+				// if sunburst displays different continent first update sunburst
+				else {
+					//update linechart
+					Update_Linechart(data, country_path, sea_data);
 
-				// zoom in on clicked country
-				var country_object = d3.select('#' + geography.id)["0"]["0"].__data__;
-				Draw_Sunburst.click(country_object);
+					// for some reason you can only (un)check radio button with document (not d3)
+					document.getElementById(new_continent).checked = true;
+
+					// this is a very brute way of updating but else I cannot make it work
+					d3.select('#sunburst > svg:nth-child(4)').remove();
+					Draw_Sunburst(curr_year, data, new_continent);
+
+					// zoom in on clicked country
+					var country_object = d3.select('#' + geography.id)["0"]["0"].__data__;
+					Draw_Sunburst.click(country_object);
+				}
+
+				//upate legend with new name
+				Update_Legend(geography.id);
 			}
-
-			//upate legend with new name
-			Update_Legend(geography.id);
-
  		});
 
 	//  on industry change update chloropleth
 	d3.selectAll("input[name='industry']").on("change", function() {
+
 			// update choropleth with last known year and new industry
+			var curr_year = d3.select('#slider > svg > g > g.slider > circle')["0"]["0"].attributes[4].value;
 			industry = this.value;
-			map.updateChoropleth(Worldmap_Data(year, data, industry));
+			map.updateChoropleth(Worldmap_Data(curr_year, data, industry));
 	});
 
 	// on continent change update sunburst
 	d3.selectAll("input[name='continent']").on("change", function(){
 
-		// update sunburst
+		// select current year from slider and update sunburst with last known year and new continent
+		var curr_year = d3.select('#slider > svg > g > g.slider > circle')["0"]["0"].attributes[4].value;
 		d3.select('#sunburst > svg:nth-child(4)').remove();
 		new_continent = this.value;
-		Draw_Sunburst(year, data, new_continent);
+		Draw_Sunburst(curr_year, data, new_continent);
 
 		//update sunburst legenda
 		Update_Legend(new_continent);
