@@ -143,15 +143,23 @@ I want the Sunburst to render only one continent, which is better. Situation: wh
 - improved legenda title for sunburst;
 
 # FINAL TODO (spend half an hour each, 4 hours for report)
-- final touch on sunburst text (popup instead of text for every country);
-- copy legenda from linechart and use it for sunburst (with values);
-- improve layout for worldmap legenda and hover info;
-- divide functions into different scripts (now the main script is more than 1000 lines of code, too much)
+- final touch on sunburst text (popup instead of text for every country)(CHECK);
+- copy legenda from linechart and use it for sunburst (with values) (CHECK)
+- improve layout for worldmap legenda and hover info (CHECK);
+- divide functions into different scripts (now the main script is more than 1000 lines of code, too much) (CHECK)
 - give structure to GitHub folder;
-- put name and student number above every code file;
-- add information buttons to every visualization with small information text;
+- put name and student number above every code file; (CHECK)
+- add information buttons to every visualization with small information text; (CHECK)
 - write report;
 - clean code (run through dirty markup), especially css styling file;
 - update design.md;
 - add licenses;
 - check if it runs via github;
+
+# day 21
+- implemented sunburst legenda with updating values and updating year;
+- added hover information in sunburst;
+- finished sunburst coloring;
+- improved worldmap layout;
+- solved bug with unclickable radio button (was overlapping with div);
+- added info buttons for both choropleth and sunburst;

@@ -1,0 +1,71 @@
+<!-- Student: Anne Lohmeijer
+Uva-ID: 10447555
+File: index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link href="css/layout.css" rel="stylesheet">
+	<link href="css/d3.slider.css" rel="stylesheet">
+	<link href="css/sweetalert2.min.css" rel="stylesheet">
+	<script src="javascript/lib/d3.min.js">
+	</script>
+	<script src="javascript/lib/sweetalert2.min.js">
+	</script>
+	<script src="javascript/lib/jquery-3.1.1.js">
+	</script>
+	<script src="javascript/lib/d3-legend.min.js">
+	</script>
+	<script src="javascript/lib/topojson.min.js">
+	</script>
+	<script src="javascript/lib/datamaps.json.js">
+	</script>
+	<script src="javascript/lib/d3.slider.js">
+	</script>
+	<script src="javascript/process/data.js">
+	</script>
+	<script src="javascript/process/draw.js">
+	</script>
+	<script src="javascript/process/update.js">
+	</script>
+	<title></title>
+</head>
+<body>
+	<h1 class="header" style="text/css">Worldwide CO<sub>2</sub> Emission <span id="title_year">1992</span></h1>
+	<link href="" rel="shortcut icon">
+	<div class="parent" style="text-align: center">
+		<div id="parent_div_1">
+			<div id="map" style="height: 700px; width: 900px">
+				<div id="industries">
+					Industry:
+				</div>
+				<form>
+					<input checked name="industry" type="radio" value="totalCO2"> Total CO<sub>2</sub> <input name="industry" type="radio" value="electricandheat"> Electric and Heat <input name="industry" type="radio" value="manufacturing"> Manufacturing <input name="industry" type="radio" value="transportation"> Transportation <input name="industry" type="radio" value="fuelcombustion"> Fuel Combustion <input name="industry" type="radio" value="fugitive"> Fugitive
+				</form><button class="btn btn-info" id="map_button" type="button">Info</button> <svg class='legend' id="legend" style="height: 260px; width: 120px"></svg>
+			</div>
+		</div>
+		<div id="parent_div_2">
+			<button class="btn btn-info" id="sunburst_button" type="button">Help</button>
+			<div id="sunburst" style="height: 700px; width: 800px">
+				<div id="continents">
+					Continent:
+				</div>
+				<form>
+					<input id="Africa" name="continent" type="radio" value="Africa"> Africa <input id="Asia" name="continent" type="radio" value="Asia"> Asia <input checked id="Europe" name="continent" type="radio" value="Europe"> Europe <input id="North America" name="continent" type="radio" value="North America"> North America <input id="Oceania" name="continent" type="radio" value="Oceania"> Oceania <input id="South America" name="continent" type="radio" value="South America"> South America
+				</form><svg class='legend' id="legend_sunburst" style="height: 650px; width: 300px"></svg>
+			</div>
+		</div>
+	</div>
+	<div id="slider"></div>
+	<script src="javascript/main.js">
+	</script>
+	<div id="parent_div_3">
+		<div id="linechart" style="height: 400px; width: 1500px"></div><svg id="linechart_legend" style="height: 300px; width: 340px"></svg>
+		<div id="source" style="height: 80px; width: 250px">
+			Data sources<br>
+			<a href="http://cait.wri.org/historical" style="color: steelblue">CAIT Climate Data Explorer</a><br>
+			<a href="http://climate.nasa.gov/vital-signs/sea-level" style="color: steelblue">NASA Global Climate Change</a>
+		</div>
+	</div>
+</body>
+</html>

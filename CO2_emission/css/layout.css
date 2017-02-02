@@ -1,8 +1,13 @@
+/*Student: Anne Lohmeijer
+UvA-ID: 10447555
+File: layout.css*/
+
+
 /*title styling*/
+
 h1.header {
 	display: block;
 	position: relative;
-	/*font-family: sans-serif;*/
 	font-size: 45px;
 	font-weight: bold;
 	border: 2px solid lightgrey;
@@ -14,60 +19,45 @@ h1.header {
 	margin-right: auto;
 	background-color: #fcfcfc;
 }
-
-body > h1 {
+body>h1 {
 	margin-top: 10px;
 	margin-bottom: 10px;
 }
 
+/*use same font for whole page*/
+
 body {
 	font-family: sans-serif;
 }
-
-
 html {
 	background-color: #4682B4;
 }
 
-
 /*style settings for worldmap legend*/
+
 .legend {
-position: absolute;
-bottom: 10px;
-left: 10px;
+	position: absolute;
+	bottom: 10px;
+	left: 10px;
 }
-
-
-#continents, #industries{
+#continents, #industries {
 	font-size: 20px;
 	background-color: lightgrey;
 	font-weight: bold;
 }
-
 form {
 	font-size: 18px;
 	background-color: lightgrey;
 }
 
-
-/*style settings for industry and continent buttons*/
-form, .legend {
-font-size: 18px;
-/*background-color: lightgrey;*/
-/*margin-top: 20px;*/
-/*margin-bottom: 20px;*/
-/*border: 2px solid blue;*/
-}
-
-
 /*placement of central div which contains choropleth and sunburst*/
-body > div.parent {
+
+body>div.parent {
 	display: block;
 	margin-top: 0px;
 	margin-bottom: 5px;
 }
-
-#parent_div_1, #parent_div_2{
+#parent_div_1, #parent_div_2 {
 	display: inline-block;
 	border: 2px solid lightgrey;
 	vertical-align: top;
@@ -75,72 +65,79 @@ body > div.parent {
 }
 
 /*style settings for time slider*/
-#slider > svg {
-		display: block;
-		margin-left: auto;
-		margin-right: auto;
-		border: 2px solid lightgrey;
-		background-color: #fcfcfc;
-	}
 
-#slider > svg > g > g.x.axis {
-	  font: 14px sans-serif;
-
-	  -webkit-user-select: none;
-	  -moz-user-select: none;
-	  user-select: none;
-	}
-
-#slider > svg > g > g.x.axis > path.domain {
-	  fill: none;
-	  stroke: black;
-	  stroke-opacity: .3;
-	  stroke-width: 10px;
-	  stroke-linecap: round;
-	}
-
-#slider > svg > g > g.x.axis > path.halo {
-	  fill: none;
-	  stroke: #ddd;
-	  stroke-width: 8px;
-	  stroke-linecap: round;
-	}
-
-#slider > svg > g > g.slider > circle {
-	  fill: #fff;
-	  stroke: #000;
-	  stroke-opacity: .5;
-	  stroke-width: 1.25px;
-	  pointer-events: none;
-	}
-
-
-/*style settings for linechart */
-.line {
-  fill: none;
-  stroke-width: 4px;
+#slider>svg {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	border: 2px solid lightgrey;
+	background-color: #fcfcfc;
+}
+#slider>svg>g>g.x.axis {
+	font: 14px sans-serif;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+}
+#slider>svg>g>g.x.axis>path.domain {
+	fill: none;
+	stroke: black;
+	stroke-opacity: .3;
+	stroke-width: 10px;
+	stroke-linecap: round;
+}
+#slider>svg>g>g.x.axis>path.halo {
+	fill: none;
+	stroke: #ddd;
+	stroke-width: 8px;
+	stroke-linecap: round;
+}
+#slider>svg>g>g.slider>circle {
+	fill: #fff;
+	stroke: #000;
+	stroke-opacity: .5;
+	stroke-width: 1.25px;
+	pointer-events: none;
 }
 
-#linechart > svg > g > text {
+/*style settings for linechart */
+
+.line {
+	fill: none;
+	stroke-width: 4px;
+}
+#linechart>svg>g>text {
 	font: 22px sans-serif;
 	font-weight: bold;
 }
-
 path {
-  stroke: #fff;
+	stroke: #fff;
+	stroke-width: 1.5px;
 }
 
-.legendTitle {
+/*general button styling*/
+
+button {
+	position: absolute;
+	margin-left: 10px;
+	margin-top: 10px;
+	font: 22px sans-serif;
 	font-weight: bold;
-	font-size: 20px;
+	color: white;
+	background-color: steelblue;
+	border: 1px solid grey;
 }
-
-#legend_sunburst > .legendTitle{
-
+#modalContentId {
+	text-align: left;
 }
-
+#sunburst_button {
+	position: absolute;
+	z-index: 1;
+	margin-left: 320px;
+	margin-top: 55px;
+}
 #parent_div_3 {
-	display:block;
+	display: block;
 	border: 2px solid lightgrey;
 	background-color: #fcfcfc;
 	width: 1710px;
@@ -149,80 +146,61 @@ path {
 	margin-top: 5px;
 	margin-left: auto;
 	margin-right: auto;
-
 }
 
 /*style settings linechart*/
+
 #linechart {
 	position: absolute;
-	/*border: 3px solid lightgrey;*/
 	margin-top: 20px;
 	margin-left: 20px;
 }
-
-#linechart > svg > g > .axis{
-	  font: 14px sans-serif;
-	}
-
-/*mouseover styling*/
-.overlay {
-  fill: none;
-  pointer-events: all;
+#linechart>svg>g>.axis {
+	font: 14px sans-serif;
 }
 
+/*mouseover styling*/
 
-#linechart > svg > g > .axis > path.domain {
-	  fill: none;
-	  stroke: #ddd;
-	  stroke-width: 2;
-
-	}
-
-
+.overlay {
+	fill: none;
+	pointer-events: all;
+}
+#linechart>svg>g>.axis>path.domain {
+	fill: none;
+	stroke: #ddd;
+	stroke-width: 2;
+}
 #linechart_legend, #legend, #legend_sunburst {
 	position: absolute;
 	font: 16px sans-serif;
 }
-
-#linechart_legend{
+#linechart_legend {
 	margin-left: 1100px;
 	margin-top: 80px;
 }
-
-#legend, #legend_sunburst {
-	/*background-color: lightgrey;*/
-
+#legend {
+	background-color: #f0f0f0;
 }
-
-
-
-
-
-
-
 #map {
 	position: relative;
-	/*left: 10px;
-	top: 10px;
-	right: 10px;*/
-	/*border: 3px solid black;*/
-	/*display:inline-block;*/
 }
-
-.hoverinfo{
+.hoverinfo {
 	font-family: verdana;
 	font-size: 100%;
-	/*font-weight: normal;*/
 	color: black;
 	text-align: left;
 }
-
-#sunburst{
+#sunburst {
 	position: relative;
 }
-
+#legend>g>text {
+	margin-top: 20px;
+	font-size: 25px;
+	font-weight: bold;
+}
 
 /*style settings for data source*/
+
 #source {
 	position: absolute;
 	margin-top: 300px;
