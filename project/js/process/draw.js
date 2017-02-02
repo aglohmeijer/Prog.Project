@@ -289,6 +289,9 @@ function Draw_Linechart(data, country_link, sea_data){
 		}
 }
 
+// define a global variable used for updating the sunburst after time bar change
+var stored_code;
+
 // draw sunburst
 function Draw_Sunburst(year, data, continent, sea_data){
 
@@ -505,26 +508,45 @@ function Draw_Sunburst(year, data, continent, sea_data){
 						return (d3.format(".0f")(d.size) + " Mt CO₂");
 					});
 				}
+
+			// when zoomed directly to industry level use parent object
+			else{
+				// remove current values
+				d3.select('#legend_sunburst > g > g').selectAll('g > text.values').remove();
+				// add new values to legenda
+				var gs = d3.select('#legend_sunburst > g').selectAll('g');
+				gs.selectAll('g').data(country.parent.children)
+					.append('text')
+					.attr('class', 'values')
+					.attr('transform', function(d, i){
+						var y = i * 35 + 15;
+						var x = 200;
+						return 'translate(' + x + ',' + y + ')';})
+					.style('font-size', '16px')
+					.style('font-weight', 'bold')
+					.text(function(d){
+						return (d3.format(".0f")(d.size) + " Mt CO₂");
+					});
+			}
 		}
 
 		// update sunburst on click
 		function click(d) {
-
 				// Update linechart when clicked on country
-				if (d.ccode) { Update_Linechart(data, Country_Path(d.ccode), sea_data); };
+				if (d.ccode) { Update_Linechart(data, Country_Path(d.ccode), sea_data);
+					// store country code for later use
+					stored_code = d.ccode;
+				 };
 
 				// update legend to clicked continent or country
 				if (d.depth == 0) { Update_Legend(d.name); }
 				else if (d.depth == 1) {Update_Legend(d.ccode); }
+				else if (d.depth == 2) {Update_Legend(d.parent.ccode);}
 
 				// update legenda values to clicked country or continent
 				Legenda_Values_Update(d);
 
-				// fade out all text elements
-				if (d.size !== undefined) {
-						d.size += 100;
-				};
-				text.transition().attr("opacity", 0);
+				// transition
 				path.transition()
 						.duration(1000)
 						.attrTween("d", arcTween(d));
@@ -646,6 +668,7 @@ function Draw_Slider(year, sea_data){
 
 		 d3.select(this)
 			 .transition(0)
+
 			 // on user input at timebar update choropleth and sunburst
 			 .call(brush.extent(brush.extent().map(function(d) {
 				 var year = d3.round(d);
@@ -659,6 +682,15 @@ function Draw_Slider(year, sea_data){
 
 				 // update sunburst
 				 Draw_Sunburst.updateChart(Sunburst_Data(year, data, curr_continent), sea_data);
+
+				 // this is a last minute hardcoded solution to bypass a incorrect sunburst
+				 var current = d3.select('#legend_sunburst > text.legend_title')["0"]["0"].innerHTML;
+
+				 // if sunburst was zoomed on country zoom in on that country again
+				 if (current != curr_continent){
+					 var country_object = d3.select('#' + stored_code)["0"]["0"].__data__;
+					 Draw_Sunburst.click(country_object);
+				 }
 
 				 return year; })))
 			 .call(brush.event);

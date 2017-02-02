@@ -6,17 +6,20 @@
 d3.json("data/CO2_emission.json", function(error, json) {
 	if (error) return console.warn(error);
 	data = json;
+
 	// set default values to draw first visualizations with
 	var industry = "totalCO2";
 	var year = 2012;
 	var default_country_path = Country_Path('NLD');
 	var sea_data = Sealevel_Data();
+
 	// draw all visualizations with default year, country, and industry
 	Draw_Map(year, data, industry);
 	Draw_Sunburst(year, data, default_country_path.continent, sea_data);
 	Draw_Slider(year, sea_data);
 	Update_Legend(default_country_path.continent);
 	Draw_Linechart(data, default_country_path, sea_data);
+
 	// message under world map info button
 	d3.select('#map_button').on('click', function() {
 		swal({
@@ -27,6 +30,7 @@ d3.json("data/CO2_emission.json", function(error, json) {
 			confirmButtonText: "OK"
 		});
 	});
+
 	// message under sunburst info button
 	d3.select('#sunburst_button').on('click', function() {
 		swal({
@@ -37,12 +41,16 @@ d3.json("data/CO2_emission.json", function(error, json) {
 			confirmButtonText: "OK, got it!"
 		});
 	});
+
 	// when user clicks on country update linechart and sunburst or give error
 	d3.select('#map > svg.datamap > g').selectAll('.datamaps-subunit').on('click', function(geography) {
+
 		// retrieve some usefull data from the clicked country
 		var country_path = Country_Path(geography.id);
+
 		// read current year and parse as int
 		var curr_year = parseInt(d3.select('#slider > svg > g > g.slider > circle')["0"]["0"].attributes[4].value);
+
 		// if no data available for the clicked country give user notice
 		if (isEmpty(country_path)) {
 			swal({
@@ -52,6 +60,7 @@ d3.json("data/CO2_emission.json", function(error, json) {
 				confirmButtonText: "OK"
 			});
 		}
+
 		// if the total emission for the clicked country in the current year is zero do not update sunburst and linechart
 		else if (data[curr_year][country_path.continent_num][country_path.continent][country_path.country_num].totalCO2 == 0) {
 			swal({
@@ -61,53 +70,70 @@ d3.json("data/CO2_emission.json", function(error, json) {
 				confirmButtonText: "OK, I'll try another one"
 			});
 		}
+
 		// if total CO2 is nonzero for the clicked country in that year update sunburst and linechart
 		else {
+
 			// check which continent is currently displayed by the sunburst
 			var curr_continent = d3.select("input[name='continent']:checked").node().value;
 			var new_continent = country_path.continent;
+
 			// check if clicked country is in continent which is currently displayed by sunburst
 			if (new_continent == curr_continent) {
+
 				// update linechart
 				Update_Linechart(data, country_path, sea_data);
+
 				// this is a very brute way of updating but else I cannot make it work
 				d3.select('#sunburst > svg:nth-child(4)').remove();
 				Draw_Sunburst(curr_year, data, curr_continent, sea_data);
+
 				// zoom in on clicked country
 				var country_object = d3.select('#' + geography.id)["0"]["0"].__data__;
 				Draw_Sunburst.click(country_object);
 			}
+
 			// if sunburst displays different continent first update sunburst
 			else {
+
 				//update linechart
 				Update_Linechart(data, country_path, sea_data);
+
 				// for some reason you can only (un)check radio button with document (not d3)
 				document.getElementById(new_continent).checked = true;
+
 				// this is a very brute way of updating but else I cannot make it work
 				d3.select('#sunburst > svg:nth-child(4)').remove();
 				Draw_Sunburst(curr_year, data, new_continent, sea_data);
+
 				// zoom in on clicked country
 				var country_object = d3.select('#' + geography.id)["0"]["0"].__data__;
 				Draw_Sunburst.click(country_object);
 			}
+
 			//upate legend with new name
 			Update_Legend(geography.id);
 		}
 	});
+
 	//  on industry change update chloropleth
 	d3.selectAll("input[name='industry']").on("change", function() {
+
 		// update choropleth with last known year and new industry
 		var curr_year = d3.select('#slider > svg > g > g.slider > circle')["0"]["0"].attributes[4].value;
 		industry = this.value;
 		map.updateChoropleth(Worldmap_Data(curr_year, data, industry));
 	});
+
 	// on continent change update sunburst
 	d3.selectAll("input[name='continent']").on("change", function() {
+
 		// select current year from slider and update sunburst with last known year and new continent
 		var curr_year = d3.select('#slider > svg > g > g.slider > circle')["0"]["0"].attributes[4].value;
 		d3.select('#sunburst > svg:nth-child(4)').remove();
 		new_continent = this.value;
 		Draw_Sunburst(curr_year, data, new_continent, sea_data);
+
 		//update sunburst legenda
 		Update_Legend(new_continent);
 	});

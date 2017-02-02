@@ -163,3 +163,10 @@ I want the Sunburst to render only one continent, which is better. Situation: wh
 - improved worldmap layout;
 - solved bug with unclickable radio button (was overlapping with div);
 - added info buttons for both choropleth and sunburst;
+- divided javascripts into different files;
+- gave structure to Github folder;
+- host via github;
+- (re)wrote DESIGN, REPORT, LICENSES and README;
+### Last minute implementations
+- FIXED issue with updating sunburst on change on slider (had to define global variable unfortunately);
+- FIXED issue with legenda which updates on changing sunburst;

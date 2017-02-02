@@ -2,33 +2,32 @@
 // UvA-ID: 10447555
 // File: data.js
 
-
 // load data in correct format for linechart
-function Linechart_Data(data, country_path){
+function Linechart_Data(data, country_path) {
 
 	// define some variables needed to retrieve the correct data
 	var continent_name = country_path.continent,
-			country_code = country_path.country_code,
-			country_num = country_path.country_num,
-			continent_num = country_path.continent_num;
+		country_code = country_path.country_code,
+		country_num = country_path.country_num,
+		continent_num = country_path.continent_num;
 
 	var linechart_data = new Object;
 	linechart_data.values = [];
 
 	// loop through every year per country
-	for (year = 1992; year < 2013; year++){
+	for (year = 1992; year < 2013; year++) {
 
 		linechart_data.ccode = country_path.country_code;
 
 		// write data in appropriate format
-		[data[year][continent_num][continent_name][country_num]].forEach(function(d){
+		[data[year][continent_num][continent_name][country_num]].forEach(function(d) {
 			linechart_data.values.push({
-				"year" : year,
-				"electricandheat" : d.electricandheat,
-				"manufacturing" : d.manufacturing,
-				"transportation" : d.transportation,
-				"fuelcombustion" : d.fuelcombustion,
-				"fugitive" : d.fugitive
+				"year": year,
+				"electricandheat": d.electricandheat,
+				"manufacturing": d.manufacturing,
+				"transportation": d.transportation,
+				"fuelcombustion": d.fuelcombustion,
+				"fugitive": d.fugitive
 			});
 		});
 	}
@@ -49,13 +48,13 @@ function Worldmap_Data(year, data, industry) {
 	// array to put all values in to determine min and max (for all years, else the legend changes over time)
 	var all_values = [];
 
-	for (Year = 2012; Year < 2013; Year++){
+	for (Year = 2012; Year < 2013; Year++) {
 
 		// loop through all continents
-		for (i = 0; i < 6; i++){
+		for (i = 0; i < 6; i++) {
 
 			// loop through all items per continent
-			data[Year][i][continents[i]].forEach(function(d){
+			data[Year][i][continents[i]].forEach(function(d) {
 
 				// push all values
 				all_values.push(d[industry]);
@@ -67,49 +66,55 @@ function Worldmap_Data(year, data, industry) {
 
 	// determine min and max value for coloring
 	var minValue = Math.min.apply(null, all_values),
-					maxValue = Math.max.apply(null, all_values);
+		maxValue = Math.max.apply(null, all_values);
 
 	// use different color schemes
-	var color_range = {blue: ['#EFEFFF','#02386F'],
-										green: ['#edf8e9','#005a32'],
-											red: ['#fee5d9','#99000d'],
-									 purple: ['#f2f0f7','#4a1486'],
-								 	 yellow: ['#ffffcc','#b10026'],
-									  black: ['#f7f7f7','#252525'],
-						  yellow_blue: ['#ffffd9', '#0c2c84']};
+	var color_range = {
+		blue: ['#EFEFFF', '#02386F'],
+		green: ['#edf8e9', '#005a32'],
+		red: ['#fee5d9', '#99000d'],
+		purple: ['#f2f0f7', '#4a1486'],
+		yellow: ['#ffffcc', '#b10026'],
+		black: ['#f7f7f7', '#252525'],
+		yellow_blue: ['#ffffd9', '#0c2c84']
+	};
 
 	// asign a different colorscheme to every industry
-	var industry_color = {totalCO2: 'yellow_blue',
-								 electricandheat: 'blue',
-								 	 manufacturing: 'yellow',
-								 	transportation: 'red',
-							 		fuelcombustion: 'green',
-						 						fugitive: 'purple'};
+	var industry_color = {
+		totalCO2: 'yellow_blue',
+		electricandheat: 'blue',
+		manufacturing: 'yellow',
+		transportation: 'red',
+		fuelcombustion: 'green',
+		fugitive: 'purple'
+	};
 
 	// linear and variable color scale
 	var paletteScale = d3.scale.linear()
-            .domain([minValue, maxValue])
-            .range(color_range[industry_color[industry]]);
+		.domain([minValue, maxValue])
+		.range(color_range[industry_color[industry]]);
 
 	Worldmap_Data.industry_color = industry_color;
 	Worldmap_Data.color_range = color_range;
 	Worldmap_Data.paletteScale = paletteScale;
 
 	// now save data per country and assign color
-	for (j = 0; j < 6; j++){
+	for (j = 0; j < 6; j++) {
 
 		// store data from one year per country in new object
-		data[year][j][continents[j]].forEach(function(d){
+		data[year][j][continents[j]].forEach(function(d) {
 
 			// some countries contain empty fields which actually equals 0 emission, unknown is lightgrey
 			var fillcolor;
-			 if (isEmpty(d[industry])){
-				fillcolor = paletteScale(parseFloat(0));}
-			else { fillcolor = paletteScale(parseFloat(d[industry]));}
+			if (isEmpty(d[industry])) {
+				fillcolor = paletteScale(parseFloat(0));
+			} else {
+				fillcolor = paletteScale(parseFloat(d[industry]));
+			}
 
 			// save data per country in new json format
 			data_per_year[d.ccode] = {
-				name : d.name,
+				name: d.name,
 				fillColor: fillcolor,
 				industry: industry,
 				value: d[industry]
@@ -121,30 +126,33 @@ function Worldmap_Data(year, data, industry) {
 	var svg = d3.select("#legend");
 
 	svg.append("g")
-	  .attr("class", "legendLinear")
-	  .attr("transform", "translate(10, 30)");
+		.attr("class", "legendLinear")
+		.attr("transform", "translate(10, 30)");
 
 	var legendLinear = d3.legend.color()
-	  .shapeWidth(50)
+		.shapeWidth(50)
 		.shapeHeight(20)
 		.shapePadding(7)
 		.title('Mt CO₂')
-	  .cells(7)
-	  .orient('vertical')
+		.cells(7)
+		.orient('vertical')
 		.labelFormat(function(d) {
-			if (d == 0){ return 0;}
-			else{ return d3.format(".2s")(d);}
+			if (d == 0) {
+				return 0;
+			} else {
+				return d3.format(".2s")(d);
+			}
 		})
-	  .scale(paletteScale);
+		.scale(paletteScale);
 
 	svg.select(".legendLinear")
-	  .call(legendLinear);
+		.call(legendLinear);
 
 	return data_per_year;
 }
 
 // load data in correct format for sunburst
-function Sunburst_Data(year, data, continent){
+function Sunburst_Data(year, data, continent) {
 
 	// create object in which I place formatted data
 	var sunburst_data = new Object;
@@ -157,7 +165,7 @@ function Sunburst_Data(year, data, continent){
 	var continents_total = [];
 
 	// loop through all continents per the given year and put format in appropriate object for sunburst
-	for (i = 0; i < continents.length ; i++) {
+	for (i = 0; i < continents.length; i++) {
 
 		// every time create new continent object else it overwrites
 		var continent_parent = new Object;
@@ -169,7 +177,7 @@ function Sunburst_Data(year, data, continent){
 		var numb_countries = data[year][i][continents[i]].length;
 
 		// loop through every country per continent
-		for (a = 0; a < numb_countries; a++){
+		for (a = 0; a < numb_countries; a++) {
 
 			var country_parent = new Object;
 
@@ -181,7 +189,7 @@ function Sunburst_Data(year, data, continent){
 
 			// START don't take 6 (totalco2) because it doesn't make sense to put the totalCO2 in the sunburst!
 			// loop through the numbers per country
-			for (z = 0; z < 4; z ++){
+			for (z = 0; z < 4; z++) {
 
 				// create new object every time, else it replaces
 				var emission_per_industry = new Object;
@@ -229,10 +237,12 @@ function Sealevel_Data() {
 	// load json data via query else I can only use it inside the d3.json function
 	var jsonData;
 	$.ajax({
-  	dataType: "json",
-  	url: "data/sealevel_data.json",
-  	async: false,
-  	success: function(data){jsonData = data}
+		dataType: "json",
+		url: "data/sealevel_data.json",
+		async: false,
+		success: function(data) {
+			jsonData = data
+		}
 	});
 
 
@@ -245,12 +255,12 @@ function Sealevel_Data() {
 	round_year.level = -13.74;
 	filtered_data.push(round_year);
 
-	for (year = 1994; year < 2013; year++){
-		for (i = 1; i < jsonData.length; i++){
+	for (year = 1994; year < 2013; year++) {
+		for (i = 1; i < jsonData.length; i++) {
 			var diff = Math.abs(jsonData[i].year - year);
-			if (diff < (Math.abs(jsonData[i - 1].year - year))){
+			if (diff < (Math.abs(jsonData[i - 1].year - year))) {
 				var index = i;
-				}
+			}
 		}
 
 		// create object with data for round year and push into new data array
