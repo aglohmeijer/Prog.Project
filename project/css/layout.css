@@ -33,6 +33,11 @@ html {
 	background-color: #4682B4;
 }
 
+#legend > g > g > g > text {
+	font-size: 20px;
+	font-weight: bold;
+}
+
 /*style settings for worldmap legend*/
 
 .legend {

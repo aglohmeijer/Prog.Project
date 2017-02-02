@@ -170,3 +170,4 @@ I want the Sunburst to render only one continent, which is better. Situation: wh
 ### Last minute implementations
 - FIXED issue with updating sunburst on change on slider (had to define global variable unfortunately);
 - FIXED issue with legenda which updates on changing sunburst;
+- last minute implementation of "gradual" legenda at worldmap;

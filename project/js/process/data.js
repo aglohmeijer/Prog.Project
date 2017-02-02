@@ -131,16 +131,21 @@ function Worldmap_Data(year, data, industry) {
 
 	var legendLinear = d3.legend.color()
 		.shapeWidth(50)
-		.shapeHeight(20)
-		.shapePadding(7)
+		.shapeHeight(15)
+		.shapePadding(0)
 		.title('Mt CO₂')
-		.cells(7)
+		.cells(12)
 		.orient('vertical')
-		.labelFormat(function(d) {
-			if (d == 0) {
+		.labelFormat(function(d, i) {
+			// not most subtile way of legenda but last-minute
+			if (i == 0) {
 				return 0;
-			} else {
+			}
+			else if ((i == 5) || (i == 11)){
 				return d3.format(".2s")(d);
+			}
+			else {
+				return ;
 			}
 		})
 		.scale(paletteScale);
