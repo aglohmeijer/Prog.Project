@@ -130,3 +130,28 @@ I want the Sunburst to render only one continent, which is better. Situation: wh
 - add legenda and mouseover to linechart;
 - optional: add info buttons for each part of the visualization to expain the visualizations;
 - optional: add hover to sunburst with full country names or something like that.
+
+# day 20
+- fixed issue with undefined sea_level data on updating linechart (linechart now updates too when clicking on country in sunburst);
+- Added linechart title and vertical line mouse over;
+- added legenda to linechart with industries and corresponding colors, TODO: value display on hovering;
+- added sea level data formatting which simplifies the mouseover (sealevel data initially had 20 entreis per year);
+- implemented dynamic legenda to linechart which updates on hovering and is removed on mouseout;
+- made year in the title dynamic;
+- linechart is 100% finished;
+- linechart has one small bug: when you hover fast from right to left, it does not remove the vertical cursor correctly, I'll ask staff tomorrow for help;
+- improved legenda title for sunburst;
+
+# FINAL TODO (spend half an hour each, 4 hours for report)
+- final touch on sunburst text (popup instead of text for every country);
+- copy legenda from linechart and use it for sunburst (with values);
+- improve layout for worldmap legenda and hover info;
+- divide functions into different scripts (now the main script is more than 1000 lines of code, too much)
+- give structure to GitHub folder;
+- put name and student number above every code file;
+- add information buttons to every visualization with small information text;
+- write report;
+- clean code (run through dirty markup), especially css styling file;
+- update design.md;
+- add licenses;
+- check if it runs via github;

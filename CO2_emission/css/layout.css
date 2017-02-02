@@ -2,8 +2,9 @@
 h1.header {
 	display: block;
 	position: relative;
-	font-family: verdana;
-	font-size: 150%;
+	/*font-family: sans-serif;*/
+	font-size: 45px;
+	font-weight: bold;
 	border: 2px solid lightgrey;
 	height: 70px;
 	line-height: 70px;
@@ -19,6 +20,10 @@ body > h1 {
 	margin-bottom: 10px;
 }
 
+body {
+	font-family: sans-serif;
+}
+
 
 html {
 	background-color: #4682B4;
@@ -28,35 +33,27 @@ html {
 /*style settings for worldmap legend*/
 .legend {
 position: absolute;
-/*z-index: 1;*/
 bottom: 10px;
 left: 10px;
-/*background-color: lightgrey;*/
-
-
 }
-/*
-#industries{
-	position: absolute;
-	top: 20px;
 
-}*/
 
 #continents, #industries{
-	font-family: verdana;
-	font-size: 110%;
+	font-size: 20px;
 	background-color: lightgrey;
 	font-weight: bold;
-
 }
 
+form {
+	font-size: 18px;
+	background-color: lightgrey;
+}
 
 
 /*style settings for industry and continent buttons*/
 form, .legend {
-font-family: verdana;
-font-size: 90%;
-background-color: lightgrey;
+font-size: 18px;
+/*background-color: lightgrey;*/
 /*margin-top: 20px;*/
 /*margin-bottom: 20px;*/
 /*border: 2px solid blue;*/
@@ -87,7 +84,7 @@ body > div.parent {
 	}
 
 #slider > svg > g > g.x.axis {
-	  font: 12px sans-serif;
+	  font: 14px sans-serif;
 
 	  -webkit-user-select: none;
 	  -moz-user-select: none;
@@ -121,17 +118,25 @@ body > div.parent {
 /*style settings for linechart */
 .line {
   fill: none;
-  /*stroke: black;*/
   stroke-width: 4px;
+}
+
+#linechart > svg > g > text {
+	font: 22px sans-serif;
+	font-weight: bold;
 }
 
 path {
   stroke: #fff;
-  /*fill-rule: evenodd;*/
 }
 
 .legendTitle {
 	font-weight: bold;
+	font-size: 20px;
+}
+
+#legend_sunburst > .legendTitle{
+
 }
 
 #parent_div_3 {
@@ -159,35 +164,40 @@ path {
 	  font: 14px sans-serif;
 	}
 
-/*#linechart > svg > g > g.x.axis > path.domain {
-	  fill: none;
-	  stroke: black;
-	  stroke-opacity: .3;
-	  stroke-width: 10px;
-	  stroke-linecap: round;
-	}*/
+/*mouseover styling*/
+.overlay {
+  fill: none;
+  pointer-events: all;
+}
+
 
 #linechart > svg > g > .axis > path.domain {
 	  fill: none;
 	  stroke: #ddd;
 	  stroke-width: 2;
-	  /*stroke-linecap: round;*/
+
 	}
 
 
-
-
-/*style settings for data source*/
-#source {
+#linechart_legend, #legend, #legend_sunburst {
 	position: absolute;
-	margin-top: 300px;
-	margin-left: 1440px;
-	border: 2px solid lightgrey;
-	font: 14px sans-serif;
-	font-weight: bold;
-	height: 70px;
-	line-height: 25px;
+	font: 16px sans-serif;
 }
+
+#linechart_legend{
+	margin-left: 1100px;
+	margin-top: 80px;
+}
+
+#legend, #legend_sunburst {
+	/*background-color: lightgrey;*/
+
+}
+
+
+
+
+
 
 
 #map {
@@ -209,4 +219,17 @@ path {
 
 #sunburst{
 	position: relative;
+}
+
+
+/*style settings for data source*/
+#source {
+	position: absolute;
+	margin-top: 300px;
+	margin-left: 1440px;
+	border: 2px solid lightgrey;
+	font: 14px sans-serif;
+	font-weight: bold;
+	height: 70px;
+	line-height: 25px;
 }

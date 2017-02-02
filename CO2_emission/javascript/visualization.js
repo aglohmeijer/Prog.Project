@@ -54,7 +54,6 @@ function Linechart_Data(data, country_path){
 		[data[year][continent_num][continent_name][country_num]].forEach(function(d){
 			linechart_data.values.push({
 				"year" : year,
-				// "totalCO2" : d.totalCO2,
 				"electricandheat" : d.electricandheat,
 				"manufacturing" : d.manufacturing,
 				"transportation" : d.transportation,
@@ -71,12 +70,15 @@ function Linechart_Data(data, country_path){
 // draw line chart
 function Draw_Linechart(data, country_link, sea_data){
 
-	var margin = {top: 20, right: 100, bottom: 30, left: 100},
-			width = 1100 - margin.left - margin.right,
+	var margin = {top: 60, right: 400, bottom: 30, left: 100},
+			width = 1400 - margin.left - margin.right,
 			height = 350 - margin.top - margin.bottom;
 
 	// functions to parse dates and values correctly
 	var parseDate = d3.time.format("%Y").parse;
+
+	// bisectdate function for mouseover
+	var bisectDate = d3.bisector(function(d) { return d.year; }).left;
 
 	var x = d3.scale.linear().range([0, width]);
 
@@ -87,6 +89,11 @@ function Draw_Linechart(data, country_link, sea_data){
 		.scale(x)
 		.orient("bottom")
 		.tickFormat(d3.format("d"));
+
+	var xAxis_2 = d3.svg.axis()
+		.scale(x)
+		.orient("top")
+		.tickValues([]);
 
 	var yAxisLeft = d3.svg.axis()
 		.scale(y)
@@ -119,10 +126,12 @@ function Draw_Linechart(data, country_link, sea_data){
 	// set x domain
 	x.domain(d3.extent(line_data.values, function(d) { return d.year;}));
 
+	// first determine the max value because the minimum value will be a fraction (negative) of this value
+	var max_value = d3.max(line_data.values, function(d){return Math.max(d.electricandheat, d.manufacturing, d.transportation, d.fuelcombustion, d.fugitive); }),
+			min_value = max_value * -0.05;
+
 	// set y domain for emission
-	y.domain([d3.min(line_data.values, function(d) { return Math.min("-20", d.electricandheat, d.manufacturing, d.transportation, d.fuelcombustion, d.fugitive);
-			}),
-			d3.max(line_data.values, function(d) { return Math.max(d.electricandheat, d.manufacturing, d.transportation, d.fuelcombustion, d.fugitive);})]);
+	y.domain([min_value, max_value]);
 
 	// set y domain for sealevel
 	y2.domain([d3.min(sea_data, function(d) { return Math.min(d.level); }), d3.max(sea_data, function(d) { return Math.max(d.level); })]);
@@ -133,6 +142,12 @@ function Draw_Linechart(data, country_link, sea_data){
 		.attr("transform", "translate(0," + height + ")")
 		.call(xAxis);
 
+	// make upper x axis
+	svg.append("g")
+		.attr("class", "x axis")
+		.attr("transform", "translate(0, 0)")
+		.call(xAxis_2);
+
 	// draw left y axis
 	svg.append("g")
 		.attr("class", "y axis")
@@ -142,7 +157,8 @@ function Draw_Linechart(data, country_link, sea_data){
 		.attr("y", 6)
 		.attr("dy", "-4em")
 		.style("text-anchor", "end")
-		.text("Emission (MtCO2)");
+		.style('font-size', '16px')
+		.text("Emission (MtC0₂)");
 
 	// draw right y axis
 	svg.append("g")
@@ -154,9 +170,10 @@ function Draw_Linechart(data, country_link, sea_data){
 		.attr("dy", "4em")
 		.attr("transform", "rotate(-90)")
 		.style("text-anchor", "end")
+		.style('font-size', '16px')
 		.text("Sea-level variation (mm)");
 
-	// Define variable for the plot
+	// define variables for the plot
  	var plot = svg.selectAll(".plot")
  		.data([line_data])
  		.enter().append("g")
@@ -167,14 +184,19 @@ function Draw_Linechart(data, country_link, sea_data){
 		.enter().append("g")
 		.attr("class", "line_graph_2");
 
-	var industry = ['electricandheat', 'manufacturing', 'transportation', 'fuelcombustion', 'fugitive'];
+	var industry = ['electricandheat', 'manufacturing', 'transportation', 'fuelcombustion', 'fugitive', 'sealevel'];
 
+	var name_format = new Object,
+	name_format = {'electricandheat' : 'Electric and Heat', 'manufacturing' : 'Manufacturing', 'transportation' : 'Transportation', 'fuelcombustion' : 'Fuel Combustion', 'fugitive' : 'Fugitive', 'sealevel' : 'Sea Level Variation'};
+
+
+	// line colorring which corresponds with the colors in the choropleth and sunburst
 	var industry_color = new Object;
-	var industry_color = {'electricandheat' : 'rgb(81, 117, 159)', 'manufacturing': '#fed976	', 'transportation' : '#d73027', 'fuelcombustion' : 'rgb(79, 143, 111)', 'fugitive' : 'rgb(130, 93, 172)'};
+	var industry_color = {'electricandheat' : 'rgb(81, 117, 159)', 'manufacturing': '#fed976	', 'transportation' : '#d73027', 'fuelcombustion' : 'rgb(79, 143, 111)', 'fugitive' : 'rgb(130, 93, 172)', 'sealevel' : 'black'};
 
 
 	// draw all lines seperately
-	for (m = 0; m < industry.length; m++){
+	for (m = 0; m < (industry.length - 1); m++){
 
 		line.y(function(d) {
 			return y(d[industry[m]]);
@@ -184,27 +206,134 @@ function Draw_Linechart(data, country_link, sea_data){
 			.attr("class", "line")
 			.style('stroke', industry_color[industry[m]])
 			.attr("d", function(d) {return line(d.values);});
-			// .attr("")
 	}
 
+	// draw sea varation plot
 	plot_2.append("path")
 		.attr("class", "line")
 		.style('stroke', 'black')
 		.style('stroke-width', '2px')
 		.attr("d", function (d) {return line_2(d);});
 
-		// draw black line
+		// draw black vertical line
 		svg.append("path") // this is the black vertical line to follow mouse
   	.attr("class","mouseLine")
   	.style("stroke","black")
   	.style("stroke-width", "1px")
   	.style("opacity", "0");
 
+		// append country name as graph title
+		svg.append("text")
+			.attr("x", (width / 2))
+			.attr("y", (-margin.top / 3))
+			.attr("text-anchor", "middle")
+			.style('font-size', '40px')
+			.style('font-weight', 'bold')
+			.text(country_link.name);
+
+		// draw legenda with industry names
+		var legenda = d3.select('#linechart_legend');
+
+		legenda.append('g')
+			.attr('class', 'linechart_legend')
+			.attr('transform', 'translate(10,80)');
+
+		var gs = legenda.selectAll('g').data(industry).append('g').attr('class', 'legend_cells');
+
+		gs.selectAll('g').data(industry).enter().append("g")
+			.attr('class', 'legend_cells')
+			.append('rect')
+			.attr('transform', function(d, i){
+				var y = i * 35;
+				var x = 5;
+				return 'translate(' + x + ',' + y + ')';
+			})
+				.attr('width', 40)
+				.attr('height', 25)
+				.style('fill', function(d) {return industry_color[d];});
+
+			gs.selectAll('g')
+				.append('text')
+				.attr('class', 'label')
+				.attr('transform', function(d, i){
+					var y = i * 35 + 15;
+					var x = 60;
+					return 'translate(' + x + ',' + y + ')';
+				})
+
+				.text(function(d){
+					return name_format[d];
+				});
+
+		// mouseover function
+		var focus = svg.append("g")
+      	.attr("class", "focus")
+      	.style("display", "none");
+
+  		focus.append("line")
+      	.attr("y0", -(height / 2))
+				.attr("y1", (height))
+				.style("stroke-width", 3)
+				.style("stroke", "black");
+
+			svg.append("rect")
+       .attr("class", "overlay")
+       .attr("width", width)
+       .attr("height", height)
+       .on("mouseover", function() {focus.style("display", null); })
+       .on("mouseout", function(legenda) { focus.style("display", "none");
+			 		// remove year and corresponding values from legenda too
+		  		d3.select('#linechart_legend > text').remove();
+					d3.selectAll('#linechart_legend > g > g > g > text.values').remove();
+				 })
+       .on("mousemove", mousemove);
+
+		function mousemove() {
+			var hover_year = parseInt(x.invert(d3.mouse(this)[0]));
+			focus.attr("transform", "translate(" + x(hover_year) + "," + 0 + ")");
+			focus.select("text").text(hover_year);
+
+			var d = new Object;
+			d = line_data.values[hover_year - 1992];
+			try { d.sealevel = sea_data[hover_year - 1993].level; }
+			catch(err){d.sealevel = "Unknown";}
+
+			// store values in array to display them later
+			var values = [d.electricandheat, d.manufacturing, d.transportation, d.fuelcombustion, d.fugitive, d.sealevel];
+
+			// remove current values and current year
+			gs.selectAll('g > text.values').remove();
+			legenda.selectAll('text.year_label').remove();
+
+			// append new year to legenda
+			legenda.append('text')
+				.attr('class', 'year_label')
+				.attr('transform', 'translate(30, 60)')
+				.style('font-size', '60px')
+				.style('font-weight', 'bold')
+				.text(hover_year);
+
+			// append new values to legenda
+			gs.selectAll('g')
+				.append('text')
+				.attr('class', 'values')
+				.attr('transform', function(d, i){
+					var y = i * 35 + 15;
+					var x = 230;
+					return 'translate(' + x + ',' + y + ')';})
+				.style('font-size', '16px')
+				.style('font-weight', 'bold')
+				.text(function(d, i){
+					// the sealevel is unkonwn in 1992 SO:
+					return ((hover_year == 1992 && i ==5) ? "Unknown" : (d3.format(".0f")(values[i]) + (i != 5 ? " Mt CO₂" : " mm")));
+				});
+		}
 }
 
 // function to update linechart when user clicks on new country
 function Update_Linechart(data, country_link, sea_data){
 	d3.select("#linechart > svg").remove();
+	d3.select('#linechart_legend > g').remove();
 	Draw_Linechart(data, country_link, sea_data);
 }
 
@@ -395,7 +524,7 @@ function Sunburst_Data(year, data, continent){
 }
 
 // draw sunburst
-function Draw_Sunburst(year, data, continent){
+function Draw_Sunburst(year, data, continent, sea_data){
 
 	// script which creates sunburst
 	var width = 600,
@@ -469,9 +598,8 @@ function Draw_Sunburst(year, data, continent){
 	}
 
 	// update sunburst
-	var updateChart = function (items) {
+	var updateChart = function (items, sea_data) {
 			var root = items;
-
 			// DATA JOIN - Join new data with old elements, if any.
 			var gs = svg.selectAll("g").data(partition.nodes(root));
 
@@ -539,14 +667,12 @@ function Draw_Sunburst(year, data, continent){
 				.attr('transform', 'translate(20,20)');
 
 			// this line is somewhat hardcoded since I used the d3.legend as reference
-			var gs = svg.selectAll('g').data(industry_leafs).append('g').attr('class', 'legend_cells').attr('transform', 'translate(0, 27)');
+			var gs = svg.selectAll('g').data(industry_leafs).append('g').attr('class', 'legend_cells').attr('transform', 'translate(0, 550)');
 
 			// add colored circles to legenda
 			gs.selectAll('g').data(industry_leafs).enter().append("g")
 					.attr('class', 'cell')
 					.attr("transform", function(d, i){
-						// console.log(i);
-						// console.log(d);
 						var y = i * 27;
 						var x = 5;
 						return 'translate(' + x + ',' + y + ')';
@@ -565,6 +691,7 @@ function Draw_Sunburst(year, data, continent){
 					.text(function(d){ return industry_name[d];});
 		}
 
+		// udpate legend
 		Sunburst_Legend(items);
 
 		var text = g.append("text");
@@ -587,15 +714,18 @@ function Draw_Sunburst(year, data, continent){
 		// update sunburst on click
 		function click(d) {
 
+				// Update linechart when clicked on country
+				if (d.ccode) { Update_Linechart(data, Country_Path(d.ccode), sea_data); };
+
 				// update legend to clicked continent or country
-				Update_Legend(d.ccode ? d.ccode : d.name);
+				if (d.depth == 0) { Update_Legend(d.name); }
+				else if (d.depth == 1) {Update_Legend(d.ccode); }
 
 				// fade out all text elements
 				if (d.size !== undefined) {
 						d.size += 100;
 				};
 				text.transition().attr("opacity", 0);
-				// console.log("TEST"
 				path.transition()
 						.duration(1000)
 						.attrTween("d", arcTween(d))
@@ -616,7 +746,7 @@ function Draw_Sunburst(year, data, continent){
 						    }
 						})
 						;
-		} //});
+		}
 
 		updateChart.click = click;
 
@@ -629,7 +759,7 @@ function Draw_Sunburst(year, data, continent){
 	// console.log(sunburst_data);
 
 	// update chart to default year
-	updateChart(sunburst_data);
+	updateChart(sunburst_data, sea_data);
 
 	// in this way updateChart can be called from outside this function
 	Draw_Sunburst.updateChart = updateChart;
@@ -649,8 +779,33 @@ function Sealevel_Data() {
   	async: false,
   	success: function(data){jsonData = data}
 	});
-	// return array
-	return jsonData;
+
+
+	// the data contains nearly 20 entries per year, so filter some (not most efficient function but is only called once)
+	var filtered_data = [];
+
+	// I had to hardcode the first year unfortunately (unknown bug)
+	var round_year = new Object;
+	round_year.year = 1993;
+	round_year.level = -13.74;
+	filtered_data.push(round_year);
+
+	for (year = 1994; year < 2013; year++){
+		for (i = 1; i < jsonData.length; i++){
+			var diff = Math.abs(jsonData[i].year - year);
+			if (diff < (Math.abs(jsonData[i - 1].year - year))){
+				var index = i;
+				}
+		}
+
+		// create object with data for round year and push into new data array
+		var round_year = new Object;
+		round_year.year = d3.round(jsonData[index].year);
+		round_year.level = jsonData[index].level;
+		filtered_data.push(round_year);
+	}
+
+	return filtered_data;
 }
 
 // this function updates the sunburst legenda to the current continent/country
@@ -660,7 +815,14 @@ function Update_Legend(new_country){
 	d3.select('#legend_sunburst > text').remove();
 
 	// define title object
-	var title = d3.select('#legend_sunburst').append('text').attr('class', 'legendTitle').attr('transform', 'translate(20, 20)');
+	var title = d3.select('#legend_sunburst')
+		.append('text')
+		.attr('class', 'legend_title')
+		.attr('text-anchor', 'begin')
+		.attr('font-family', 'sans-serif')
+		.attr('font-size', '50px')
+		.attr('font-weight', 'bold')
+		.attr('transform', 'translate(50, 530)rotate(-90)');
 
 	// if the sunburst focusses on one country use coutnry ID, else append continent name to legend
 	if (new_country.length == 3){
@@ -672,14 +834,8 @@ function Update_Legend(new_country){
 	}
 }
 
-// draw and update legenda for Linechart_Legend
-function Linechart_Legend(new_country){
-
-
-	}
-
 // draw slider
-function Draw_Slider(year){
+function Draw_Slider(year, sea_data){
 	var margin = {top: 20, right: 20, bottom: 20, left: 20},
 			width = 1710 - margin.left - margin.right,
 			height = 100 - margin.bottom - margin.top;
@@ -750,6 +906,13 @@ function Draw_Slider(year){
 		// add x coordinate and current year to slider (needed for other functions)
 		handle.attr("cx", x2(value))
 					.attr("curr_year", value);
+
+		// change year in header
+		document.getElementById("title_year").textContent= d3.format('.0f')(value);
+
+		// console.log(d3.round(value));
+
+
 	}
 
 	function hue(h) {
@@ -784,7 +947,7 @@ function Draw_Slider(year){
 				 map.updateChoropleth(Worldmap_Data(year, data, industry));
 
 				 // update sunburst
-				 Draw_Sunburst.updateChart(Sunburst_Data(year, data, curr_continent));
+				 Draw_Sunburst.updateChart(Sunburst_Data(year, data, curr_continent), sea_data);
 
 				 return year; })))
 			 .call(brush.event);
@@ -828,22 +991,18 @@ d3.json("data/CO2_emission.json", function(error, json) {
 	if (error) return console.warn(error);
 	data = json;
 
-	// set default values
+	// set default values to draw first visualizations with
 	var industry = "totalCO2";
 	var year = 2012;
-	var default_country = 'DEU';
-	var default_continent = 'Europe';
-
-	// draw Map with default year 1992
-	Draw_Map(year, data, industry);
-	Draw_Sunburst(year, data, default_continent);
-	Draw_Slider(year);
-	Update_Legend(default_continent);
-
-	// draw first linegraph with default country germany (only possible AFTER Draw_Sunburst!)
-	var germany = Country_Path(default_country);
+	var default_country_path = Country_Path('NLD');
 	var sea_data = Sealevel_Data();
-	Draw_Linechart(data, germany, sea_data);
+
+	// draw all visualizations with default year, country, and industry
+	Draw_Map(year, data, industry);
+	Draw_Sunburst(year, data, default_country_path.continent, sea_data);
+	Draw_Slider(year, sea_data);
+	Update_Legend(default_country_path.continent);
+	Draw_Linechart(data, default_country_path, sea_data);
 
 	 // when user clicks on country update linechart and sunburst or give error
  	d3.select('#map > svg.datamap > g').selectAll('.datamaps-subunit').on('click', function(geography) {
@@ -886,7 +1045,7 @@ d3.json("data/CO2_emission.json", function(error, json) {
 
 					// this is a very brute way of updating but else I cannot make it work
 					d3.select('#sunburst > svg:nth-child(4)').remove();
-					Draw_Sunburst(curr_year, data, curr_continent);
+					Draw_Sunburst(curr_year, data, curr_continent, sea_data);
 
 					// zoom in on clicked country
 					var country_object = d3.select('#' + geography.id)["0"]["0"].__data__;
@@ -902,7 +1061,7 @@ d3.json("data/CO2_emission.json", function(error, json) {
 
 					// this is a very brute way of updating but else I cannot make it work
 					d3.select('#sunburst > svg:nth-child(4)').remove();
-					Draw_Sunburst(curr_year, data, new_continent);
+					Draw_Sunburst(curr_year, data, new_continent, sea_data);
 
 					// zoom in on clicked country
 					var country_object = d3.select('#' + geography.id)["0"]["0"].__data__;
@@ -930,7 +1089,7 @@ d3.json("data/CO2_emission.json", function(error, json) {
 		var curr_year = d3.select('#slider > svg > g > g.slider > circle')["0"]["0"].attributes[4].value;
 		d3.select('#sunburst > svg:nth-child(4)').remove();
 		new_continent = this.value;
-		Draw_Sunburst(curr_year, data, new_continent);
+		Draw_Sunburst(curr_year, data, new_continent, sea_data);
 
 		//update sunburst legenda
 		Update_Legend(new_continent);

@@ -7,14 +7,12 @@
    <link rel="stylesheet" href="css/sweetalert.css" />
     <script src="javascript/d3.min.js"></script>
     <script src="javascript/sweetalert.min.js"></script>
-    <!script src="javascript/d3.v4.min.js"></script>
     <script src="javascript/jquery-3.1.1.js"></script>
     <script src="javascript/d3-legend.min.js"></script>
     <script src="javascript/topojson.min.js"></script>
     <script src="javascript/datamaps.json.js"></script>
-    <!script src=javascript/d3.v3.min.js"></script>
     <script src="javascript/d3.slider.js"></script>
-    <h1 class="header" style="text/css">CO<sub>2</sub> Emission Worldwide (1992 - 2012)</h1>
+    <h1 class="header" style="text/css">Worldwide CO<sub>2</sub> Emission <span id="title_year">1992</span></h1>
     <link rel="shortcut icon" href="">
   </head>
   <body>
@@ -23,7 +21,7 @@
         <div id="map" style="height: 700px; width: 900px">
           <div id="industries">Industry: </div>
           <form>
-            <input type="radio" name="industry" value="totalCO2" checked> Total CO2
+            <input type="radio" name="industry" value="totalCO2" checked> Total CO<sub>2</sub>
             <input type="radio" name="industry" value="electricandheat"> Electric and Heat
             <input type="radio" name="industry" value="manufacturing"> Manufacturing
             <input type="radio" name="industry" value="transportation"> Transportation
@@ -43,13 +41,14 @@
             <input id="Oceania" type="radio" name="continent" value="Oceania"> Oceania
             <input id="South America" type="radio" name="continent" value="South America"> South America
           </form>
-        <svg id="legend_sunburst" class='legend' style="height: 180px; width: 175px"></svg></div>
+        <svg id="legend_sunburst" class='legend' style="height: 700px; width: 175px"></svg></div>
       </div>
     </div>
     <div id="slider"></div>
     <script src=" javascript/visualization.js"></script>
     <div id="parent_div_3">
-      <div id="linechart" style="height: 300px; width: 900px"></div>
+      <div id="linechart" style="height: 400px; width: 1500px"></div>
+      <svg id="linechart_legend" style="height: 300px; width: 340px"></svg>
       <div id="source" style="height: 80px; width: 250px">Data sources<br>
         <a href="http://cait.wri.org/historical" style="color: steelblue">CAIT Climate Data Explorer</a><br>
         <a href="http://climate.nasa.gov/vital-signs/sea-level" style="color: steelblue">NASA Global Climate Change</a>
