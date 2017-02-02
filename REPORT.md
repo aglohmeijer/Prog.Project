@@ -1,7 +1,7 @@
 ## Final report
-Programming Project Course, january 2017
-Student: Anne Lohmeijer
-UvA-ID: 10447555
+Programming Project Course, january 2017  
+Student: Anne Lohmeijer  
+UvA-ID: 10447555  
 
 # Short description of application
 The visualization I made gives the user a clear overview of the worldwide CO<sub>2</sub> emission from 1992 to 2012 divided in a few industries which have a major share in the worldwide air pollution.
