@@ -4,9 +4,11 @@ Student: Anne Lohmeijer
 UvA-ID: 10447555
 
 # Short description of application
-The visualization I made gives the user a clear overview of the worldwide CO<sub>2</sub> emission from 1992 to 2012 divided in a few industries which have a major share in the worldwide air pollution. A choropleth is used to depict the COCO<sub>2</sub> emission per country, besides the choropleth a sunburst visualization shows the distribution of emission per one of the six continents. The user can adjust the year by changing a slider which is placed centrally in the page. Below the slider a linechart is placed which shows the development of the emission of all industries from one chosen country. In this linechart the variation in the global sea level is depicted as well, in this way the user can determine which countries have a big share in the sea level increasement in the period between 1992 and 2012.
+The visualization I made gives the user a clear overview of the worldwide CO<sub>2</sub> emission from 1992 to 2012 divided in a few industries which have a major share in the worldwide air pollution.
+A choropleth is used to depict the COCO<sub>2</sub> emission per country, besides the choropleth a sunburst visualization shows the distribution of emission per one of the six continents.
+The user can adjust the year by changing a slider which is placed centrally in the page. Below the slider a linechart is placed which shows the development of the emission of all industries from one chosen country. In this linechart the variation in the global sea level is depicted as well, in this way the user can determine which countries have a big share in the sea level increasement in the period between 1992 and 2012.
 
-Screen shot of final visualization.
+![](doc/final_visualization.png)
 
 # Overview
 The visualization project consists of one main HTML page, a javascript folder, a CSS styling folder and a folder which contains the used data. The javascript folder itself consists of one main javascript, a folder with all the used javascript libraries and a folder which contains three separate scripts which load/format data, draws the visualizations, and at last updates the visualizations on user input.
